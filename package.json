@@ -1,0 +1,23 @@
+{
+	"name": "symmetric-public-api-required",
+	"version": "3.2.1",
+	"demo": "http://ghost.estudiopatagon.com/symmetric",
+	"engines": {
+        "ghost": ">=1.0.0"
+    },
+	"author": {
+		"name": "Estudio Patagon",
+        "email": "admin@estudiopatagon.com",
+        "url": "https://estudiopatagon.com"
+	},
+	"gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
+    },
+	"config": {
+        "posts_per_page": 8
+    }
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tag/carousel/
+Disallow: /tag/featured-top/
+Disallow: /tag/featured-bottom/
+Disallow: /tag/weeklytop/

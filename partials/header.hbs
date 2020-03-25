@@ -1,0 +1,108 @@
+<!-- start: #header -->
+<header id="header">
+
+	<div class="menu-mobile">
+		<i class="fa fa-bars"></i>
+	</div>
+
+	<!-- start: .top -->
+	<div class="top grid-container grid-parent">
+
+		<div class="social hide-on-mobile hide-on-tablet">
+			<i class="open fa fa-share-alt"></i>
+			{{> social-profiles}}
+		</div>
+
+		{{#if @blog.logo}}
+			<h1 class="logo" ><a href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a></h1>
+		{{else}}
+			<h1 class="logo">
+				<a href="{{@site.url}}">{{@site.title}}</a>
+			</h1>
+		{{/if}}
+
+		
+
+	</div>
+	<!-- end: .top -->
+
+	
+
+	<!-- start: .menu-wrapper -->
+	<div class="menu-wrapper">
+		<!-- start: .main-nav -->
+		<nav class="main-nav grid-container grid-parent" role="navigation">
+
+			<div class="social hide-on-tablet hide-on-mobile">
+				<i class="open fa fa-share-alt"></i>
+				{{> social-profiles}}
+			</div>
+
+			<ul id="menu-header" class="menu">
+				<li class="nav-home current-menu-item"><a href="http://epigram.ghost.io/">Home</a></li>
+				<li class="nav-news"><a href="http://epigram.ghost.io/tag/news/">News</a></li>
+				<li class="nav-features"><a href="http://epigram.ghost.io/tag/features/">Features</a></li>
+				<li class="nav-comment"><a href="http://epigram.ghost.io/tag/comment/">Opinion</a></li>
+				<li class="nav-science"><a href="http://epigram.ghost.io/tag/science/">SciTech</a></li>
+				<li class="nav-lifestyle">
+					<button class="lifestyle-dropbtn">The Croft</button>
+					<div class="lifestyle-dropdown-content">
+						<a href="http://epigram.ghost.io/tag/The Croft/">The Croft</a>
+						<a href="http://epigram.ghost.io/tag/wellbeing/">Wellbeing</a>
+						<a href="http://epigram.ghost.io/tag/food/">Food</a>
+						<a href="http://epigram.ghost.io/tag/travel/">Travel</a>
+						<a href="http://epigram.ghost.io/tag/style/">Style</a>
+					</div>
+				</li>
+		    <li class="nav-entertainment">
+					<button class="entertainment-dropbtn">Entertainment</button>
+					<div class="entertainment-dropdown-content">
+						<a href="http://epigram.ghost.io/tag/film-TV/">Film & TV</a>
+						<a href="http://epigram.ghost.io/tag/arts/">Arts</a>
+						<a href="http://epigram.ghost.io/tag/music/">Music</a>
+					</div>
+				</li>
+					<li class="nav-sports"><a href="http://epigram.ghost.io/tag/sport/">Sport</a></li>
+				</li>
+			<li class="nav-intramural">
+					<button class="intramural-dropbtn">Intramural</button>
+					<div class="intramural-dropdown-content">
+						<a href="/2018/10/01/intramural-football/">Football</a>
+						<a href="/basketball/">Basketball</a>
+						<a href="/netball/">Netball</a>
+						<a href="/badminton/">Badminton</a>
+						<a href="/hockey/">Hockey</a>
+					</div>
+				</li>
+				</li>
+					<li class="nav-puzzles"><a href="http://epigram.ghost.io/tag/puzzles/">Puzzles</a></li>
+				</li>
+				<form action="" method="get" class="mobile-hide">
+					<input type="text" name="s" value="" class="search-field" required>
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+
+				<div class="nav-home current-menu-item">
+    			<button class="home-dropbtn">Home</button>
+    		<div class="home-dropdown-content">
+      		<a href="#">Link 1</a>
+      		<a href="#">Link 2</a>
+      		<a href="#">Link 3</a>
+    		</div>
+  		</div>
+		</ul>
+
+			<form action="" method="get" class="hide-on-tablet hide-on-mobile mobile-hide">
+				<input type="text" name="s" value="" class="search-field" required>
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+
+		</nav>
+		<!-- end: .main-nav -->
+	</div>
+	<!-- end: .menu-wrapper -->
+
+	<div class="clear"></div>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</header>
+<!-- end: #header -->

@@ -1,0 +1,26 @@
+<!-- start: .breaking-news -->
+<section class="breaking-news hide-on-mobile grid-container grid-parent">
+	<div class="grid-15 tablet-grid-20 grid-parent">
+		<h3 id="breaking-news-title" class="title">BREAKING</h3>
+	</div>
+	<div class="grid-85 tablet-grid-80 grid-parent">
+		<div class="slick">
+			{{#get "posts" limit="10" include="tags" filter="tags:breaking-news" as |breaking-news|}}
+				{{#foreach breaking-news}}
+					<div class="slick-item">
+						<article class="item">
+							
+							<a href="{{url}}">
+								<div class="meta grid-container grid-parent">
+									<h6>{{title}}...</h6>
+								</div>
+							</a>
+							
+						</article>
+					</div>
+				{{/foreach}}
+			{{/get}}	
+		</div>
+	</div>
+</section>
+<!-- end: .breaking-news -->
