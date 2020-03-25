@@ -31,7 +31,7 @@ q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 
 html, textarea{ overflow: auto; }
-html, body{ width: 100%; height: 100%; overflow-x: hidden; }
+html, body{ width: 100%; height: 100%; overflow-x: hidden;}
 a{ text-decoration: none; outline: 0; }
 input, textarea, button{ margin: 0; padding: 0; border: 0; outline: 0; }
 a, input[type=button], input[type=submit], button, label{ cursor: pointer; }
