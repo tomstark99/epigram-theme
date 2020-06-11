@@ -31,7 +31,7 @@ q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 
 html, textarea{ overflow: auto; }
-html, body{ width: 100%; height: 100%; overflow-x: hidden;}
+html, body{ width: 100%; height: 100%; }
 a{ text-decoration: none; outline: 0; }
 input, textarea, button{ margin: 0; padding: 0; border: 0; outline: 0; }
 a, input[type=button], input[type=submit], button, label{ cursor: pointer; }
@@ -342,10 +342,9 @@ div.tags a, div.tags span{
 	vertical-align: top;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-} 
+}
 a[href="/tag/no-sidebar/"], span.no-sidebar,
 a[href="/tag/one-sidebar/"], span.one-sidebar,
-a[href="/tag/weeklytop/"], span.weeklytop,
 a[href="/tag/carousel/"], span.carousel,
 a[href="/tag/featured-top/"], span.featured-top,
 a[href="/tag/featured-bottom/"], span.featured-bottom,
@@ -1350,7 +1349,7 @@ div#mc_embed_signup_scroll label{
 	width: 75%;
 }
 
-.footer-icons{
+.icons{
 	margin-top: 10px;
 	margin-left: 13px;
 	width: 30px;
