@@ -1,25 +1,26 @@
 <article class="default index-{{@index}} grid-container grid-parent {{post_class}}">
 	{{#if feature_image}}
 		<div class="grid-50 tablet-grid-50 left">
-			<a href="{{url}}" class="thumb hover-effect">
-				<img src="{{feature_image}}">
+			<a href="{{url}}" class="thumb hover-effect" style="-webkit-border-radius: 10px;">
+				<img src="{{feature_image}}" style="height: 220px; object-fit: cover; object-position: center;">
 			</a>
+			<div style="margin: 5px 0 0px;">
+				{{#if tags}}
+					<div class="tags">
+						{{tags separator=""}}
+					</div>
+				{{/if}}
+				<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i>{{date}}</time>
+			</div>
 		</div>
 	{{/if}}
+	
 	<div class="right {{#if feature_image}}grid-50 tablet-grid-50{{/if}}">
 		<header>
-			<div class="meta">
-				<div class="alignleft">
-					{{#if tags}}
-						<div class="tags">
-							{{tags separator=""}}
-						</div>
-					{{/if}}
-					<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i>{{date}}</time>
 			<h4 class="title"><a href="{{url}}">{{{title}}}</a></h4>
 		</header>
 		<div class="post-excerpt">
-			{{excerpt words="20"}}...
+			{{excerpt words="20"}}
 			<div class="clear"></div>
 		</div> 
 		<a href="{{url}}" class="button dark">Read More</a>

@@ -1,21 +1,35 @@
 <!-- start: .breaking-news -->
 <section class="breaking-news hide-on-mobile grid-container grid-parent">
 	<div class="grid-15 tablet-grid-20 grid-parent">
-		<h3 id="breaking-news-title" class="title">BREAKING</h3>
+		
+		<h3 id="breaking-news-title" class="title">BREAKING NEWS</h3>
 	</div>
 	<div class="grid-85 tablet-grid-80 grid-parent">
 		<div class="slick">
-			{{#get "posts" limit="10" include="tags" filter="tags:breaking-news" as |breaking-news|}}
+			{{#get "posts" limit="5" include="tags" filter="tags:breaking-news" as |breaking-news|}}
 				{{#foreach breaking-news}}
-					<div class="slick-item">
-						<article class="item">
-							
-							<a href="{{url}}">
-								<div class="meta grid-container grid-parent">
-									<h6>{{title}}...</h6>
+					<div class="slick-item" >
+						<article class="item" >
+							<a class="hover-effect" href="{{url}}">
+								<div class="meta grid-container grid-parent" style="background: url({{feature_image}});background-size: 100%; background-position: center; height:70px;">
+									<div class="image-shadow">
+									<span class="cover"></span>
+									<h6 >{{title}}...</h6>
+									{{#if tags}}
+										<div class="tags">
+											{{#foreach tags}}<span class="{{slug}}">{{name}}</span>{{/foreach}}
+										</div>
+									{{/if}}
+									<time id="time_1" style="margin-bottom: 0px; color:#fff;" datetime="{{date published_at format="YYYY-MM-DD HH:mm"}}"><i class="fa fa-clock-o"></i>
+									{{date}}</time>
+									<!-- <script>
+										var date = new Date(document.getElementById('time_1').textContent);
+										alert(document.getElementById('time_1').textContent);
+										{{!-- document.getElementById('time_1').textContent = time_ago(date); --}}
+									</script> -->
+									</div>
 								</div>
 							</a>
-							
 						</article>
 					</div>
 				{{/foreach}}

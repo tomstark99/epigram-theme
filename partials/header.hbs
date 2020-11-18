@@ -21,8 +21,6 @@
 			</h1>
 		{{/if}}
 
-		
-
 	</div>
 	<!-- end: .top -->
 
@@ -39,34 +37,40 @@
 			</div>
 
 			<ul id="menu-header" class="menu">
-				<li class="nav-home current-menu-item"><a href="http://epigram.ghost.io/">Home</a></li>
-				<li class="nav-news"><a href="http://epigram.ghost.io/tag/news/">News</a></li>
-				<li class="nav-features"><a href="http://epigram.ghost.io/tag/features/">Features</a></li>
-				<li class="nav-comment"><a href="http://epigram.ghost.io/tag/comment/">Opinion</a></li>
-				<li class="nav-science"><a href="http://epigram.ghost.io/tag/science/">SciTech</a></li>
+				<li class="nav-home current-menu-item"><a href="/">Home</a></li>
 				<li class="nav-lifestyle">
-					<button class="lifestyle-dropbtn">The Croft</button>
+					<a href="/tag/news/">News</a>
 					<div class="lifestyle-dropdown-content">
-						<a href="http://epigram.ghost.io/tag/The Croft/">The Croft</a>
-						<a href="http://epigram.ghost.io/tag/wellbeing/">Wellbeing</a>
-						<a href="http://epigram.ghost.io/tag/food/">Food</a>
-						<a href="http://epigram.ghost.io/tag/travel/">Travel</a>
-						<a href="http://epigram.ghost.io/tag/style/">Style</a>
+						<a href="/coronavirus/">Covid-19</a>
+					</div>
+				</li>
+				<li class="nav-features"><a href="/tag/features/">Features</a></li>
+				<li class="nav-comment"><a href="/tag/comment/">Opinion</a></li>
+				<li class="nav-science"><a href="/tag/science/">SciTech</a></li>
+				<li class="nav-lifestyle">
+					<a href="/tag/The Croft/">The Croft</a>
+					<div class="lifestyle-dropdown-content">
+						
+						<a href="/tag/wellbeing/">Wellbeing</a>
+						<a href="/tag/food/">Food</a>
+						<a href="/tag/travel/">Travel</a>
+						<a href="/tag/style/">Style</a>
 					</div>
 				</li>
 		    <li class="nav-entertainment">
-					<button class="entertainment-dropbtn">Entertainment</button>
+					<a href="/tag/entertainment/">Culture</a>
 					<div class="entertainment-dropdown-content">
-						<a href="http://epigram.ghost.io/tag/film-TV/">Film & TV</a>
-						<a href="http://epigram.ghost.io/tag/arts/">Arts</a>
-						<a href="http://epigram.ghost.io/tag/music/">Music</a>
+						<a href="/tag/film-TV/">Film & TV</a>
+						<a href="/tag/arts/">Arts</a>
+						<a href="/tag/music/">Music</a>
 					</div>
 				</li>
-					<li class="nav-sports"><a href="http://epigram.ghost.io/tag/sport/">Sport</a></li>
+					{{!-- <li class="nav-sports"><a href="http://epigram.ghost.io/tag/sport/">Sport</a></li> --}}
 				</li>
 			<li class="nav-intramural">
-					<button class="intramural-dropbtn">Intramural</button>
+					<a href="/tag/sport/">Sport</a>
 					<div class="intramural-dropdown-content">
+						<a href="/tag/intramural/">Intramural</a>
 						<a href="/2018/10/01/intramural-football/">Football</a>
 						<a href="/basketball/">Basketball</a>
 						<a href="/netball/">Netball</a>
@@ -75,25 +79,35 @@
 					</div>
 				</li>
 				</li>
-					<li class="nav-puzzles"><a href="http://epigram.ghost.io/tag/puzzles/">Puzzles</a></li>
+			<li class="nav-puzzles"><a href="/tag/puzzles/">Puzzles</a></li>
 				</li>
-				<form action="" method="get" class="mobile-hide">
+			<li class="nav-intramural">
+					<a href="/get-involved/">Get Involved</a>
+					<div class="intramural-dropdown-content">
+						<a href="/advertise-with-us/">Advertise</a>
+						<a href="/alumni/">Alumni</a>
+						<a href="/meet-the-team/">Team</a>
+						<a href="/read-the-paper/">Read the paper</a>
+						<!-- <a href="/tag/puzzles/">Puzzles</a> -->
+					</div>
+				</li>
+				</li>
+				{{!-- <form action="" method="get" class="mobile-hide">
 					<input type="text" name="s" value="" class="search-field" required>
 					<button type="submit"><i class="fa fa-search"></i></button>
-				</form>
-
-				<div class="nav-home current-menu-item">
+				</form> --}}
+				{{!-- <div class="nav-home current-menu-item">
     			<button class="home-dropbtn">Home</button>
     		<div class="home-dropdown-content">
       		<a href="#">Link 1</a>
       		<a href="#">Link 2</a>
       		<a href="#">Link 3</a>
     		</div>
-  		</div>
+  		</div> --}}
 		</ul>
 
 			<form action="" method="get" class="hide-on-tablet hide-on-mobile mobile-hide">
-				<input type="text" name="s" value="" class="search-field" required>
+				<input type="text" name="s" value="" class="search-field" placeholder="Search" required>
 				<button type="submit"><i class="fa fa-search"></i></button>
 			</form>
 
