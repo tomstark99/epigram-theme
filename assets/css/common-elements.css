@@ -170,8 +170,8 @@ div.post-format-link a:hover:before{
 
 /* @group Widgets */
 
-section.widget{ margin-bottom: 40px; }
-section.widget h4.widget-title{  margin-bottom: 20px; text-transform: uppercase; }
+section.widget{ margin-bottom: 20px; }
+section.widget h4.widget-title{  margin-bottom: 10px; text-transform: uppercase; }
 section.widget p{ padding-bottom: 10px; }
 section.widget p:last-of-type{ padding-bottom: 0; }
 section.widget a{  }
@@ -260,13 +260,13 @@ section.widget_ep_social div.icons a i{ display: block; line-height: 64px; font-
 section.widget_ep_social div.icons a p{
 	padding-top: 10px;
 	color: black;
-	width: 100px;
+	width: auto;
 }
 section.widget_ep_social div.icons a p span{
 	display: block;
 	font: 10px 'Roboto';
 	text-transform: uppercase;
-	width: 100px;
+	width: auto;
 }
 section.widget_ep_social div.icons a.dribbble{ background: #D97AA6; }
 section.widget_ep_social div.icons a.facebook{ background: #507CBE; }
@@ -308,7 +308,7 @@ section.widget_ep_social div.icons a.rss{ background: #F7B454; }
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
-div.text{ font-size: 16px; }
+div.text{ font-size: 18px; }
 div.text iframe{ margin-bottom: 20px; }
 div.text hr{ margin: 0 0 20px; }
 div.ep-map img, div#map_canvas img{ max-width: none !important; height: inherit; }
@@ -456,9 +456,9 @@ input[type=submit]{
 	color: #fff;
 	font: 14px 'Roboto';
 	margin-top: 10px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;

@@ -112,7 +112,7 @@
 
     height: auto;
 
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
 	outline: 0;
 }
 .slick-arrow.slick-hidden {

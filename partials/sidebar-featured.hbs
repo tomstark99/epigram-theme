@@ -20,6 +20,22 @@
 		{{/primary_author}}
 	{{/is}}	
 
+	<div class="item featured-top">
+		<div>
+		<!-- <img src="assets/images/alert.png" style="float:left;height:1.6em; margin-right:5px; display:block"/> -->
+		<h3 class="title bordered">CORONAVIRUS: LATEST UPDATES AND GUIDELINES</h3>
+		</div>
+		<div class="box-covid">
+			<a href="/coronavirus/">
+			<img class="covid-info" src="/assets/images/coronavirus.jpg"/>
+			<h1 class="title-covid">STAY SAFE</h1>
+			<h2 class="title-covid">ON CAMPUS</h1>
+			<h3 class="title-covid">Click here to view the latest updates and guidelines for Coronavirus at Bristol University.</h2>
+			<img src="/assets/images/mask.png" style="width: 60%; display:block; pointer-events: none; margin:auto;"/>
+			<h4 class="title-covid" style="padding:20px 10px; text-align:center">WEAR A MASK</h4>
+			</a>
+		</div>
+	</div>
 	<!-- start: .item -->
 	<div class="item featured-top">
 		<h3 class="title bordered">MOST READ</h3>
@@ -28,21 +44,23 @@
 				{{#foreach featured-top}}
 					<article class="{{post_class}}">
 						<time class="uppercase" datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-clock-o"></i> {{date}}</time>
-						<h4 class="title"><a href="{{url}}">{{title}}</a></h4>
+						<div class="clear"></div>
+						<h4 class="title-side"><a href="{{url}}">{{title}}</a></h4>
 					</article>	
 				{{/foreach}}
 			{{/get}}
 		</div>
 	</div>
+	
 	<!-- end: .item -->
 	
 	
 	
 	<!-- start: .item -->
-	<div class="item">
+	{{!-- <div class="item">
 		<h3 class="title bordered">ADVERTISING</h3>
-		<a href="https://www.v-cars.com/" class="ads" target="_blank"><img src="{{asset "images/ad-160x600.jpg"}}" class="img-ad"></a>
-	</div>
+		<a href="https://www.v-cars.com/" class="sup" target="_blank"><img src="{{asset "images/160x600-coffee.jpg"}}" class="img-sup"></a>
+	</div> --}}
 	<!-- end: .item -->
 	
 </aside>

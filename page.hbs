@@ -9,10 +9,20 @@
 	{{#post}}
 	
 		<!-- start: .center -->
-		<div class="center grid-container {{#has tag="no sidebar"}}no-sidebar{{/has}} {{#has tag="one sidebar"}}one-sidebar{{/has}}">
-		
+		<div class="center grid-container {{#has tag="no sidebar"}}no-sidebar{{/has}} {{#has tag="one sidebar"}}one-sidebar{{/has}} {{#has tag="two sidebar"}}two-sidebar{{/has}}">
+
+			{{#has tag="two sidebar"}}
+			<div class="section hide-on-tablet">
+
+				{{> sidebar-featured}}
+			
+			</div>
+			{{else}}
+			{{/has}}
+
 			<!-- start: .left-content -->
-			<div class="left-content section grid-parent grid-50">
+			<div class="left-content section grid-parent grid-50" style="display: block;">
+
 				<article class="{{post_class}}">
 				
 					<header>
@@ -30,10 +40,14 @@
 			<!-- end: .content -->
 			
 			<div class="section hide-on-tablet">
-				
-				{{> sidebar-featured}}
+
+				{{#has tag="two sidebar"}}
 				{{> sidebar-default}}
-			
+				{{else}}
+				{{> sidebar-featured}}
+				{{>sidebar-default}}
+				{{/has}}
+				
 			</div>
 		
 		</div>

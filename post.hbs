@@ -10,7 +10,7 @@
 		{{#if feature_image}}
 			{{^has tag="no cover"}}
 				<div class="wow fadeIn">
-					<div class="main-image cover" style="background: url({{feature_image}});">
+					<div class="main-image cover" style="background: url({{feature_image}});" id="image_1">
 						<div class="overlay"></div>
 						<div class="center grid-container">
 							<div class="boxed cover" style="background: url({{feature_image}});"></div>
@@ -78,6 +78,24 @@
 							<a class="googleplus" href="https://plus.google.com/share?url={{url absolute="true"}}"
 					   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><i class="fa fa-google-plus"></i> GOOGLE</a>
 						</div>
+
+						<button onclick="hide_show()" id="button_sm" style="border-radius: 10px; background: #c2262f; font-family: 'Roboto Condensed'; font-weight: bold; font-size:20px; padding:10px; color: #fff; width:100%; height:auto;">SOMETHING WRONG WITH THIS ARTICLE?</button>
+
+						<div id="something_wrong" style="display: none; width=100%" >
+							<form action="https://formspree.io/f/xyybplok" method="POST" name="error_form">
+								<input type="hidden" name="url" value="{{url absolute=true}}">
+								<input type="hidden" name="title" value="{{title}}">
+								<input type="hidden" name="tags" value="{{tags autolink="false" separator=" &bull; "}}">
+								<div style="padding: 10px 0 0 10px;">
+									<h2 class="title">Help us improve</h2>
+									<label for="whats_wrong" style="font-size: 16px; margin-bottom:5px; display:block;">Please provide us with details of the errors found on this page:</label>
+								</div>
+								<div style="padding: 10px; margin-bottom:10px; border-radius:10px; background:#fff;">
+								<textarea name="whats_wrong" style="font-size: 16px; width: 100%; height:100px; resize:none; background:#fff;" required="true" placeholder="Type your problem"></textarea>
+								</div>
+								<input type="submit" style="background: #c2262f; font-family: 'Roboto Condensed'; font-weight: bold; font-size:20px; color: #fff; width:100px; display: inline-block; margin-left:auto; margin-right:auto;" value="SUBMIT">
+							</form>
+						</div>
 						
 					</article>
 					
@@ -115,7 +133,7 @@
 						{{#prev_post}}
 							<article class="previous grid-50 tablet-grid-50">
 								{{#if feature_image}}
-									<a href="{{url}}" class="thumb cover opacity-effect" style="background: url({{feature_image}});"><span><i class="fa fa-chevron-left"></i> PREVIOUS</span></a>
+									<a href="{{url}}" class="thumb cover opacity-effect" style="background: url({{feature_image}}); -webkit-border-radius: 10px;"><span><i class="fa fa-chevron-left"></i> PREVIOUS</span></a>
 								{{/if}}
 								<div class="meta">
 									{{#if tags}}
@@ -132,7 +150,7 @@
 						{{#next_post}}
 							<article class="next grid-50 tablet-grid-50">
 								{{#if feature_image}}
-									<a href="{{url}}" class="thumb cover opacity-effect" style="background: url({{feature_image}});"><span>NEXT <i class="fa fa-chevron-right"></i></span></a>
+									<a href="{{url}}" class="thumb cover opacity-effect" style="background: url({{feature_image}}); -webkit-border-radius: 10px;"><span>NEXT <i class="fa fa-chevron-right"></i></span></a>
 								{{/if}}
 								<div class="meta">
 									{{#if tags}}

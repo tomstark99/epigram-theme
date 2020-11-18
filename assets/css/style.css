@@ -19,6 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 /* @group Reset */
 
+
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, button{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main{ display: block; }
@@ -30,8 +31,8 @@ blockquote:before, blockquote:after,
 q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 
-html, textarea{ overflow: auto; }
-html, body{ width: 100%; height: 100%; overflow-x: hidden;}
+html, textarea{ overflow: auto; overflow-x: hidden;}
+html, body{ width: 100%; height: 100%;}
 a{ text-decoration: none; outline: 0; }
 input, textarea, button{ margin: 0; padding: 0; border: 0; outline: 0; }
 a, input[type=button], input[type=submit], button, label{ cursor: pointer; }
@@ -74,16 +75,24 @@ h4{ font-size: 15px; }
 h5{ font-size: 13px; }
 h6{ font-size: 11px; }
 .title{ font-family: 'Roboto Condensed'; font-weight: bold; line-height: 1.2; }
+.title-side{ font-family: 'Roboto Condensed'; font-weight: bold; line-height: 1.2; }
+.title-covid{ font-family: 'Roboto Condensed'; font-weight: bold; line-height: 1; color: #c2262f; padding:0 10px;}
 .title.bordered{
 	border-left: 5px solid  #FCD665;
 	padding-left: 10px;
 }
 h1.title{ font-size: 28px; }
 h2.title{ font-size: 24px; }
-h3.title{ font-size: 16px; line-height: 1.4; }
-h4.title{ font-size: 16px; line-height: 1.4; display: inline-block;}
+h3.title{ font-size: 20px; line-height: 1.2; }
+h4.title{ font-size: 20px; line-height: 1.2; display: inline-block;}
+h4.title-side{ font-size: 18px; line-height: 1.2; display: inline-block;}
 h5.title{ font-size: 14px; }
 h6.title{ font-size: 12px; }
+
+h1.title-covid{font-size: 55px;}
+h2.title-covid{font-size: 40px;}
+h3.title-covid{font-size: 18px; padding-bottom: 20px;}
+h4.title-covid{font-size: 35px; padding: 20px 10px;}
 .wow{
 	-webkit-opacity: 0;
 	opacity: 0;
@@ -128,7 +137,8 @@ i.icon, i.fa{ font-style: normal !important; }
 .mobile{ display: none; }
 .cover{
 	background-repeat: no-repeat !important;
-	background-position: center center !important;
+	background-position-x: center !important;
+	background-position-y: 50%;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	-o-background-size: cover !important;
@@ -156,7 +166,7 @@ body.cover #single div.main-image .boxed.cover{
 	width: 100%;
 	height: 100%;
 }
-.section{ margin-top: 40px; }
+.section{ margin-top: 20px; }
 .fullwidth{ display: block; width: 100%; height: auto; }
 .left-content{ }
 
@@ -164,6 +174,7 @@ body.cover #single div.main-image .boxed.cover{
 .one-sidebar aside#featured{ display: none; }
 .one-sidebar section.author div.avatar{ width: 20%; }
 .one-sidebar section.author div.right{ width: 80%; }
+.two-sidebar aside#featured{ padding-left: 0; padding-right: 30px;}
 .no-sidebar .left-content{ width: auto; }
 .no-sidebar aside{ display: none; }
 .no-sidebar section.author div.avatar{ width: 15%; }
@@ -278,7 +289,15 @@ body.cover #single div.main-image .boxed.cover{
 /*390 - 240 pixels wide seems to work
 /* Add some shadows to create a card effect */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.card-img {
+	width: 100%;
+	border-top-left-radius: 10px; 
+	border-top-right-radius:10px;
 }
 
 /*A second sized container (container2) is used 
@@ -331,21 +350,22 @@ where there is no paragraph added*/
 
 div.tags{ display: inline-block; }
 div.tags a, div.tags span{
-	font: bold 10px/1 'Roboto Condensed';
+	font: bold 11px/1 'Roboto Condensed';
 	color: #000;
 	background: #FCD665;
 	display: inline-block;
-	padding: 4px 6px;
+	padding: 4px 8px;
 	margin-right: 4px;
 	margin-bottom: 4px;
 	text-transform: uppercase;
-	vertical-align: top;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+	vertical-align: centre;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 } 
 a[href="/tag/no-sidebar/"], span.no-sidebar,
 a[href="/tag/one-sidebar/"], span.one-sidebar,
 a[href="/tag/weeklytop/"], span.weeklytop,
+a[href="/tag/hide-recent/"], span.hide-recent,
 a[href="/tag/carousel/"], span.carousel,
 a[href="/tag/featured-top/"], span.featured-top,
 a[href="/tag/featured-bottom/"], span.featured-bottom,
@@ -373,6 +393,9 @@ div.meta a.comments i.fa{ margin-right: 3px; }
 .ads{ margin: 40px auto 0; }
 .ads img.img-ad{ display: block; margin: 0 auto; }
 
+.sup{ margin: 40px auto 0; }
+.sup img.img-sup{ display: block; margin: 0 auto; }
+
 /* Buttons */
 
 .button{
@@ -382,8 +405,8 @@ div.meta a.comments i.fa{ margin-right: 3px; }
 	font-weight: bold;
 	padding: 6px 12px;
 	text-transform: uppercase;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 .button:hover{
 	color: #000;
@@ -414,8 +437,8 @@ div.share a{
 	font-weight: bold;
 	line-height: 25px;
 	text-align: center;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 div.share a:hover{
 	-webkit-opacity: .9;
@@ -522,7 +545,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 
 /* @group Header */
 
-#header{ background: #fff; color: #fff; padding-top: 30px; }
+#header{ background: #fff; color: #fff; padding-top: 10px; }
 
 #header .top{ position: relative; z-index: 1; }
 #header div.menu-mobile{ display: none; }
@@ -574,7 +597,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 #header h1.logo{ max-width: 600px; text-align: center; margin: 0 auto; }
 #header h1.logo a{ font-size: 28px; line-height: 1.2; color: #fff; }
 #header h1.logo a:hover{ }
-#header h1.logo a img{ max-width: 100%; height: auto; }
+#header h1.logo a img{ max-width: 100%; height: 150px; object-fit: contain;}
 #header form{
 	position: absolute;
 	right: 0px;
@@ -582,17 +605,18 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 	color: #fff;
 	margin-top: -18px;
 }
-#header form input.search-field{ margin: 0; float: right; width: 100px; padding: 5px 30px 5px 20px; }
+#header form input.search-field{ margin-right: 5px; float: right; width: 100px; padding: 5px 30px 5px 20px; border-radius: 7px; }
 #header form input.search-field:focus{ width: 220px; }
 #header form button{ position: absolute; right: 10px; top: 7px; font-size: 14px; background: none; color: rgba(142, 142, 142, 0.42); }
 
 #header div.menu-wrapper{ background: #FCD665; }
-#header nav{ margin-top: 30px; padding-top: 15px; text-align: center; position: relative; z-index: 100; }
+#header nav{ margin-top: 10px; padding-top: 15px; text-align: center; position: relative; z-index: 100; }
 
 #header nav div.social{ display: none; color: #000; }
 #header nav div.social ul li a{ color: #000; }
 
-#header nav form input.search-field{ background: #fff; background: rgba(255,255,255,.3); color: #000; width: 100px !important; }
+#header nav form input.search-field{ background: #fff; background: rgba(255,255,255,.3); color: #fff; width: 100px !important; }
+#header nav form input.search-field::placeholder{color: white; opacity: 0.7; font-weight: bold;}
 #header nav form button{ color: #000; }
 
 #header nav ul.menu{ font-size: 0px; }
@@ -726,16 +750,16 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 
 /* @group Global Articles List */
 
-div.articles h3.title{ margin-bottom: 20px; }
-div.articles article.first{ border-bottom: 1px solid #ccc; padding-bottom: 30px; }
+div.articles h3.title{ margin-bottom: 10px; }
+div.articles article.first{ border-bottom: 1px solid #ccc; padding-bottom: 15px; }
 div.articles article a.thumb img{ display: block; }
 div.articles article div.meta{ margin: 15px 0 10px; }
-div.articles article h4.title{ font-size: 24px; margin-bottom: 13px; line-height: 1.2; }
-div.articles article div.post-excerpt{ margin-bottom: 13px; }
+div.articles article h4.title{ font-size: 22px; margin-top: 5px; margin-bottom: 10px; line-height: 1.2; }
+div.articles article div.post-excerpt{ margin-bottom: 10px; }
 div.articles article iframe{ max-height: 200px; width: 100%; }
 div.articles article a.share-button{ margin-left: 5px; }
 
-div.articles article.default{ border-bottom: 1px solid #ccc; padding: 30px 0; }
+div.articles article.default{ border-bottom: 1px solid #ccc; padding: 15px 0; }
 div.articles article.default .left{ padding-left: 0; }
 div.articles article.default .right{ padding-right: 0; }
 div.articles article.default h4.title{}
@@ -768,9 +792,9 @@ div.articles article.default div.meta{ margin-top: 0; }
 
 /* Carousel */
 
-#home section.carousel h3{ margin-bottom: 20px; }
-#home section.carousel .slick-item{ display: none; margin-right: 5px; outline: 0; }
-#home section.carousel article{ height: 300px; position: relative; overflow: hidden; }
+#home section.carousel h3{ margin-bottom: 10px; }
+#home section.carousel .slick-item{ display: none; margin-right: 2px; margin-left: 2px; outline: 0; }
+#home section.carousel article{ height: 265px; position: relative; overflow: hidden; }
 #home section.carousel article a{ display: block; height: 100%; position: relative; z-index: 2; }
 #home section.carousel article a span.cover{
 	display: block;
@@ -787,7 +811,7 @@ div.articles article.default div.meta{ margin-top: 0; }
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 40%;
+	height: 60%;
 	z-index: 2;
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.68) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.01)), color-stop(100%,rgba(0,0,0,0.68))); /* Chrome,Safari4+ */
@@ -820,7 +844,7 @@ div.articles article.default div.meta{ margin-top: 0; }
 	transition: all 300ms ease;
 }
 #home section.carousel article a div.meta time{ position: absolute; right: 20px; bottom: 0; text-align: right; }
-#home section.carousel article a div.meta .title{ margin-bottom: 15px; font-size: 20px; color: #fff; line-height: 1.2; text-shadow: 0px 1px 3px rgba(0,0,0,.75); }
+#home section.carousel article a div.meta .title{ margin-bottom: 15px; font-size: 18px; color: #fff; line-height: 1.2; text-shadow: 0px 1px 3px rgba(0,0,0,.75); }
 #home section.carousel article a div.meta div.tags{ float: left; }
 #home section.carousel article a div.meta time{ float: right; color: #fff;  }
 
@@ -830,42 +854,44 @@ div.articles article.default div.meta{ margin-top: 0; }
 
 h3#breaking-news-title { letter-spacing: 1px; }
 
-section.breaking-news{ line-height: 1.2; margin-top: 40px; }
+section.breaking-news{ line-height: 1.2; margin-top: 20px; }
 section.breaking-news div.user, section.breaking-news .timePosted, section.breaking-news .interact{ display: none; }
 section.breaking-news h3{
 	color: #fff;
-	background: #000;
+	/* background: #000; */
 	text-align: center;
-	padding: 10px 15px;
-	font-size: 13px;
-	height: 15px;
-	-webkit-border-top-left-radius: 3px;
-	-webkit-border-bottom-left-radius: 3px;
-	-moz-border-radius-topleft: 3px;
-	-moz-border-radius-bottomleft: 3px;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
+	vertical-align: center;
+	font-size: 18px;
+	height: 70px;
+	line-height: 70px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 section.breaking-news div.slick{
-	height: 35px;
-	background: #FCD665;
+	height: 70px;
+	/* background: #FCD665; */
 	font-size: 13px;
 	margin: 0;
 	color: #000;
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	-webkit-border-top-right-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
-	-moz-border-radius-topright: 3px;
-	-moz-border-radius-bottomright: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 section.breaking-news div.slick div.item{ position: relative; z-index: 1; margin-right: 80px; }
-section.breaking-news div.slick h6{ color: white; font-size: 13px; padding: 10px 15px; }
+section.breaking-news div.slick h6{ color: white; font-size: 19px; padding-top: 12px; padding-bottom: 5px; font-weight: bold;}
+section.breaking-news div.slick div.image-shadow{ background: linear-gradient(to left top,  rgba(255,255,255,0.45) 0%,rgba(0,0,0,0.88) 90%); padding-left: 20px; height:70px;}
 section.breaking-news div.slick a{ font-weight: normal; }
-section.breaking-news div.slick a:hover{ color: #666; 	}
+section.breaking-news div.slick a:hover{ color: #666; }
 section.breaking-news div.slick .slick-prev:before,
 section.breaking-news div.slick .slick-next:before{
 	font-size: 10px;
@@ -897,9 +923,9 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 	color: #000;
 	line-height: 30px;
 	padding: 0 15px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 .pagination a i.fa{ font-size: 12px; vertical-align: baseline; }
 .pagination a.prev i.fa{ margin-right: 3px; }
@@ -986,6 +1012,7 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 /* @group Single Post */
 
 #single div.main-image.cover{ height: 350px; position: relative; z-index: 1; }
+#single div.main-image.cover::before{ filter: blur(10px);}
 #single .boxed{ display: none !important; }
 #single div.main-image.cover div.overlay{
 	display: block;
@@ -993,7 +1020,7 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 40%;
+	height: 50%;
 	z-index: 2;
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.68) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.01)), color-stop(100%,rgba(0,0,0,0.68))); /* Chrome,Safari4+ */
@@ -1011,7 +1038,7 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 #single div.main-image.cover .center .info{ position: relative; z-index: 3; height: 100%; }
 #single div.main-image.cover .info div.meta{ color: #fff; position: absolute; left: 0; bottom: 20px;  }
 #single div.main-image.cover .info div.meta .title{ color: #fff; text-shadow: 0px 1px 3px rgba(0,0,0,.75); margin-bottom: 15px; }
-#single div.main-image.cover .info div.meta time{ color: #fff; margin: 0 20px; vertical-align: top; margin-bottom: 0; }
+#single div.main-image.cover .info div.meta time{ color: #fff; vertical-align: middle; margin-bottom: 0; } /**margin: 0 20px; **/
 #single div.meta a.comments{ display: inline-block; vertical-align: top; }
 #single div.main-image.cover .info div.meta a.comments{ color: #fff; }
 #single .left-content h3.title{ margin-bottom: 20px; }
@@ -1036,8 +1063,8 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 	color: #fff;
 	font: 10px 'Roboto Condensed';
 	font-weight: bold;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 	-webkit-opacity: 0;
 	opacity: 0;
 	-webkit-transition: all 300ms ease;
@@ -1099,6 +1126,8 @@ section.author div.right div.social a.website i.fa{ vertical-align: middle; }
 	text-align: center;
 	padding: 110px 0;
 	margin-bottom: 30px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 #page-404 div.not-found .title{ font-size: 32px; color: #bbb; }
 #page-404 div.not-found i.fa{ font-size: 60px; margin-top: 30px; }
@@ -1109,15 +1138,24 @@ section.author div.right div.social a.website i.fa{ vertical-align: middle; }
 
 /* @group Sidebar */
 
-aside#featured, aside#sidebar{ padding-left: 30px; padding-right: 0; overflow: hidden; }
+aside#sidebar, aside#featured{ padding-left: 30px; padding-right: 0; overflow: hidden; }
 
 /* Featured Sidebar */
 
-aside#featured div.item{ margin-bottom: 40px; }
-aside#featured h3.title{ margin-bottom: 20px; }
+aside#featured div.item{ margin-bottom: 20px; }
+aside#featured h3.title{ margin-bottom: 10px; }
 aside#featured div.box{
 	background: #fff;
 	padding: 0 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+aside#featured div.box-covid{
+	background: #efd0d1;
+	/* padding: 10px 10px; */
+	border-radius: 10px;
+	overflow: hidden;
+	-webkit-border-radius: 10px;
 }
 aside#featured div.box article{
 	padding: 20px 0;
@@ -1127,6 +1165,17 @@ aside#featured div.box article{
 aside#featured div.box article:first-child{ border-top: 0; }
 aside#featured div.box article time{ font-size: 10px; }
 aside#featured div.box article h4{ margin-top: 5px; }
+
+.covid-info{
+	width: 100%; 
+	display:block; 
+	mask-image: radial-gradient(ellipse 100% 60% at 100% 30%, black 25%, transparent 100%);
+	-webkit-mask-image: radial-gradient(ellipse 100% 60% at 100% 30%, black 25%, transparent 100%);
+	-moz-mask-image: radial-gradient(ellipse 100% 60% at 100% 30%, black 25%, transparent 100%);
+	-ms-mask-image: radial-gradient(ellipse 100% 60% at 100% 30%, black 25%, transparent 100%);
+	-o-mask-image: radial-gradient(ellipse 100% 60% at 100% 30%, black 25%, transparent 100%);
+	pointer-events: none;
+}
 
 div.author-info{ margin-top: 36px; }
 div.author-info p{ margin-top: 15px; }
@@ -1179,7 +1228,7 @@ div.text .kg-gallery-image:not(:first-of-type) { margin: 0 0 0 0.75em; }
 
 /* @group Footer */
 
-#footer{ background: #fff; color: black; margin-top: 70px; border-top: 3px solid #FCD665; padding: 15px 0; position: relative; height: 150px; padding-left: 40px;}
+#footer{ background: #fff; color: black; margin-top: 40px; border-top: 3px solid #FCD665; padding: 15px 0; position: relative; height: 150px; padding-left: 40px;}
 #footer .grid-container{ position: relative; }
 #footer div.copyright{ float: left; top: 47%; width: 20%;}
 #footer div.copyright p{ font-size: 10px; color: #000;}
@@ -1256,7 +1305,7 @@ div.text .kg-gallery-image:not(:first-of-type) { margin: 0 0 0 0.75em; }
 	border: 0; 
 	font-size: 100%; 
 	font: inherit; 
-	vertical-align: baseline; 
+	vertical-align: bottom; 
 	-webkit-text-size-adjust: 100%; 
 	-ms-text-size-adjust: 100%; 
 	-webkit-font-smoothing: antialiased; 
@@ -1295,7 +1344,7 @@ div#second-footer-col{
 	min-width: 400px;
 	margin: 5px 0 0 0;
 	top: 5px;
-	transform: translateY(-30px); 
+	transform: translateY(-20px); 
 }
 div#second-footer-col ul li{
 	list-style-type: none;
@@ -1308,14 +1357,14 @@ div#second-footer-col ul li{
 } */
 @media only screen and (max-width: 760px){
 	div#third-footer-col{
-		transform: translateY(-80px);
+		/* transform: translateY(-80px); */
 		
 	}
 }
 #third-second-footer-col
 {
 	top: 0;
-	transform: translateY(-20px);
+	/* transform: translateY(-20px); */
 
 }
 .footer-nav {

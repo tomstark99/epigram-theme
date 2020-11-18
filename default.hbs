@@ -37,6 +37,8 @@
 <![endif]-->
 {{ghost_head}}
 <script type="text/javascript" src="{{@site.url}}/config.js"></script>
+<script type="text/javascript" src="{{asset "js/time.since.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/hb.optional.js"}}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120404499-1"></script>
 <script>
   
@@ -105,10 +107,10 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 </head>
 <body class="enable_animations {{#if @site.cover_image}}cover{{/if}} {{body_class}}" {{#if @site.cover_image}}style="background: url({{@site.cover_image}}) no-repeat center center fixed;"{{/if}}>
 	
+		{{> header}}
 	<!-- start: #wrapper -->
 	<div id="wrapper">
 	
-		{{> header}}
 		
 		<div id="search-results" class="center grid-container grid-parent"></div>
 		
@@ -143,6 +145,9 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 	<script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script>
 	<!--[if !IE]><!--> 
 	<script type="text/javascript" src="{{asset "js/wow.min.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/hide_show.js"}}"></script>
+	
 	<script type="text/javascript">
 		if($('body').hasClass('enable_animations')){
 			wow = new WOW({ offset: 150 });
@@ -154,7 +159,7 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 	<!--<![endif]-->
 	<script type="text/javascript">
 		/* * * CONFIGURATION VARIABLES * * */
-		
+
 		
 		/* * * DON'T EDIT BELOW THIS LINE * * */
 		(function () {

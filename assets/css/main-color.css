@@ -42,11 +42,10 @@ div.meta a.comments:hover,
 
 #footer{ background: #fff; }
 section.breaking-news h3,
-.button.dark,
 #single section.related a.thumb span,
 section.widget_tag_cloud a,
-.spinner > div{ background: #000; }
-
+.spinner > div{ background: #c2262f; }
+.button.dark > div{ background: #000; }
 /* @end */
 
 /* @group Third Color default: #666 (links rollover, tags rollover, titles, etc)*/

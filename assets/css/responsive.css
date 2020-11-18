@@ -34,7 +34,7 @@
 	/* @group Header */
 	
 	#header .top{ margin: 0 5%; }
-	#header{ padding: 50px 0; position: relative; }
+	#header{ /*padding: 50px 0;*/ position: relative; }
 	#header h1.logo{ max-width: 60%; }
 	#header div.menu-mobile{
 		display: block;
@@ -126,7 +126,7 @@
 	/* @group Header */
 	
 	#header .top{ margin: 0 30px; }
-	#header{ padding: 30px 0; }
+	#header{ /*padding: 30px 0; */}
 	
 	/* @end */
 	
@@ -161,8 +161,10 @@
 	/* @group Single Post */
 	
 	#single .no-cover div.main-image{ height: auto; }
-	#single div.main-image{ height: 225px; margin-top: 40px; }
-	#single div.main-image .info div.meta .title{ font-size: 20px; }
+	#single div.main-image{ height: 225px; /*margin-top: 40px;*/ }
+	#single div.main-image .info div.meta .title{ font-size: 24px; }
+	#single div.text { font-size: 18px;}
+	
 	
 	#single section.related article{ padding: 0; }
 	#single section.related .next{ margin-top: 20px; }
@@ -210,3 +212,6 @@
 	
 }
 
+@media screen and (max-width: 450px){
+	#single div.main-image.cover div.overlay { height: 60%; }
+}

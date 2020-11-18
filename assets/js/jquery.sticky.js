@@ -23,11 +23,20 @@
     $document = $(document),
     sticked = [],
     windowHeight = $window.height(),
+    scrollOld = 0;
     scroller = function() {
       var scrollTop = $window.scrollTop(),
-        documentHeight = $document.height(),
+        plus = 0;
+      if (scrollTop > scrollOld) {
+        scrollOld = scrollTop;
+        plus = -50;
+      } else {
+        scrollOld = scrollTop;
+        plus = 0;
+      }
+      var documentHeight = $document.height(),
         dwh = documentHeight - windowHeight,
-        extra = (scrollTop > dwh) ? dwh - scrollTop : 0;
+        extra = (scrollTop > dwh) ? dwh - scrollTop : plus;
 
       for (var i = 0; i < sticked.length; i++) {
         var s = sticked[i],
@@ -91,6 +100,7 @@
 
           var stickyWrapper = stickyElement.parent();
           stickyWrapper.css('height', stickyElement.outerHeight());
+          stickyWrapper.css('margin-top', 10);
           sticked.push({
             topSpacing: o.topSpacing,
             bottomSpacing: o.bottomSpacing,
