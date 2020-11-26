@@ -196,7 +196,7 @@
 		
 	/* @group Forms */
 	
-	input[type=text], input[type=password], input[type=email], input[type=tel], input[type=url], textarea{ width: 95%; }
+	/* input[type=text], input[type=password], input[type=email], input[type=tel], input[type=url], textarea{ width: 95%; } */
 	
 	/* @end */
 	

@@ -765,6 +765,8 @@ div.articles article.default .right{ padding-right: 0; }
 div.articles article.default h4.title{}
 div.articles article.default div.meta{ margin-top: 0; }
 
+.form:required{ box-shadow: none; }
+
 /* @end */
 
 /* @group Author and Tags page */
