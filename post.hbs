@@ -24,8 +24,8 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
-						
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<!-- end: .meta -->
 							</div>
@@ -53,7 +53,8 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<!-- end: .meta -->
 								<div class="clear"></div>
@@ -148,7 +149,8 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<h4 class="title"><a href="{{url}}">{{title}}</a></h4>
 							</article>
@@ -165,7 +167,8 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<h4 class="title"><a href="{{url}}">{{title}}</a></h4>
 							</article>

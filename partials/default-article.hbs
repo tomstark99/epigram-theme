@@ -10,7 +10,8 @@
 						{{tags separator=""}}
 					</div>
 				{{/if}}
-				<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i>{{date}}</time>
+				<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+				<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 			</div>
 		</div>
 	{{/if}}
