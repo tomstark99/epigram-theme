@@ -5,7 +5,7 @@ function hide_show() {
     if(x.style.display === "none") {
         x.style.display = "block";
         if(document.body.classList.contains("tag-the-croft")){
-            b.style.background = "#EFD0D1"
+            b.style.background = "#f9e6ff"
             b.style.color = "#CF71EE"
         }
     } else {
