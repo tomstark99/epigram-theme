@@ -20,8 +20,8 @@
 											{{#foreach tags}}<span class="{{slug}}">{{name}}</span>{{/foreach}}
 										</div>
 									{{/if}}
-                                    <script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}1")</script>
-									<time id="{{uuid}}1" style="margin-bottom: 0px; color:#fff;" datetime="{{date published_at format="YYYY-MM-DD HH:mm"}}"><i class="fa fa-clock-o"></i>{{date}}</time>
+                                    <script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}{{@index}}")</script>
+									<time id="{{uuid}}{{@index}}" style="margin-bottom: 0px; color:#fff;" datetime="{{date published_at format="YYYY-MM-DD HH:mm"}}"><i class="fa fa-clock-o"></i>{{date}}</time>
 									<!-- <script>
 										var date = new Date(document.getElementById('time_1').textContent);
 										alert(document.getElementById('time_1').textContent);
