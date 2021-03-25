@@ -24,8 +24,8 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
-						
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<!-- end: .meta -->
 							</div>
@@ -53,7 +53,8 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<!-- end: .meta -->
 								<div class="clear"></div>
@@ -148,7 +149,8 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<h4 class="title"><a href="{{url}}">{{title}}</a></h4>
 							</article>
@@ -165,14 +167,16 @@
 											{{tags separator=""}}
 										</div>
 									{{/if}}
-									<time datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-clock-o"></i> {{date}}</time>
+									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
 								</div>
 								<h4 class="title"><a href="{{url}}">{{title}}</a></h4>
 							</article>
 						{{/next_post}}
 					</section>
 				    <section class="post-full-comments">
-				    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script>
+				    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+                    <!-- <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script> -->
 				    </section>
 	
 						
