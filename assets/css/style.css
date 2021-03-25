@@ -1428,3 +1428,15 @@ div#mc_embed_signup_scroll label{
 		display: none;
 	}
 }
+
+#button_sm {
+    border-radius: 10px; 
+    background: #c2262f; 
+    font-family: 'Roboto Condensed'; 
+    font-weight: bold; 
+    font-size:20px; 
+    padding:10px; 
+    color: #fff; 
+    width:100%; 
+    height:auto;
+}
