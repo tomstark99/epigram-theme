@@ -15,13 +15,8 @@ Handlebars.registerHelper('announce', function(value) {
 
 Handlebars.registerHelper('isdefined', function (value) {
     return value !== undefined;
-  });
+});
 
 Handlebars.registerHelper("logx", function(something) {
     console.log(something);
-  });
-
-
-function loggg(val) {
-    console.log(val);
-}
+});

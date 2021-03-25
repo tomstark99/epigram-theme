@@ -37,9 +37,9 @@
 <![endif]-->
 {{ghost_head}}
 <script type="text/javascript" src="{{@site.url}}/config.js"></script>
-<script type="text/javascript" src="{{asset "js/handlebars-v4.7.7.js"}}"></script>
+<!-- <script type="text/javascript" src="{{asset "js/handlebars-v4.7.7.js"}}"></script> -->
 <script type="text/javascript" src="{{asset "js/time.since.js"}}"></script>
-<script type="text/javascript" src="{{asset "js/hb.optional.js"}}"></script>
+<!-- <script type="text/javascript" src="{{asset "js/hb.optional.js"}}"></script> -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120404499-1"></script>
 <script>
   
@@ -55,7 +55,6 @@
 
  {{#is "post"}}
    
-
   {{#post}}
    _name = "{{primary_author.name}}";
   
@@ -75,34 +74,16 @@
 
  {{/foreach}}
   
-  
-  
-  
-
-  
   {{/post}}
   
  {{else}}
   
-  
  _name = "General"
  _section="General"
-  
   
  {{/is}}
 
 gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
-
-  
-
-
-
-
-
-
-
-
-
 
 </script>
 </head>
@@ -130,7 +111,7 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 	</script>
 	<script type="text/javascript" src="{{asset "js/jquery-migrate-1.2.1.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/pace.min.js"}}"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCchcoGJFmW7Tg3di_xtx3HfK3Y7RGQoq0&sensor=false"></script>
+	<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCchcoGJFmW7Tg3di_xtx3HfK3Y7RGQoq0&sensor=false"></script> -->
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/jquery.sticky.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/google-code-prettify/prettify.js"}}"></script>
