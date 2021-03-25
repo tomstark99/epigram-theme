@@ -1,13 +1,18 @@
 function hide_show() {
     var x = document.getElementById("something_wrong");
     var b = document.getElementById("button_sm");
+    
     if(x.style.display === "none") {
         x.style.display = "block";
-        b.style.background = "#EFD0D1"
-        b.style.color = "#c2262f"
+        if(document.body.classList.contains("tag-the-croft")){
+            b.style.background = "#EFD0D1"
+            b.style.color = "#CF71EE"
+        }
     } else {
         x.style.display = "none";
-        b.style.background = "#c2262f"
-        b.style.color = "#fff"
+        if(document.body.classList.contains("tag-the-croft")){
+            b.style.background = "#CF71EE"
+            b.style.color = "#fff"
+        }
     }
 }
