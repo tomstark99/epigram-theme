@@ -1,13 +1,20 @@
 var onJOB = false;
 var in_drop = false;
 
-if(document.body.classList.contains("tag-the-croft")){
-    window.onload = setCroft();
+// if(document.body.classList.contains("tag-the-croft")){
+//     document.getElementById("style").href = "/assets/css/style-croft.css?v=336cc0b901";
+//     document.getElementById("colour").href = "/assets/css/croft-color.css?v=336cc0b901";
+//     onJOB = true;
+// } else {
+//     //document.getElementById("style").href = "/assets/css/style.css?v=336cc0b901";
+//     //document.getElementById("colour").href = "/assets/css/main-color.css?v=336cc0b901";
+//     onJOB = false;
+// }
+
+if(document.URL.split("/").slice(-2)[0] === "the%20croft"){
     onJOB = true;
-} else {
-    window.onload = setDefault();
-    onJOB = false;
 }
+
 if(!onJOB) {
     var croft = document.getElementById("croft_head");
     var croft_drop_id = document.getElementById("croft_drop");
