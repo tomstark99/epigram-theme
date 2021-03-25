@@ -381,7 +381,7 @@ div.tags a:hover{
 
 /* Global post date */
 
-article time, div.meta time{ display: inline-block; font-size: 10px; color: #888; font-family: 'Roboto Condensed'; font-weight: bold; text-transform: uppercase; vertical-align: middle; }
+article time, div.meta time{ display: inline-block; font-size: 11px; color: #888; font-family: 'Roboto Condensed'; font-weight: bold; text-transform: uppercase; vertical-align: middle; }
 article time .fa, div.meta time{ margin-right: 3px; }
 div.meta time{ margin-bottom: 5px; }
 div.meta a.comments{ font-size: 10px; color: #888; }
