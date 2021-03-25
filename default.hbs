@@ -41,6 +41,7 @@
 <script type="text/javascript" src="{{asset "js/time.since.js"}}"></script>
 <!-- <script type="text/javascript" src="{{asset "js/hb.optional.js"}}"></script> -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120404499-1"></script>
+<script src="https://apis.google.com/js/api.js"></script>
 <script>
   
   window.dataLayer = window.dataLayer || [];
@@ -129,7 +130,26 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 	<script type="text/javascript" src="{{asset "js/wow.min.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/hide_show.js"}}"></script>
-	
+	{{!-- <script type="text/javascript" src="{{asset "js/page.views.js"}}"></script> --}}
+    <script type="text/javascript">
+        function start() {
+            gapi.client.init({
+                'apiKey':'AIzaSyCvlcaOsLBvG4oMg1CBnA2IVWoJN0YDC_M',
+                'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
+                'clientId': '    320426734823-du3a7075fbmsbmjspp68u81pe00fpm5r.apps.googleusercontent.com',
+                'scope': 'https://www.googleapis.com/auth/analytics',
+            }).then(function() {
+                return gapi.client.request({
+                    'path': 'https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A176589224&start-date=2018-09-01&end-date=today&metrics=ga%3Apageviews&filters=ga%3ApagePath%3D%40fashion-and-feminism',
+                })
+            }).then(function(response) {
+                console.log(response.result);
+            }, function(reason) {
+                console.log('Error: ' + reason.result.error.message);
+            });
+        };
+        gapi.load('client', start);
+    </script>
 	<script type="text/javascript">
 		if($('body').hasClass('enable_animations')){
 			wow = new WOW({ offset: 150 });
