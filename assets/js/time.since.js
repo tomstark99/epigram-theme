@@ -34,10 +34,25 @@ function time_ago(time, uuid) {
         time__ = posted.toLocaleDateString("en", format);
     }
 
-    window.addEventListener('load', function(){
-        document.getElementById(uuid).innerHTML = time_ + '' + time__;
+    // checkElement(uuid).then((selector) => {
+    //     console.log(selector);
+    // });
+    var exists = setInterval(function () {
+        if(document.getElementById(uuid) !== null) {
+            console.log("exists");
+            clearInterval(exists);
+            document.getElementById(uuid).innerHTML = time_ + '' + time__;
+        }
+    }, 100);
+    // window.addEventListener('load', function(){
         // document.getElementById(uuid).removeAttribute('id');
-    })
+    // })
     return;
 }
 
+// const checkElement = async selector => {
+//     while (document.querySelector(selector) === null) {
+//         await new Promise( resolve => requestAnimationFrame(resolve))
+//     }
+//     return document.querySelector(selector);
+// }
