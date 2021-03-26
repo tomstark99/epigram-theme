@@ -83,7 +83,7 @@ function make_read_request() {
                 <article class="post">
                     <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
                     <div class="clear"></div>
-                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM d, YYYY")} <div style="margin-left:8px;display:inline;"><i class="fa fa-eye"></i> ${views[i]}</time>
+                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM d, YYYY")} <div style="margin-left:8px;display:none;"><i class="fa fa-eye"></i> ${views[i]}</time>
                 </article>	
                 `
             });
