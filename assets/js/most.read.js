@@ -70,22 +70,24 @@ function make_view_request() {
     const div = document.getElementById("featured-box")
     client.get(uri, function(response) {
         var arr = JSON.parse(response).rows;
+        var slugs = [];
+        var views = [];
         for (var i = 0; i < arr.length; i++) {
-            arr[i] = arr[i][0].split("/").slice(-2)[0];
+            slugs[i] = arr[i][0].split("/").slice(-2)[0];
+            views[i] = arr[i][1];
         }
-        console.log(String(arr));
-        var filter = 'slug:['+String(arr)+']';
-        console.log(filter);
+        var filter = 'slug:['+String(slugs)+']';
+        console.log(slugs,views);
         api.posts.browse({
             filter: filter
         }).then((posts) => {
-            posts.forEach((post) => {
-                console.log(post);
+            posts.forEach((post, i) => {
+                // console.log(post);
                 div.innerHTML += ` 
                 <article class="post">
-                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${post.published_at}</time>
-                    <div class="clear"></div>
                     <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
+                    <div class="clear"></div>
+                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM d, YYYY")} <div style="margin-left:8px;display:inline;"><i class="fa fa-eye"></i> ${views[i]}</time>
                 </article>	
                 `
             });

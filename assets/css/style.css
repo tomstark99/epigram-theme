@@ -1174,8 +1174,8 @@ aside#featured div.box article{
 	line-height: 1.4;
 }
 aside#featured div.box article:first-child{ border-top: 0; }
-aside#featured div.box article time{ font-size: 10px; }
-aside#featured div.box article h4{ margin-top: 5px; }
+aside#featured div.box article time{ font-size: 11px; }
+aside#featured div.box article h4{ margin-bottom: 5px; }
 
 .covid-info{
 	width: 100%; 

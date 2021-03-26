@@ -5,15 +5,15 @@ function time_ago(time, uuid) {
     var time_ = '<i class="fa fa-clock-o"></i><div style="display: inline; margin-left:3px;">';
     var time__ = '';
 
-    var posted = new Date(time);
-    var now = new Date();
+    var posted = moment(time);
+    var now = moment();
 
     var minute = 60.0;
     var hour = 60.0 * minute;
     var day = 24.0 * hour;
     var week = 7 * day;
 
-    var seconds = (now.getTime() - posted.getTime())/1000;
+    var seconds = (now.subtract(posted)).unix();
 
     var time_text = document.getElementById("post_time");
 
@@ -31,7 +31,8 @@ function time_ago(time, uuid) {
         time__ = Math.floor(seconds/day) + ' days ago';
     } else {
         var format = { year: 'numeric', month: 'short', day: 'numeric' };
-        time__ = posted.toLocaleDateString("en", format);
+        // time__ = posted.toLocaleDateString("en", format);
+        time__ = posted.format("MMM d, YYYY")
     }
 
     // checkElement(uuid).then((selector) => {
@@ -39,7 +40,7 @@ function time_ago(time, uuid) {
     // });
     var exists = setInterval(function () {
         if(document.getElementById(uuid) !== null) {
-            console.log("exists");
+            // console.log("exists");
             clearInterval(exists);
             document.getElementById(uuid).innerHTML = time_ + '' + time__;
         }
