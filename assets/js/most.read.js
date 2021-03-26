@@ -20,14 +20,19 @@ var HttpClient = function() {
         anHttpRequest.send( null );
     }
 }
+const api = new GhostContentAPI({
+    url: 'https://epigram.ghost.io',
+    key: 'e6939fe25f93a0dec8eb900c95',
+    version: "v3"
+})
 
 var client = new HttpClient();
 var access_token = '';
-if(document.getElementById("page_views") !== null) {
-    get_views();
+if(document.getElementById("most_read") !== null) {
+    get_most_read();
 }
 
-function get_views() {
+function get_most_read() {
     if(access_token === '') {
         console.log("get token");
         get_access_token();
@@ -61,12 +66,24 @@ function check_validity() {
 }
 
 function make_view_request() {
-    var path = document.URL.split("/").slice(-2)[0];
-    console.log(path);
-    var uri = "https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A176589224&start-date=2015-01-01&end-date=today&metrics=ga%3Apageviews&filters=ga%3ApagePath%3D%40" + path + "&access_token=" + access_token;
+    var uri = "https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A176589224&start-date=30daysAgo&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&sort=-ga%3Apageviews&filters=ga%3ApagePath!%3D%2F%3Bga%3ApagePath!%40tag%3Bga%3ApagePath!%40page%3Bga%3ApagePath!%40amp&max-results=7&access_token=" + access_token;
     client.get(uri, function(response) {
-        var text = '<i class="fa fa-eye"></i><div style="display: inline; margin-left:8px;">'
-        document.getElementById("page_views").innerHTML = text + JSON.parse(response).totalsForAllResults["ga:pageviews"] + ' reads';
+        var arr = JSON.parse(response).rows;
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = arr[i][0].split("/").slice(-2)[0];
+        }
+        console.log(String(arr));
+        var filter = 'slug:['+String(arr)+']';
+        console.log(filter);
+        api.posts.browse({
+            filter: filter
+        }).then((posts) => {
+            posts.forEach((post) => {
+                console.log(post.title);
+            });
+        })
+        // var text = '<i class="fa fa-eye"></i><div style="display: inline; margin-left:8px;">'
+        // document.getElementById("page_views").innerHTML = text + JSON.parse(response).totalsForAllResults["ga:pageviews"] + ' reads';
     });
 }
 
