@@ -2,7 +2,7 @@ function time_ago(time, uuid) {
 
     // console.log(time);
     // console.log(uuid);
-    var time_ = '<i class="fa fa-clock-o"></i><div style="display: inline; margin-left:3px;">';
+    var time_ = '<i class="fa fa-clock-o"></i><div style="display: inline; margin-left:4px;">';
     var time__ = '';
 
     var posted = moment(time);
@@ -14,8 +14,6 @@ function time_ago(time, uuid) {
     var week = 7 * day;
 
     var seconds = (now.subtract(posted)).unix();
-
-    var time_text = document.getElementById("post_time");
 
     if ((seconds - (minute * 2.0)) < 0) {
         time__ = 'Just Now';
@@ -34,13 +32,8 @@ function time_ago(time, uuid) {
         // time__ = posted.toLocaleDateString("en", format);
         time__ = posted.format("MMM d, YYYY")
     }
-
-    // checkElement(uuid).then((selector) => {
-    //     console.log(selector);
-    // });
     var exists = setInterval(function () {
         if(document.getElementById(uuid) !== null) {
-            // console.log("exists");
             clearInterval(exists);
             document.getElementById(uuid).innerHTML = time_ + '' + time__;
         }
@@ -50,10 +43,3 @@ function time_ago(time, uuid) {
     // })
     return;
 }
-
-// const checkElement = async selector => {
-//     while (document.querySelector(selector) === null) {
-//         await new Promise( resolve => requestAnimationFrame(resolve))
-//     }
-//     return document.querySelector(selector);
-// }
