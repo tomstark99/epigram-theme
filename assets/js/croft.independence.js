@@ -13,7 +13,7 @@ const croft_colour = "#7B52C2";
 //     onJOB = false;
 // }
 
-if(document.URL.split("/").slice(-2)[0] === "the%20croft"){
+if(document.body.classList.contains("tag-the-croft")){
     onJOB = true;
 }
 
