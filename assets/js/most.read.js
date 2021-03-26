@@ -67,6 +67,7 @@ function check_validity() {
 
 function make_view_request() {
     var uri = "https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A176589224&start-date=30daysAgo&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&sort=-ga%3Apageviews&filters=ga%3ApagePath!%3D%2F%3Bga%3ApagePath!%40tag%3Bga%3ApagePath!%40page%3Bga%3ApagePath!%40amp&max-results=7&access_token=" + access_token;
+    const div = document.getElementById("featured-box")
     client.get(uri, function(response) {
         var arr = JSON.parse(response).rows;
         for (var i = 0; i < arr.length; i++) {
@@ -79,7 +80,14 @@ function make_view_request() {
             filter: filter
         }).then((posts) => {
             posts.forEach((post) => {
-                console.log(post.title);
+                console.log(post);
+                div.innerHTML += ` 
+                <article class="post">
+                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${post.published_at}</time>
+                    <div class="clear"></div>
+                    <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
+                </article>	
+                `
             });
         })
         // var text = '<i class="fa fa-eye"></i><div style="display: inline; margin-left:8px;">'
