@@ -758,6 +758,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 
 /* @group Global Articles List */
 
+div.page_views{ font-size: 20px; }
 div.articles h3.title{ margin-bottom: 10px; }
 div.articles article.first{ border-bottom: 1px solid #ccc; padding-bottom: 15px; }
 div.articles article a.thumb img{ display: block; }
