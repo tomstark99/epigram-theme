@@ -83,7 +83,7 @@ h6{ font-size: 11px; }
 }
 h1.title{ font-size: 28px; }
 h2.title{ font-size: 24px; }
-h3.title{ font-size: 20px; line-height: 1.2; }
+h3.title{ font-size: 21px; line-height: 1.2; }
 h4.title{ font-size: 20px; line-height: 1.2; display: inline-block;}
 h4.title-side{ font-size: 18px; line-height: 1.2; display: inline-block;}
 h5.title{ font-size: 14px; }
@@ -758,6 +758,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 
 /* @group Global Articles List */
 
+div.page_views{ font-size: 14px; padding-bottom: 10px; visibility: hidden; }
 div.articles h3.title{ margin-bottom: 10px; }
 div.articles article.first{ border-bottom: 1px solid #ccc; padding-bottom: 15px; }
 div.articles article a.thumb img{ display: block; }
@@ -1051,7 +1052,7 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 #single div.main-image.cover .info div.meta time{ color: #fff; vertical-align: middle; margin-bottom: 0; } /**margin: 0 20px; **/
 #single div.meta a.comments{ display: inline-block; vertical-align: top; }
 #single div.main-image.cover .info div.meta a.comments{ color: #fff; }
-#single .left-content h3.title{ margin-bottom: 20px; }
+#single .left-content h3.title{ margin-bottom: 5px; }
 #single .left-content article.post{ border-bottom: 3px solid #ccc; padding-bottom: 20px; }
 #single .left-content article.post h2.title{ font-size: 28px; margin-bottom: 20px; margin-top: 10px; }
 #single .left-content article.post div.main-image{ margin-bottom: 20px; }
@@ -1173,8 +1174,8 @@ aside#featured div.box article{
 	line-height: 1.4;
 }
 aside#featured div.box article:first-child{ border-top: 0; }
-aside#featured div.box article time{ font-size: 10px; }
-aside#featured div.box article h4{ margin-top: 5px; }
+aside#featured div.box article time{ font-size: 11px; }
+aside#featured div.box article h4{ margin-bottom: 5px; }
 
 .covid-info{
 	width: 100%; 
