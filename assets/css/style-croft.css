@@ -1440,3 +1440,13 @@ div#mc_embed_signup_scroll label{
     width:100%; 
     height:auto;
 }
+
+#error_submit {
+    background: #7B52C2; 
+    font-family: 'Roboto Condensed'; 
+    font-weight: bold; font-size:20px; 
+    color: #fff; width:100px; 
+    display: inline-block; 
+    margin-left:auto; 
+    margin-right:auto;
+}

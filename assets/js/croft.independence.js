@@ -15,6 +15,9 @@ const croft_colour = "#7B52C2";
 
 if(document.body.classList.contains("tag-the-croft")){
     onJOB = true;
+    document.getElementById("logo").src = "/assets/images/croft_logo.png";
+} else {
+    document.getElementById("logo").src = "/assets/images/epigram_logo.png";
 }
 
 if(!onJOB) {
