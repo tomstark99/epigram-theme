@@ -64,7 +64,7 @@ function check_validity_() {
 }
 
 function make_read_request() {
-    var uri = "https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A176589224&start-date=30daysAgo&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&sort=-ga%3Apageviews&filters=ga%3ApagePath!%3D%2F%3Bga%3ApagePath!%40tag%3Bga%3ApagePath!%40page%3Bga%3ApagePath!%40amp&max-results=7&access_token=" + access_token;
+    var uri = "https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A176589224&start-date=21daysAgo&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&sort=-ga%3Apageviews&filters=ga%3ApagePath!%3D%2F%3Bga%3ApagePath!%40tag%3Bga%3ApagePath!%40page%3Bga%3ApagePath!%40amp&max-results=7&access_token=" + access_token;
     const div = document.getElementById("featured-box");
     client.get(uri, function(response) {
         var arr = JSON.parse(response).rows;
@@ -83,7 +83,7 @@ function make_read_request() {
                 <article class="post">
                     <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
                     <div class="clear"></div>
-                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")} <div style="margin-left:8px;display:none;"><i class="fa fa-eye"></i> ${views[i]}</time>
+                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")} <div style="margin-left:8px;display:none;"><i class="fa fa-eye"></i> ${views[i]/3} / week</time>
                 </article>	
                 `
             });
