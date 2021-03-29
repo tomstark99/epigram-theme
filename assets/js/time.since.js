@@ -2,7 +2,7 @@ function time_ago(time, uuid) {
 
     // console.log(time);
     // console.log(uuid);
-    var time_ = '<i class="fa fa-clock-o"></i><div style="display: inline; margin-left:4px;">';
+    var time_ = '<i class="fa fa-clock-o"></i><div style="display: inline;">';
     var time__ = '';
 
     var posted = moment(time);
@@ -30,7 +30,7 @@ function time_ago(time, uuid) {
     } else {
         var format = { year: 'numeric', month: 'short', day: 'numeric' };
         // time__ = posted.toLocaleDateString("en", format);
-        time__ = posted.format("MMM d, YYYY")
+        time__ = posted.format("MMM DD, YYYY")
     }
     var exists = setInterval(function () {
         if(document.getElementById(uuid) !== null) {
