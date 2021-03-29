@@ -390,7 +390,7 @@ article time, div.meta time{
     text-transform: uppercase; 
     /*vertical-align: middle;*/ 
 }
-article time .fa, div.meta time{ margin-right: 3px; }
+article time .fa, div.meta time{ margin-right: 4px; }
 div.meta time{ margin-bottom: 5px; }
 div.meta a.comments{ font-size: 10px; color: #888; }
 div.meta a.comments:hover{ color: #000; }
@@ -1049,7 +1049,7 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 #single div.main-image.cover .center .info{ position: relative; z-index: 3; height: 100%; }
 #single div.main-image.cover .info div.meta{ color: #fff; position: absolute; left: 0; bottom: 20px;  }
 #single div.main-image.cover .info div.meta .title{ color: #fff; text-shadow: 0px 1px 3px rgba(0,0,0,.75); margin-bottom: 15px; }
-#single div.main-image.cover .info div.meta time{ color: #fff; vertical-align: middle; margin-bottom: 0; } /**margin: 0 20px; **/
+#single div.main-image.cover .info div.meta time{ color: #fff; vertical-align: middle; margin-bottom: 0; margin-left: 4px; } /**margin: 0 20px; **/
 #single div.meta a.comments{ display: inline-block; vertical-align: top; }
 #single div.main-image.cover .info div.meta a.comments{ color: #fff; }
 #single .left-content h3.title{ margin-bottom: 5px; }
