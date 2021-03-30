@@ -26,6 +26,8 @@ const api = new GhostContentAPI({
     version: "v3"
 });
 
+const {readingTime} = GhostHelpers;
+
 var client = new HttpClient();
 var access_token = '';
 if(document.getElementById("most_read").offsetParent !== null) {
@@ -79,6 +81,7 @@ function make_read_request() {
             filter: filter
         }).then((posts) => {
             posts.forEach((post, i) => {
+                // console.log(readingTime(post, {minute: 'A 1 minute read.', minutes: 'A % minute read.'}));
                 div.innerHTML += ` 
                 <article class="post">
                     <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
