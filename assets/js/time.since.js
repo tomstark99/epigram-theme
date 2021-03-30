@@ -2,7 +2,7 @@ function time_ago(time, uuid) {
 
     // console.log(time);
     // console.log(uuid);
-    var time_ = '<i class="fa fa-clock-o"></i><div style="display: inline;">';
+    var time_ = '<i class="fa fa-clock-o"></i>';
     var time__ = '';
 
     var posted = moment(time);
