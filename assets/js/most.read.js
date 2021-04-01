@@ -26,6 +26,8 @@ const api = new GhostContentAPI({
     version: "v3"
 });
 
+const {readingTime} = GhostHelpers;
+
 var client = new HttpClient();
 var access_token = '';
 if(document.getElementById("most_read").offsetParent !== null) {
@@ -79,11 +81,12 @@ function make_read_request() {
             filter: filter
         }).then((posts) => {
             posts.forEach((post, i) => {
+                // console.log(readingTime(post, {minute: 'A 1 minute read.', minutes: 'A % minute read.'}));
                 div.innerHTML += ` 
                 <article class="post">
                     <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
                     <div class="clear"></div>
-                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD'><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")} <div style="margin-left:8px;display:none;"><i class="fa fa-eye"></i> ${Math.floor(views[i]/3)} / week</time>
+                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views"><i class="fa fa-eye"></i> ${Math.floor(views[i]/3)} / week
                 </article>	
                 `
             });
