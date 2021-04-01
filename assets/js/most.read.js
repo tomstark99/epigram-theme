@@ -77,18 +77,29 @@ function make_read_request() {
             views[i] = arr[i][1];
         }
         var filter = 'slug:['+String(slugs)+']';
+        var rollout = (Math.random() > 0.9);
         api.posts.browse({
             filter: filter
         }).then((posts) => {
             posts.forEach((post, i) => {
                 // console.log(readingTime(post, {minute: 'A 1 minute read.', minutes: 'A % minute read.'}));
-                div.innerHTML += ` 
-                <article class="post">
-                    <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
-                    <div class="clear"></div>
-                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views"><i class="fa fa-eye"></i> ${Math.floor(views[i]/3)} / week
-                </article>	
-                `
+                if(rollout) {
+                    div.innerHTML += ` 
+                    <article class="post">
+                        <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
+                        <div class="clear"></div>
+                        <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views" style="visibility:visible;"><i class="fa fa-eye"></i> ${views[i]} / 3 weeks
+                    </article>	
+                    `
+                } else {
+                    div.innerHTML += ` 
+                    <article class="post">
+                        <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
+                        <div class="clear"></div>
+                        <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views"><i class="fa fa-eye"></i> ${Math.floor(views[i]/3)} / week
+                    </article>	
+                    `
+                }
             });
         })
     });
