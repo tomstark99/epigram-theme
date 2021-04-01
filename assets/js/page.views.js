@@ -24,7 +24,10 @@ var HttpClient = function() {
 var client = new HttpClient();
 var access_token = '';
 if(document.getElementById("page_views") !== null) {
-    get_views();
+    var rollout = (Math.random() > 0.9);
+    if(rollout) {
+        get_views();
+    }
 }
 
 function get_views() {

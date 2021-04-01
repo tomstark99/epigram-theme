@@ -403,6 +403,7 @@ div.main-image.cover div.page_views{
     font-family: 'Roboto Condensed'; 
     font-weight: bold; 
 	margin-left: 4px;
+	visibility: visible;
 }
 
 div.page_views{
