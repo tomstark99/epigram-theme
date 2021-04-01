@@ -62,7 +62,7 @@ function make_view_request() {
     var path = document.URL.split("/").slice(-2)[0];
     var uri = "https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A176589224&start-date=2015-01-01&end-date=today&metrics=ga%3Apageviews&filters=ga%3ApagePath%3D%40" + path + "&access_token=" + access_token;
     client.get(uri, function(response) {
-        var text = '<i class="fa fa-eye"></i><div style="display: inline; margin-left:8px;">'
+        var text = '<i class="fa fa-eye"></i>'
         document.getElementById("page_views").innerHTML = text + JSON.parse(response).totalsForAllResults["ga:pageviews"] + ' reads';
     });
 }

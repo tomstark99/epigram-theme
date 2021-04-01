@@ -396,6 +396,25 @@ div.meta a.comments{ font-size: 10px; color: #888; }
 div.meta a.comments:hover{ color: #000; }
 div.meta a.comments i.fa{ margin-right: 3px; }
 
+div.main-image.cover div.page_views{
+	display: inline-block; 
+    font-size: 11px; 
+    color: #fff; 
+    font-family: 'Roboto Condensed'; 
+    font-weight: bold; 
+	margin-left: 4px;
+}
+
+div.page_views{
+	display: inline-block; 
+    font-size: 11px; 
+    color: #888; 
+    font-family: 'Roboto Condensed'; 
+    font-weight: bold; 
+	margin-left: 4px;
+	visibility: hidden;
+}
+
 /* Advertising */
 
 .ads{ margin: 40px auto 0; }
@@ -758,7 +777,6 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 
 /* @group Global Articles List */
 
-div.page_views{ font-size: 14px; padding-bottom: 10px; visibility: hidden; }
 div.articles h3.title{ margin-bottom: 10px; }
 div.articles article.first{ border-bottom: 1px solid #ccc; padding-bottom: 15px; }
 div.articles article a.thumb img{ display: block; }
@@ -1052,7 +1070,7 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 #single div.main-image.cover .info div.meta time{ color: #fff; vertical-align: middle; margin-bottom: 0; } /**margin: 0 20px; **/
 #single div.meta a.comments{ display: inline-block; vertical-align: top; }
 #single div.main-image.cover .info div.meta a.comments{ color: #fff; }
-#single .left-content h3.title{ margin-bottom: 5px; }
+#single .left-content h3.title{ margin-bottom: 20px; }
 #single .left-content article.post{ border-bottom: 3px solid #ccc; padding-bottom: 20px; }
 #single .left-content article.post h2.title{ font-size: 28px; margin-bottom: 20px; margin-top: 10px; }
 #single .left-content article.post div.main-image{ margin-bottom: 20px; }
