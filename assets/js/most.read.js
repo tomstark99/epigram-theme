@@ -36,10 +36,10 @@ if(document.getElementById("most_read").offsetParent !== null) {
 
 function get_most_read() {
     if(access_token === '') {
-        console.log("get token");
+        // console.log("get token");
         get_access_token_();
     } else {
-        console.log("check token");
+        // console.log("check token");
         check_validity_();
     }
 }
@@ -56,10 +56,10 @@ function check_validity_() {
     client.post(uri, function(response) {
         var check = JSON.parse(response).hasOwnProperty("expires_in");
         if(check) {
-            console.log("TOKEN OK");
+            // console.log("TOKEN OK");
             make_read_request();
         } else {
-            console.log("RENEW TOKEN")
+            // console.log("RENEW TOKEN");
             get_access_token_();
         }
     });
@@ -83,23 +83,24 @@ function make_read_request() {
         }).then((posts) => {
             posts.forEach((post, i) => {
                 // console.log(readingTime(post, {minute: 'A 1 minute read.', minutes: 'A % minute read.'}));
-                if(rollout) {
-                    div.innerHTML += ` 
-                    <article class="post">
-                        <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
-                        <div class="clear"></div>
-                        <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views" style="visibility:visible;"><i class="fa fa-eye"></i> ${views[i]} / 3 weeks
-                    </article>	
-                    `
-                } else {
-                    div.innerHTML += ` 
-                    <article class="post">
-                        <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
-                        <div class="clear"></div>
-                        <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views"><i class="fa fa-eye"></i> ${Math.floor(views[i]/3)} / week
-                    </article>	
-                    `
-                }
+                div.innerHTML += ` 
+                <article class="post">
+                    <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
+                    <div class="clear"></div>
+                    <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views" style="visibility:visible;"><i class="fa fa-eye"></i> ${views[i]} / 3 weeks
+                </article>	
+                `
+                // if(rollout) {
+                // } 
+                // else {
+                //     div.innerHTML += ` 
+                //     <article class="post">
+                //         <h4 class="title-side"><a href=${post.url}>${post.title}</a></h4>
+                //         <div class="clear"></div>
+                //         <time class="uppercase" datetime=${post.published_at} format='YYYY-MM-DD' style="margin-right:4px;"><i class="fa fa-clock-o"></i> ${moment(post.published_at).format("MMM DD, YYYY")}</time><div class="page_views"><i class="fa fa-eye"></i> ${Math.floor(views[i]/3)} / week
+                //     </article>	
+                //     `
+                // }
             });
         })
     });
