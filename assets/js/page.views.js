@@ -24,18 +24,18 @@ var HttpClient = function() {
 var client = new HttpClient();
 var access_token = '';
 if(document.getElementById("page_views") !== null) {
-    var rollout = (Math.random() > 0.9);
-    if(rollout) {
-        get_views();
-    }
+    get_views();
+    // var rollout = (Math.random() > 0.9);
+    // if(rollout) {
+    // }
 }
 
 function get_views() {
     if(access_token === '') {
-        console.log("get token");
+        // console.log("get token");
         get_access_token();
     } else {
-        console.log("check token");
+        // console.log("check token");
         check_validity();
     }
 }
@@ -52,10 +52,10 @@ function check_validity() {
     client.post(uri, function(response) {
         var check = JSON.parse(response).hasOwnProperty("expires_in");
         if(check) {
-            console.log("TOKEN OK");
+            // console.log("TOKEN OK");
             make_view_request();
         } else {
-            console.log("RENEW TOKEN")
+            // console.log("RENEW TOKEN")
             get_access_token();
         }
     });
