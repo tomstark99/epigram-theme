@@ -6,12 +6,12 @@ function hide_show() {
         x.style.display = "block";
         if(document.body.classList.contains("tag-the-croft")){
             b.style.background = "#f9e6ff"
-            b.style.color = "#7B52C2"
+            b.style.color = "#B591F2"
         }
     } else {
         x.style.display = "none";
         if(document.body.classList.contains("tag-the-croft")){
-            b.style.background = "#7B52C2"
+            b.style.background = "#B591F2"
             b.style.color = "#fff"
         }
     }

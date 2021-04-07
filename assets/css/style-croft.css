@@ -83,7 +83,7 @@ h6{ font-size: 11px; }
 }
 h1.title{ font-size: 28px; }
 h2.title{ font-size: 24px; }
-h3.title{ font-size: 20px; line-height: 1.2; }
+h3.title{ font-size: 21px; line-height: 1.2; }
 h4.title{ font-size: 20px; line-height: 1.2; display: inline-block;}
 h4.title-side{ font-size: 18px; line-height: 1.2; display: inline-block;}
 h5.title{ font-size: 14px; }
@@ -125,7 +125,7 @@ a img{
 a:hover img{
 
 }
-i.icon, i.fa{ font-style: normal !important; }
+i.icon, i.fa{ font-style: normal !important; margin-right: 4px;}
 .alignleft{ float: left !important; }
 .alignright{ float: right !important; }
 .aligncenter{ display: block; margin: 0 auto; }
@@ -390,11 +390,31 @@ article time, div.meta time{
     text-transform: uppercase; 
     /*vertical-align: middle;*/ 
 }
-article time .fa, div.meta time{ margin-right: 3px; }
+article time .fa, div.meta time{ margin-right: 4px; }
 div.meta time{ margin-bottom: 5px; }
 div.meta a.comments{ font-size: 10px; color: #888; }
 div.meta a.comments:hover{ color: #000; }
 div.meta a.comments i.fa{ margin-right: 3px; }
+
+div.main-image.cover div.page_views{
+	display: inline-block; 
+    font-size: 11px; 
+    color: #fff; 
+    font-family: 'Roboto Condensed'; 
+    font-weight: bold; 
+	margin-left: 4px;
+	visibility: visible;
+}
+
+div.page_views{
+	display: inline-block; 
+    font-size: 11px; 
+    color: #888; 
+    font-family: 'Roboto Condensed'; 
+    font-weight: bold; 
+	margin-left: 4px;
+	visibility: hidden;
+}
 
 /* Advertising */
 
@@ -694,7 +714,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 .lifestyle-dropdown-content, .entertainment-dropdown-content, .intramural-dropdown-content {
 	  display: none;
     position: absolute;
-    background-color: #7B52C2;
+    background-color: #B591F2;
     min-width: 130px;
 	  color: #000;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -716,7 +736,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 }
 
 .entertainment-dropdown-content a:hover, .intramural-dropdown-content a:hover {
-    background-color: #7B52C2;
+    background-color: #B591F2;
 }
 
 .nav-entertainment:hover .entertainment-dropdown-content, .nav-lifestyle:hover .lifestyle-dropdown-content, .nav-intramural:hover .intramural-dropdown-content {
@@ -1173,8 +1193,8 @@ aside#featured div.box article{
 	line-height: 1.4;
 }
 aside#featured div.box article:first-child{ border-top: 0; }
-aside#featured div.box article time{ font-size: 10px; }
-aside#featured div.box article h4{ margin-top: 5px; }
+aside#featured div.box article time{ font-size: 11px; }
+aside#featured div.box article h4{ margin-bottom: 5px; }
 
 .covid-info{
 	width: 100%; 
@@ -1431,7 +1451,7 @@ div#mc_embed_signup_scroll label{
 
 #button_sm {
     border-radius: 10px; 
-    background: #7B52C2; 
+    background: #B591F2; 
     font-family: 'Roboto Condensed'; 
     font-weight: bold; 
     font-size:20px; 
@@ -1442,7 +1462,7 @@ div#mc_embed_signup_scroll label{
 }
 
 #error_submit {
-    background: #7B52C2; 
+    background: #B591F2; 
     font-family: 'Roboto Condensed'; 
     font-weight: bold; font-size:20px; 
     color: #fff; width:100px; 
