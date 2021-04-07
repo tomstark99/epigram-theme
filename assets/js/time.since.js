@@ -2,20 +2,18 @@ function time_ago(time, uuid) {
 
     // console.log(time);
     // console.log(uuid);
-    var time_ = '<i class="fa fa-clock-o"></i><div style="display: inline; margin-left:3px;">';
+    var time_ = '<i class="fa fa-clock-o"></i>';
     var time__ = '';
 
-    var posted = new Date(time);
-    var now = new Date();
+    var posted = moment(time);
+    var now = moment();
 
     var minute = 60.0;
     var hour = 60.0 * minute;
     var day = 24.0 * hour;
     var week = 7 * day;
 
-    var seconds = (now.getTime() - posted.getTime())/1000;
-
-    var time_text = document.getElementById("post_time");
+    var seconds = (now.subtract(posted)).unix();
 
     if ((seconds - (minute * 2.0)) < 0) {
         time__ = 'Just Now';
@@ -31,15 +29,11 @@ function time_ago(time, uuid) {
         time__ = Math.floor(seconds/day) + ' days ago';
     } else {
         var format = { year: 'numeric', month: 'short', day: 'numeric' };
-        time__ = posted.toLocaleDateString("en", format);
+        // time__ = posted.toLocaleDateString("en", format);
+        time__ = posted.format("MMM DD, YYYY")
     }
-
-    // checkElement(uuid).then((selector) => {
-    //     console.log(selector);
-    // });
     var exists = setInterval(function () {
         if(document.getElementById(uuid) !== null) {
-            console.log("exists");
             clearInterval(exists);
             document.getElementById(uuid).innerHTML = time_ + '' + time__;
         }
@@ -49,10 +43,3 @@ function time_ago(time, uuid) {
     // })
     return;
 }
-
-// const checkElement = async selector => {
-//     while (document.querySelector(selector) === null) {
-//         await new Promise( resolve => requestAnimationFrame(resolve))
-//     }
-//     return document.querySelector(selector);
-// }
