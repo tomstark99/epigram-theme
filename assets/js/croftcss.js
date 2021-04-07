@@ -1,4 +1,5 @@
-if(document.URL.split("/").slice(-2)[0] === "the%20croft"){
+var re = RegExp("^.*(the(%20|-| ){1}croft|wellbeing|food|travel|style){1}.*$");
+if(re.test(document.URL)){
     document.getElementById("style").href = "/assets/css/style-croft.css?v=336cc0b901";
     document.getElementById("colour").href = "/assets/css/croft-color.css?v=336cc0b901";
 } else {
@@ -6,7 +7,7 @@ if(document.URL.split("/").slice(-2)[0] === "the%20croft"){
     
     for (let i = 0; i < metas.length; i++) {
         if (metas[i].getAttribute('property') === "article:tag") {
-            if (metas[i].getAttribute('content') === "the croft") {
+            if (re.test(metas[i].getAttribute('content'))) {
                 document.getElementById("style").href = "/assets/css/style-croft.css?v=336cc0b901";
                 document.getElementById("colour").href = "/assets/css/croft-color.css?v=336cc0b901";
                 break;

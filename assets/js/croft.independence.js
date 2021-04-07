@@ -13,7 +13,7 @@ const croft_colour = "#B591F2";
 //     onJOB = false;
 // }
 
-if(document.body.classList.contains("tag-the-croft")){
+if(document.body.className.split(' ').some(function(c) {return /^tag-(the-croft|wellbeing|food|travel|style){1}$/.test(c) })){
     onJOB = true;
     document.getElementById("logo").src = "/assets/images/croft_logo.png";
 } else {
@@ -48,23 +48,22 @@ if(!onJOB) {
             }
         }
     });
-}
-for (var i = 0; i < croft_drop.length; i++) {
-    croft_drop[i].addEventListener("mouseover", function() {
-        in_drop = true;
-    });
-    croft_drop[i].addEventListener("mouseout", function(evt) {
-        in_drop = false;
-
-        console.log(evt);
-        if(evt.relatedTarget.id !== "croft_head" && !evt.relatedTarget.classList.contains("croft_drop")) {
-            var elements = document.getElementsByClassName("menu-wrapper");
-            for (var i = 0; i < elements.length; i++) {
-                elements[i].animate([{backgroundColor:croft_colour},{backgroundColor:"#c2262f"}],{duration:500});
-                elements[i].style.backgroundColor = "#c2262f";
+    for (var i = 0; i < croft_drop.length; i++) {
+        croft_drop[i].addEventListener("mouseover", function() {
+            in_drop = true;
+        });
+        croft_drop[i].addEventListener("mouseout", function(evt) {
+            in_drop = false;
+    
+            if(evt.relatedTarget.id !== "croft_head" && !evt.relatedTarget.classList.contains("croft_drop")) {
+                var elements = document.getElementsByClassName("menu-wrapper");
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].animate([{backgroundColor:croft_colour},{backgroundColor:"#c2262f"}],{duration:500});
+                    elements[i].style.backgroundColor = "#c2262f";
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 function setCroft() {
