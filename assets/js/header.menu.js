@@ -36,7 +36,7 @@ if(class_list.contains("home-template")) {
 } else if (document.body.className.split(' ').some(function(c) { return re_sport.test(c) })) {
     togglehome("SPORT");
 } else if (class_list.contains("tag-puzzles")) {
-    togglehome("PUZZLE");
+    togglehome("PUZZLES");
 } else if (document.body.className.split(' ').some(function(c) { return re_page.test(c) })) {
     togglehome("GET INVOLVED");
 }

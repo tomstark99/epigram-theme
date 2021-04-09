@@ -1,7 +1,7 @@
 var onJOB = false;
 var in_drop = false;
 
-const croft_colour = "#B591F2";
+const croft_colour = "#a272f2";
 
 // if(document.body.classList.contains("tag-the-croft")){
 //     document.getElementById("style").href = "/assets/css/style-croft.css?v=336cc0b901";
