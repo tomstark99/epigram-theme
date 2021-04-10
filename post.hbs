@@ -4,6 +4,9 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 <!-- start: #single -->
+
+<script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
+
 <main id="single" class="main" role="main">
 	
 	{{#post}}
@@ -82,7 +85,7 @@
 					   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><i class="fa fa-google-plus"></i> GOOGLE</a>
 						</div>
 
-						<button onclick="hide_show()" id="button_sm" style="border-radius: 10px; background: #c2262f; font-family: 'Roboto Condensed'; font-weight: bold; font-size:20px; padding:10px; color: #fff; width:100%; height:auto;">SOMETHING WRONG WITH THIS ARTICLE?</button>
+						<button onclick="hide_show()" id="button_sm">SOMETHING WRONG WITH THIS ARTICLE?</button>
 
 						{{> something-wrong}}
 						
