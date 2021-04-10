@@ -22,7 +22,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset "css/grids.css"}}">
 <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}">
 <link rel="stylesheet" type="text/css" href="{{asset "css/common-elements.css"}}">
-<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
+<link id="style" rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
 <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}">
 <link rel="stylesheet" type="text/css" href="{{asset "css/prettify-bootstrap.css"}}">
 <link rel="stylesheet" type="text/css" href="{{asset "css/jquery.magnific-popup.css"}}">
@@ -30,7 +30,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset "js/tooltipster/css/themes/tooltipster-small.css"}}">
 <link rel="stylesheet" type="text/css" href="{{asset "js/slick/slick.css"}}">
 <link rel="stylesheet" type="text/css" href="{{asset "js/slick/slick-theme.css"}}">
-<link rel="stylesheet" type="text/css" href="{{asset "css/main-color.css"}}">
+<link id="colour" rel="stylesheet" type="text/css" href="{{asset "css/main-color.css"}}">
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="{{asset "css/grids-ie.css"}}">
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,6 +42,10 @@
 <script src="https://unpkg.com/@tryghost/helpers@1.1.40/umd/helpers.min.js"></script>
 <script type="text/javascript" src="{{asset "js/moment.js"}}"></script>
 <script type="text/javascript" src="{{asset "js/time.since.js"}}"></script>
+
+{{!-- script changing colour of The Croft needs to be in head so its applied before page is loaded --}}
+<script type="text/javascript" src="{{asset "js/croftcss.js"}}"></script>
+
 <!-- <script type="text/javascript" src="{{asset "js/hb.optional.js"}}"></script> -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120404499-1"></script>
 {{!-- <script async defer src="https://apis.google.com/js/api.js" 
@@ -116,6 +120,8 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 		document.write('<script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></'+'script>');		
 	}
 	</script>
+	<script type="text/javascript" src="{{asset "js/croft.independence.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/header.menu.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/jquery-migrate-1.2.1.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/pace.min.js"}}"></script>
 	<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCchcoGJFmW7Tg3di_xtx3HfK3Y7RGQoq0&sensor=false"></script> -->
@@ -134,10 +140,10 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 	<script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script>
 	<!--[if !IE]><!--> 
 	<script type="text/javascript" src="{{asset "js/wow.min.js"}}"></script>
-	<script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/page.views.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/most.read.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/hide.show.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/header.menu.js"}}"></script>
 	<script type="text/javascript">
 		if($('body').hasClass('enable_animations')){
 			wow = new WOW({ offset: 150 });

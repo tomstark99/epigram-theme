@@ -7,13 +7,3 @@ if (document.getElementById('image_1') !== null) {
         })
     })
 }
-
-function validate_form(email) {
-    var regex = "/^[a-zA-Z0-9.]{2,50}[@]bristol.ac.uk$/";
-
-    if(!regex.test(email)) {
-        email.focus();
-        return false;
-    }
-    return true;
-}

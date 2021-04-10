@@ -1,5 +1,5 @@
 <div id="something_wrong" style="display: none; width=100%" >
-	<form action="https://formspree.io/f/xyybplok" onsubmit="validate_form(error_form.email)" method="POST" name="error_form">
+	<form id="form" action="https://formspree.io/f/xyybplok" onsubmit="validate_form(error_form.email)" method="POST" name="error_form">
 		<input type="hidden" name="url" value="{{url absolute=true}}">
 		<input type="hidden" name="title" value="{{title}}">
 		<input type="hidden" name="tags" value="{{tags autolink="false" separator=" &bull; "}}">
@@ -15,8 +15,10 @@
 			<label for="email" style="font-size: 18px; margin-bottom:5px; display:block;">Bristol E-mail:</label>
 		</div>
 		<div style="margin-bottom:10px; border-radius:10px; background:#fff; width:100%;">
-		<input class="form" name="email" placeholder="ab12345@bristol.ac.uk" style="border-radius:10px; font-size: 18px; background:#fff;" type="email" required pattern="[a-zA-Z0-9.]{2,50}[@]bristol.ac.uk" title="Please use a @bristol.ac.uk email">
+		<input class="form" name="email" id="email" placeholder="ab12345@bristol.ac.uk" style="border-radius:10px; font-size: 18px; background:#fff;" type="email" required title="Please use a @bristol.ac.uk email">
 		</div>
 		<input type="submit" style="background: #c2262f; font-family: 'Roboto Condensed'; font-weight: bold; font-size:20px; color: #fff; width:100px; display: inline-block; margin-left:auto; margin-right:auto;" value="SUBMIT">
 	</form>
 </div>
+
+<script type="text/javascript" src="{{asset "js/form.validation.js"}}"></script>
