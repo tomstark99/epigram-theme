@@ -46,11 +46,25 @@ if(!onJOB) {
                 elements[i].animate([{backgroundColor:croft_colour},{backgroundColor:"#c2262f"}],{duration:500});
                 elements[i].style.backgroundColor = "#c2262f";
             }
+            croft_drop_id.animate([{backgroundColor:croft_colour},{backgroundColor:"#c2262f"}],{duration:500});
+            croft_drop_id.style.backgroundColor = "#c2262f";
         }
     });
     for (var i = 0; i < croft_drop.length; i++) {
         croft_drop[i].addEventListener("mouseover", function() {
             in_drop = true;
+            /*  rewrite this so that it only happens when not from menu item into drop and not from drop to drop for complete bug free fix
+                uncomment to see
+                
+            var elements = document.getElementsByClassName("menu-wrapper");
+            for (var i = 0; i < elements.length; i++) {
+                // elements[i].style.backgroundColor = croft_colour;
+                elements[i].animate([{backgroundColor:"#c2262f"},{backgroundColor:croft_colour}],{duration:500});
+                elements[i].style.backgroundColor = croft_colour;
+            }
+            croft_drop_id.animate([{backgroundColor:"#c2262f"},{backgroundColor:croft_colour}],{duration:500});
+            croft_drop_id.style.backgroundColor = croft_colour;
+            */
         });
         croft_drop[i].addEventListener("mouseout", function(evt) {
             in_drop = false;
@@ -61,6 +75,8 @@ if(!onJOB) {
                     elements[i].animate([{backgroundColor:croft_colour},{backgroundColor:"#c2262f"}],{duration:500});
                     elements[i].style.backgroundColor = "#c2262f";
                 }
+                croft_drop_id.animate([{backgroundColor:croft_colour},{backgroundColor:"#c2262f"}],{duration:500});
+                croft_drop_id.style.backgroundColor = "#c2262f";
             }
         });
     }

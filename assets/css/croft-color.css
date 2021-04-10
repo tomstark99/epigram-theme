@@ -13,13 +13,13 @@ section.breaking-news div.slick,
 .pagination a, .pagination span,
 .button,
 .pace .pace-progress{
-	background: #B591F2;
+	background: #a272f2;
 }
 
 .title.bordered,
 div.text blockquote,
 #footer{
-	border-color: #B591F2;
+	border-color: #a272f2;
 }
 
 /* @end */
@@ -44,7 +44,7 @@ div.meta a.comments:hover,
 section.breaking-news h3,
 #single section.related a.thumb span,
 section.widget_tag_cloud a,
-.spinner > div{ background: #B591F2; }
+.spinner > div{ background: #a272f2; }
 .button.dark > div{ background: #000; }
 /* @end */
 
