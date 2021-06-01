@@ -433,8 +433,8 @@ div.page_views{
 	font-weight: bold;
 	padding: 6px 12px;
 	text-transform: uppercase;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
 }
 .button:hover{
 	color: #000;
@@ -472,6 +472,7 @@ div.share a:hover{
 	-webkit-opacity: .9;
 	opacity: .9;
 }
+div.share a.google-play{ background: rgba(15, 157, 88, 0.5); }
 div.share a.facebook{ background: #3B5998; }
 div.share a.twitter{ background: #00ACED; }
 div.share a.googleplus{ background: #DD4B39; }
@@ -779,7 +780,13 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 /* @group Global Articles List */
 
 div.articles h3.title{ margin-bottom: 10px; }
-div.articles article.first{ border-bottom: 1px solid #ccc; padding-bottom: 15px; }
+div.articles article.first{ 
+	/* border-bottom: 1px solid #ccc;  */
+	background-color: #FFF;
+	border-radius: 20px;
+	padding: 15px;
+	margin-bottom: 15px;
+}
 div.articles article a.thumb img{ display: block; }
 div.articles article div.meta{ margin: 15px 0 10px; }
 div.articles article h4.title{ font-size: 22px; margin-top: 5px; margin-bottom: 10px; line-height: 1.2; }
@@ -787,7 +794,13 @@ div.articles article div.post-excerpt{ margin-bottom: 10px; }
 div.articles article iframe{ max-height: 200px; width: 100%; }
 div.articles article a.share-button{ margin-left: 5px; }
 
-div.articles article.default{ border-bottom: 1px solid #ccc; padding: 15px 0; }
+div.articles article.default{ 
+	/* border-bottom: 1px solid #ccc;  */
+	background-color: #FFF;
+	border-radius: 20px;
+	padding: 15px; 
+	margin: 15px 0;
+}
 div.articles article.default .left{ padding-left: 0; }
 div.articles article.default .right{ padding-right: 0; }
 div.articles article.default h4.title{}
@@ -953,9 +966,9 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 	color: #000;
 	line-height: 30px;
 	padding: 0 15px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
 .pagination a i.fa{ font-size: 12px; vertical-align: baseline; }
 .pagination a.prev i.fa{ margin-right: 3px; }

@@ -472,6 +472,7 @@ div.share a:hover{
 	-webkit-opacity: .9;
 	opacity: .9;
 }
+div.share a.google-play{ background: rgb(15, 157, 88); }
 div.share a.facebook{ background: #3B5998; }
 div.share a.twitter{ background: #00ACED; }
 div.share a.googleplus{ background: #DD4B39; }
