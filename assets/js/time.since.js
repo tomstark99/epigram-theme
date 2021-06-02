@@ -43,3 +43,15 @@ function time_ago(time, uuid) {
     // })
     return;
 }
+
+function excerpt(excerpt, n, uuid) {
+    var exists = setInterval(function () {
+        if(document.getElementById(`excerpt_${uuid}`) !== null) {
+            clearInterval(exists);
+            document.getElementById(`excerpt_${uuid}`).innerHTML = `
+            ${excerpt.split(" ").slice(0, n).join(" ")} ...
+            <div class="clear"></div>
+            `}
+    }, 100);
+    return
+}
