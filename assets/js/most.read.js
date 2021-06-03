@@ -81,6 +81,8 @@ function make_read_request() {
         api.posts.browse({
             filter: filter
         }).then((posts) => {
+            div.innerHTML = ''
+            div.style.animationIterationCount = 0
             posts.forEach((post, i) => {
                 // console.log(readingTime(post, {minute: 'A 1 minute read.', minutes: 'A % minute read.'}));
                 div.innerHTML += ` 
