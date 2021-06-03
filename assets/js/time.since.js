@@ -49,7 +49,7 @@ function excerpt(excerpt, n, uuid) {
         if(document.getElementById(`excerpt_${uuid}`) !== null) {
             clearInterval(exists);
             document.getElementById(`excerpt_${uuid}`).innerHTML = `
-            ${excerpt.split(" ").slice(0, n).join(" ")} ...
+            ${excerpt.split(" ").slice(0, n).join(" ")}...
             <div class="clear"></div>
             `}
     }, 100);
