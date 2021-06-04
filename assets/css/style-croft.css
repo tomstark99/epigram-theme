@@ -433,8 +433,8 @@ div.page_views{
 	font-weight: bold;
 	padding: 6px 12px;
 	text-transform: uppercase;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
 }
 .button:hover{
 	color: #000;
@@ -780,15 +780,29 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 /* @group Global Articles List */
 
 div.articles h3.title{ margin-bottom: 10px; }
-div.articles article.first{ border-bottom: 1px solid #ccc; padding-bottom: 15px; }
+div.articles article.first{ 
+	/* border-bottom: 1px solid #ccc;  */
+	background-color: #FFF;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
 div.articles article a.thumb img{ display: block; }
 div.articles article div.meta{ margin: 15px 0 10px; }
-div.articles article h4.title{ font-size: 22px; margin-top: 5px; margin-bottom: 10px; line-height: 1.2; }
+div.articles article h4.title{ font-size: 18px; margin-top: 5px; /*margin-bottom: 10px;*/ line-height: 1.2; }
 div.articles article div.post-excerpt{ margin-bottom: 10px; }
 div.articles article iframe{ max-height: 200px; width: 100%; }
 div.articles article a.share-button{ margin-left: 5px; }
 
-div.articles article.default{ border-bottom: 1px solid #ccc; padding: 15px 0; }
+div.articles article.default{ 
+	/* border-bottom: 1px solid #ccc;  */
+	background-color: #FFF;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	padding: 10px; 
+	margin: 10px 0;
+}
 div.articles article.default .left{ padding-left: 0; }
 div.articles article.default .right{ padding-right: 0; }
 div.articles article.default h4.title{}
@@ -954,9 +968,9 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 	color: #000;
 	line-height: 30px;
 	padding: 0 15px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
 .pagination a i.fa{ font-size: 12px; vertical-align: baseline; }
 .pagination a.prev i.fa{ margin-right: 3px; }
@@ -1172,15 +1186,41 @@ section.author div.right div.social a.website i.fa{ vertical-align: middle; }
 aside#sidebar, aside#featured{ padding-left: 30px; padding-right: 0; overflow: hidden; }
 
 /* Featured Sidebar */
-
+@keyframes most_read_placeholder {
+    0% {
+      background: #fff;
+    }
+    100% {
+      background: #ddd;
+    }
+}
 aside#featured div.item{ margin-bottom: 20px; }
 aside#featured h3.title{ margin-bottom: 10px; }
 aside#featured div.box{
-	background: #fff;
+	/* background: #fff;
 	padding: 0 20px;
 	border-radius: 10px;
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 10px; */
 }
+aside#featured div.box-placeholder{
+	background: #fff;
+	padding: 10px 0;
+    margin-bottom: 10px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+    animation-name: most_read_placeholder;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+._1 {animation-delay: 0.0s; height: 80px;}
+._2 {animation-delay: 0.1s; height: 100px;}
+._3 {animation-delay: 0.2s; height: 120px;}
+._4 {animation-delay: 0.3s; height: 70px;}
+._5 {animation-delay: 0.4s; height: 90px;}
+._6 {animation-delay: 0.5s; height: 80px;}
+._7 {animation-delay: 0.6s; height: 100px;}
 aside#featured div.box-covid{
 	background: #efd0d1;
 	/* padding: 10px 10px; */
@@ -1189,8 +1229,12 @@ aside#featured div.box-covid{
 	-webkit-border-radius: 10px;
 }
 aside#featured div.box article{
-	padding: 20px 0;
-	border-top: 1px solid #ddd;
+    background: #fff;
+    margin-bottom: 10px;
+	padding: 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+	/* border-top: 1px solid #ddd; */
 	line-height: 1.4;
 }
 aside#featured div.box article:first-child{ border-top: 0; }
