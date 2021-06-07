@@ -829,7 +829,7 @@ div.articles article.default div.meta{ margin-top: 0; }
 }
 #archives div.cover-image div.description .title{ color: #fff; margin-bottom: 5px; }
 #archives div.articles-title.no-cover{ margin-top: 0; }
-#archives div.articles article.index-0{ padding-top: 0; }
+/* #archives div.articles article.index-0{ padding-top: 0; } */
 
 /* @end */
 
