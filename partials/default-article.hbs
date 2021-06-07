@@ -4,15 +4,6 @@
 			<a href="{{url}}" class="thumb hover-effect" style="-webkit-border-radius: 10px;">
 				<img src="{{feature_image}}" style="height: 220px; object-fit: cover; object-position: center;">
 			</a>
-			<div style="margin: 5px 0 0px;">
-				{{#if tags}}
-					<div class="tags">
-						{{tags separator=""}}
-					</div>
-				{{/if}}
-				<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
-				<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
-			</div>
 		</div>
 	{{/if}}
 	
@@ -20,8 +11,18 @@
 		<header>
 			<h4 class="title"><a href="{{url}}">{{{title}}}</a></h4>
 		</header>
-		<div class="post-excerpt">
-			{{excerpt words="20"}}
+        <div style="margin: 5px 0 0px;">
+			{{#if tags}}
+				<div class="tags">
+					{{tags separator=""}}
+				</div>
+			{{/if}}
+			<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
+			<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
+		</div>
+        <script>excerpt("{{excerpt}}", 20, "{{uuid}}")</script>
+		<div id="excerpt_{{uuid}}" class="post-excerpt">
+			{{excerpt words=20}}
 			<div class="clear"></div>
 		</div> 
 		<a href="{{url}}" class="button dark">Read More</a>

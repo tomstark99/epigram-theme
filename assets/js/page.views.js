@@ -68,7 +68,9 @@ function make_view_request() {
         var text = '<i class="fa fa-eye"></i>'
         var views = JSON.parse(response).totalsForAllResults["ga:pageviews"];
         var suffix = parseInt(views) === 1 ? " read" : " reads";
-        document.getElementById("page_views").innerHTML = '' + text + views + suffix;
+        if (parseInt(views) > 800) {
+            document.getElementById("page_views").innerHTML = '' + text + views + suffix;
+        }
     });
 }
 

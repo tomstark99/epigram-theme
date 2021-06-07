@@ -41,14 +41,14 @@ if(class_list.contains("home-template")) {
     togglehome("GET INVOLVED");
 }
 
-function togglehome(xd) {
+function togglehome(menu_item) {
     for(var i = 0; i < nav_items.length; i++) {
         // kinda redundant check since current-menu-item class was removed from default item in header.hbs
-        if(nav_items[i].innerText === xd && nav_items[i].classList.contains("current-menu-item")) {
+        if(nav_items[i].innerText === menu_item && nav_items[i].classList.contains("current-menu-item")) {
             return;
         } else {
             nav_items[i].classList.remove("current-menu-item");
-            if(nav_items[i].innerText === xd) {
+            if(nav_items[i].innerText === menu_item) {
                 nav_items[i].classList.add("current-menu-item");
             }
         }
