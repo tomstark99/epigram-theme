@@ -1,0 +1,87 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main id="home" class="main" role="main">
+	
+	<!-- start: .center -->
+	<div class="center content grid-container">
+	
+		{{!-- {{> breaking-news }} --}}
+
+		{{> carousel}}
+		
+		<!-- start: .ads -->
+        <!--
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- Top Banner -->
+
+        <!--
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:970px;height:90px"
+            data-ad-client="ca-pub-8236710384567365"
+            data-ad-slot="4646156948"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <amp-ad
+            layout="fixed"
+            width="970"
+            height="90"
+            type="adsense"
+            data-ad-client="ca-pub-8236710384567365"
+            data-ad-slot="4646156948">
+        </amp-ad> -->
+
+		<div class="textwidget" style="margin-top: 20px; border-radius: 10px;">
+			<a href="https://alttickets.com/thekla-reopening-tickets" class="sup" target="_blank"><img style="border-radius: 10px; pointer-events: none;" src="{{asset "images/web_banner_v3.png"}}" class="img-sup"></a>
+		</div>
+		<!-- end: .ads -->
+		
+		<!-- start: .left-content -->
+		<div class="left-content section articles grid-parent grid-50">
+			<h3 class="title bordered">RECENT NEWS</h3>
+			
+				{{#foreach posts}}
+
+					{{^is "paged"}}
+					
+						{{#if @first}}
+
+							{{> first-article}}
+
+						{{else}}
+
+							{{> default-article}}
+
+						{{/if}}
+
+					{{else}}
+
+						{{> default-article}}
+
+					{{/is}}
+					
+				{{/foreach}}
+			
+			{{pagination}}
+			
+		</div>
+		<!-- end: .left-content -->
+		
+		<div class="section">
+			
+			{{> sidebar-featured}}
+			{{> sidebar-default}}
+		
+		</div>
+	
+	</div>
+	<!-- end: .center -->
+	
+
+		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+        <!-- <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script> -->>
+
+</main>
