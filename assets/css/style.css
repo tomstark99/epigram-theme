@@ -1134,8 +1134,8 @@ section.breaking-news div.slick .tweets_text{ max-height: 15px; overflow: hidden
 #single section.related .next a.thumb:hover span{
 	right: 10px;
 }
-#single section.related .previous{ padding-left: 0; }
-#single section.related .next{ padding-right: 0; }
+#single section.related .previous{ padding: 10px; background: #fff; border-radius: 15px; width: 49.5%; }
+#single section.related .next{ padding: 10px; background: #fff; border-radius: 15px; width: 49.5%; float: right; }
 #single section.related div.meta{ margin-bottom: 5px; }
 
 /* @end */
