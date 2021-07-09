@@ -289,15 +289,16 @@ body.cover #single div.main-image .boxed.cover{
 /*390 - 240 pixels wide seems to work
 /* Add some shadows to create a card effect */
 .card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+    padding: 10px;
+    background: #fff;
 }
 
 .card-img {
 	width: 100%;
-	border-top-left-radius: 10px; 
-	border-top-right-radius:10px;
+	border-radius: 10px;
 }
 
 /*A second sized container (container2) is used 
