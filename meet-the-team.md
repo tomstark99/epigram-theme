@@ -433,7 +433,7 @@ scienceandtech.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Julia-Riopelle.jpeg" style="width:100%">
       <div class="container2">
-        <h2>Julia Riopelle</h2>
+        <h2>Sarah Dalton</h2>
         <p class="title">Editor</p>
       </div>
     </div>
@@ -443,7 +443,7 @@ scienceandtech.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Edward-Deacon.jpeg" style="width:100%">
       <div class="container2">
-        <h2>Edward Deacon</h2>
+        <h2>Bethany Winget</h2>
         <p class="title">Digital Editor</p>
       </div>
     </div>
@@ -453,7 +453,7 @@ scienceandtech.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Delhi-Kalwan.jpg" style="width:100%">
       <div class="container2">
-        <h2>Delhi Kalwan</h2>
+        <h2>James Emery</h2>
         <p class="title">Deputy Editor</p> 
       </div>
     </div>
@@ -463,7 +463,7 @@ scienceandtech.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Sarah-Dalton.JPG" style="width:100%">
       <div class="container2">
-        <h2>Sarah Dalton</h2>
+        <h2>Isabella Ferguson</h2>
         <p class="title">Subeditor</p>
       </div>
     </div>
@@ -483,7 +483,7 @@ filmtv.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Maddy-Raven.jpg" style="width:100%">
       <div class="container2">
-        <h2>Maddy Raven</h2>
+        <h2>Ben Carpenter</h2>
         <p class="title">Editor</p>
       </div>
     </div>
@@ -493,7 +493,7 @@ filmtv.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Samuel-Vickers.jpg" style="width:100%">
       <div class="container2">
-        <h2>Samuel Vickers</h2>
+        <h2>Isha Vibhakar</h2>
         <p class="title">Deputy Editor</p>
       </div>
     </div>
@@ -503,8 +503,18 @@ filmtv.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Katya-Spiers.jpg" style="width:100%">
       <div class="container2">
-        <h2>Katya Spiers</h2>
+        <h2>Madeleine Ellis</h2>
         <p class="title">Digital Editor</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Katya-Spiers.jpg" style="width:100%">
+      <div class="container2">
+        <h2>Evelyn Heis</h2>
+        <p class="title">Columnist</p>
       </div>
     </div>
   </div>
@@ -513,7 +523,7 @@ filmtv.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Layla-Nathan.jpg" style="width:100%">
       <div class="container2">
-        <h2>Layla Nathan</h2>
+        <h2>Chezelle Bingham</h2>
         <p class="title">Subeditor</p>
      </div>
     </div>
@@ -818,7 +828,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Eve-Coleman.JPG" style="width:100%">
       <div class="container2">
-        <h2>Eve Coleman</h2>
+        <h2>Charlie Tonks</h2>
         <p class="title">Digital Editor</p> 
       </div>
     </div>
@@ -828,7 +838,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Sanjana.JPG" style="width:100%">
       <div class="container2">
-        <h2>Sanjana Idnani</h2>
+        <h2>Ellie Spenceley</h2>
         <p class="title">Subeditor</p>
       </div>
     </div>
@@ -847,7 +857,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Savannah-Coombe.jpg" style="width:100%">
       <div class="container2">
-        <h2>Savannah Coombe</h2>
+        <h2>Maddy Clegg</h2>
         <p class="title">Editor</p>
       </div>
     </div>
@@ -857,7 +867,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Maria-Shevchenko.jpg" style="width:100%">
       <div class="container2">
-        <h2>Maria Shevchenko</h2>
+        <h2>Lou Craven</h2>
         <p class="title">Digital Editor</p> 
       </div>
     </div>
@@ -867,7 +877,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Tim-Quiney.jpeg" style="width:100%">
       <div class="container2">
-        <h2>Tim Quiney</h2>
+        <h2>Daniel Bargioni</h2>
         <p class="title">Deputy Editor</p> 
       </div>
     </div>
@@ -877,7 +887,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Phoebe-Ransom.JPG" style="width:100%">
       <div class="container2">
-        <h2>Phoebe Ransom</h2>
+        <h2>Phoebe Altman</h2>
         <p class="title">Subeditor</p>
       </div>
     </div>
@@ -896,7 +906,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Manon-Branson-William.JPG" style="width:100%">
       <div class="container2">
-        <h2>Manon Branson William</h2>
+        <h2>Jenny Gallagher</h2>
         <p class="title">Editor</p>
       </div>
     </div>
@@ -906,7 +916,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Morgan-Collins.JPG" style="width:100%">
       <div class="container2">
-        <h2>Morgan Collins</h2>
+        <h2>Ania Townsin</h2>
         <p class="title">Digital Editor</p> 
       </div>
     </div>
@@ -916,7 +926,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/May-Garland.jpg" style="width:100%">
       <div class="container2">
-        <h2>May Garland</h2>
+        <h2>Anna Johnson</h2>
         <p class="title">Deputy Editor</p>
      </div>
    </div>
@@ -926,7 +936,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Olivia-Andrews.JPG" style="width:100%">
       <div class="container2">
-        <h2>Olivia Andrews</h2>
+        <h2>Farah Thorndycraft</h2>
         <p class="title">Subeditor</p>
       </div>
     </div>
@@ -944,7 +954,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Daisy-Game.JPG" style="width:100%">
       <div class="container2">
-        <h2>Daisy Game</h2>
+        <h2>Xander Brett</h2>
         <p class="title">Editor</p>
       </div>
     </div>
@@ -954,7 +964,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Mia-Musa-Green.JPG" style="width:100%">
       <div class="container2">
-        <h2>Mia Musa-Green</h2>
+        <h2>Mia Austin</h2>
         <p class="title">Digital Editor</p> 
       </div>
     </div>
@@ -964,8 +974,18 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Rebecca-Pardon.JPG" style="width:100%">
       <div class="container2">
-        <h2>Rebecca Pardon</h2>
+        <h2>Lucy Rawlings</h2>
         <p class="title">Deputy Editor</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Rebecca-Pardon.JPG" style="width:100%">
+      <div class="container2">
+        <h2>Jenny Barruol</h2>
+        <p class="title">International Deputy Editor</p>
       </div>
     </div>
   </div>
@@ -974,7 +994,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Sanjana-1.JPG" style="width:100%">
       <div class="container2">
-        <h2>Sanjana Idnani</h2>
+        <h2>Orla Mchale</h2>
         <p class="title">Subeditor</p>
       </div>
     </div>
@@ -992,7 +1012,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Joseph-Marshall.JPG" style="width:100%">
       <div class="container2">
-        <h2>Joseph Marshall</h2>
+        <h2>Hester Cameron</h2>
         <p class="title">Chief Proofreader, Epigram</p>
       </div>
     </div>
@@ -1002,7 +1022,7 @@ thecroft.epigram@gmail.com
     <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Annabel-Morgan.JPG" style="width:100%">
       <div class="container2">
-        <h2>Annabel Morgan</h2>
+        <h2>Ciara Allen</h2>
         <p class="title">Chief Proofreader, The Croft</p>
       </div>
     </div>
@@ -1011,7 +1031,7 @@ thecroft.epigram@gmail.com
 </div> 
 
 ---
-
+<!-- does this still exist? -->
 #Photography & Illustrations
 [@EpigramTravel](https://twitter.com/EpigramTravel)
 
@@ -1032,6 +1052,34 @@ thecroft.epigram@gmail.com
       <div class="container2">
         <h2>Alice Proctor</h2>
         <p class="title">Head of Illustration</p> 
+      </div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+#Puzzles
+[@EpigramTravel](https://twitter.com/EpigramTravel)
+
+<div class= "row">
+  <div class="column2">
+    <div class="card">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Lucy-O-Neil.JPG" style="width:100%">
+      <div class="container2">
+        <h2>Patrick Sullivan</h2>
+        <p class="title">Editor</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Alice-Proctor.JPG" style="width:100%">
+      <div class="container2">
+        <h2>Grace Barnes</h2>
+        <p class="title">Subeditor</p> 
       </div>
     </div>
   </div>
