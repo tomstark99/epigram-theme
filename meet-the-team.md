@@ -441,20 +441,20 @@ scienceandtech.epigram@gmail.com
 
   <div class="column2">
     <div class="card">
-      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Edward-Deacon.jpeg" style="width:100%">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Delhi-Kalwan.jpg" style="width:100%">
       <div class="container2">
-        <h2>Bethany Winget</h2>
-        <p class="title">Digital Editor</p>
+        <h2>James Emery</h2>
+        <p class="title">Deputy Editor</p> 
       </div>
     </div>
   </div>
 
   <div class="column2">
     <div class="card">
-      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Delhi-Kalwan.jpg" style="width:100%">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Edward-Deacon.jpeg" style="width:100%">
       <div class="container2">
-        <h2>James Emery</h2>
-        <p class="title">Deputy Editor</p> 
+        <h2>Bethany Winget</h2>
+        <p class="title">Digital Editor</p>
       </div>
     </div>
   </div>
@@ -865,20 +865,20 @@ thecroft.epigram@gmail.com
 
   <div class="column2">
     <div class="card">
-      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Maria-Shevchenko.jpg" style="width:100%">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Tim-Quiney.jpeg" style="width:100%">
       <div class="container2">
-        <h2>Lou Craven</h2>
-        <p class="title">Digital Editor</p> 
+        <h2>Daniel Bargioni</h2>
+        <p class="title">Deputy Editor</p> 
       </div>
     </div>
   </div>
 
   <div class="column2">
     <div class="card">
-      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Tim-Quiney.jpeg" style="width:100%">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Maria-Shevchenko.jpg" style="width:100%">
       <div class="container2">
-        <h2>Daniel Bargioni</h2>
-        <p class="title">Deputy Editor</p> 
+        <h2>Lou Craven</h2>
+        <p class="title">Digital Editor</p> 
       </div>
     </div>
   </div>
@@ -914,16 +914,6 @@ thecroft.epigram@gmail.com
 
   <div class="column2">
     <div class="card">
-      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Morgan-Collins.JPG" style="width:100%">
-      <div class="container2">
-        <h2>Ania Townsin</h2>
-        <p class="title">Digital Editor</p> 
-      </div>
-    </div>
-  </div>
-
-  <div class="column2">
-    <div class="card">
       <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/May-Garland.jpg" style="width:100%">
       <div class="container2">
         <h2>Anna Johnson</h2>
@@ -931,6 +921,16 @@ thecroft.epigram@gmail.com
      </div>
    </div>
  </div>
+
+  <div class="column2">
+    <div class="card">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Morgan-Collins.JPG" style="width:100%">
+      <div class="container2">
+        <h2>Ania Townsin</h2>
+        <p class="title">Digital Editor</p> 
+      </div>
+    </div>
+  </div>
 
   <div class="column2">
     <div class="card">
@@ -962,20 +962,20 @@ thecroft.epigram@gmail.com
 
   <div class="column2">
     <div class="card">
-      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Mia-Musa-Green.JPG" style="width:100%">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Rebecca-Pardon.JPG" style="width:100%">
       <div class="container2">
-        <h2>Mia Austin</h2>
-        <p class="title">Digital Editor</p> 
+        <h2>Lucy Rawlings</h2>
+        <p class="title">Deputy Editor</p>
       </div>
     </div>
   </div>
 
   <div class="column2">
     <div class="card">
-      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Rebecca-Pardon.JPG" style="width:100%">
+      <img class="card-img" src="https://epigram.org.uk/content/images/2020/06/Mia-Musa-Green.JPG" style="width:100%">
       <div class="container2">
-        <h2>Lucy Rawlings</h2>
-        <p class="title">Deputy Editor</p>
+        <h2>Mia Austin</h2>
+        <p class="title">Digital Editor</p> 
       </div>
     </div>
   </div>
