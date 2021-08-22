@@ -382,8 +382,8 @@ div.text code{ font: 11px Monaco, monospace; }
 div.text abbr, div.text acronym{ border-bottom: 1px dotted; cursor: help; }
 div.text ins{ text-decoration: none; }
 div.text p, div.text ul, div.text ol, div.text dd, div.text pre, div.text blockquote{
-    padding-bottom: 20px;
-	line-height: 1.6;
+    padding-bottom: 15px;
+	/* line-height: 1.6; */
 }
 div.text blockquote{ padding: 5px 5px 0px 20px; margin: 0 0 30px 0; border-left: 6px solid #FCD665; font-style: italic; }
 div.text blockquote cite:before{
