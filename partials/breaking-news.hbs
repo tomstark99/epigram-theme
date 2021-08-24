@@ -14,19 +14,15 @@
 								<div class="meta grid-container grid-parent" style="background: url({{feature_image}});background-size: 100%; background-position: center; height:70px;">
 									<div class="image-shadow">
 									<span class="cover"></span>
-									<h6 >{{title}}...</h6>
+                  <script>title("{{title}}", 15, "{{uuid}}")</script>
+									<h6 id="title_{{uuid}}"></h6>
 									{{#if tags}}
 										<div class="tags">
 											{{#foreach tags}}<span class="{{slug}}">{{name}}</span>{{/foreach}}
 										</div>
 									{{/if}}
-                                    <script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}{{@index}}")</script>
+                  <script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}{{@index}}")</script>
 									<time id="{{uuid}}{{@index}}" style="margin-bottom: 0px; color:#fff;" datetime="{{date published_at format="YYYY-MM-DD HH:mm"}}"><i class="fa fa-clock-o"></i>{{date}}</time>
-									<!-- <script>
-										var date = new Date(document.getElementById('time_1').textContent);
-										alert(document.getElementById('time_1').textContent);
-										{{!-- document.getElementById('time_1').textContent = time_ago(date); --}}
-									</script> -->
 									</div>
 								</div>
 							</a>
