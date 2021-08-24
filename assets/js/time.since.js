@@ -50,8 +50,19 @@ function excerpt(excerpt, n, uuid) {
             clearInterval(exists);
             document.getElementById(`excerpt_${uuid}`).innerHTML = `
             ${excerpt.split(" ").slice(0, n).join(" ")}...
-            <div class="clear"></div>
-            `}
+            <div class="clear"></div>`
+          }
     }, 100);
     return
+}
+
+function title(title, n, uuid) {
+  var exists = setInterval(function () {
+    if(document.getElementById(`title_${uuid}`) !== null) {
+      clearInterval(exists)
+      document.getElementById(`title_${uuid}`).innerHTML = `
+      ${title.split(" ").slice(0, n).join(" ")}...`
+    }
+  }, 100)
+  return
 }
