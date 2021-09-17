@@ -15,10 +15,14 @@ function get_top_ad_url() {
     sidebar.innerHTML = adverts[1][1]
 
     // update href and img src
-    document.getElementById("top-banner-sup").href = topBanner.children[1].innerHTML
-    document.getElementById("top-banner-sup").firstChild.src = topBanner.children[0].src
-    document.getElementById("sidebar-sup").href = sidebar.children[1].innerHTML
-    document.getElementById("sidebar-sup").firstChild.src = sidebar.children[0].src
+    try {
+      document.getElementById("top-banner-sup").href = topBanner.children[1].innerHTML
+      document.getElementById("top-banner-sup").firstChild.src = topBanner.children[0].src
+      document.getElementById("sidebar-sup").href = sidebar.children[1].innerHTML
+      document.getElementById("sidebar-sup").firstChild.src = sidebar.children[0].src
+    } catch(e) {
+      console.log("Currently using Google Ads")
+    }
   })
 }
 // triggers advert images to be loaded from https://epigram.org.uk/images-for-ads-on-epigram/
