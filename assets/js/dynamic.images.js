@@ -16,9 +16,9 @@ function get_top_ad_url() {
 
     // update href and img src
     try {
-      document.getElementById("top-banner-sup").href = topBanner.children[1].innerHTML
+      document.getElementById("top-banner-sup").href = topBanner.children[1].innerText
       document.getElementById("top-banner-sup").firstChild.src = topBanner.children[0].src
-      document.getElementById("sidebar-sup").href = sidebar.children[1].innerHTML
+      document.getElementById("sidebar-sup").href = sidebar.children[1].innerText
       document.getElementById("sidebar-sup").firstChild.src = sidebar.children[0].src
     } catch(e) {
       console.log("Currently using Google Ads")
