@@ -30,13 +30,13 @@
             data-ad-client="ca-pub-8236710384567365"
             data-ad-slot="4646156948">
         </amp-ad>-->
-
+        <!--
 		<div class="textwidget" style="margin-top: 20px; border-radius: 10px;">
 			<a id="top-banner-sup" href="" class="sup" target="_blank"><img style="border-radius: 10px; pointer-events: none;" src="" class="img-sup"></a>
 		</div>
-		<!-- end: .ads -->
+		<!-- end: .ads
 		
-		<!-- start: .left-content -->
+		<!-- start: .left-content
 		<div class="left-content section articles grid-parent grid-50">
 			<h3 class="title bordered">RECENT NEWS</h3>
 			
@@ -66,13 +66,46 @@
 			
 		</div>
 		<!-- end: .left-content -->
-		
-		<div class="section">
-			
-			{{> sidebar-featured}}
-			{{> sidebar-default}}
-		
-		</div>
+
+		<!-- MAPACHE STUFF -->
+		 {{#is "paged"}}
+              {{!-- lates post - partials/loop.hbs --}}
+              {{> "loop"}}
+                {{else}}
+
+                    {{!-- Home Top Section --}}
+                    <div class="h-cover home-banner mx-auto mb-10 p-2 grid gap-2 lg:grid-cols-5">
+                        {{#foreach posts visibility="all" from="1" to="3"}}
+                            {{!-- Home Top Section -> 3 first Articles - partials/story/story-cover.hbs --}}
+                            {{> story-cover }}
+                            {{!--  {{> default-article}} --}}
+                        {{/foreach}}
+                    </div>
+
+
+                    {{!-- Post Grid - 8 lates article - this should be 4 articles and be repeated for each section--}}
+                    <div class="side container mx-auto mb-16">
+                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+                            {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                            {{#foreach posts visibility="all" from="4" to="7"}}
+                                {{> story-grid classTitle='text-xl'}}
+                                {{!--{{> default-article}} --}}
+                            {{/foreach}}
+
+                        </div>
+                    </div>
+
+                    {{!-- this is the MAPACHE sidebar - might be better to use EPIGRAM sidebar with MAPACHE styling --}}
+                    <div>
+                        {{!-- Sidebar - partials/sidebar.hbs --}}
+                        {{> "sidebar"}}
+                    </div>
+
+                  
+
+                    {{/is}}
+
 	
 	</div>
 	<!-- end: .center -->
