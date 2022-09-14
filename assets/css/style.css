@@ -641,7 +641,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 #header form button{ position: absolute; right: 10px; top: 7px; font-size: 14px; background: none; color: rgba(142, 142, 142, 0.42); }
 
 #header div.menu-wrapper{ background: #FCD665; }
-#header nav{ margin-top: 10px; padding-top: 15px; text-align: center; position: relative; z-index: 100; }
+#header nav{ margin-top: 10px; text-align: center; position: relative; z-index: 100; }
 
 #header nav div.social{ display: none; color: #000; }
 #header nav div.social ul li a{ color: #000; }
@@ -659,7 +659,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 	text-transform: uppercase;
 	position: relative;
 	z-index: 1;
-	padding: 0 5px 15px;
+	padding: 15px 5px;
 }
 #header nav ul.menu > li > button{
 	display: block;
@@ -1516,4 +1516,36 @@ div#mc_embed_signup_scroll label{
     display: inline-block; 
     margin-left:auto; 
     margin-right:auto;
+}
+
+.nav-home:hover {
+	background-color: #731717;
+}
+
+.nav-news:hover {
+	background-color: #c27e26;
+}
+
+.nav-features:hover {
+	background-color: #c2b026;
+}
+
+.nav-comment:hover {
+	background-color: #5dc226;
+}
+
+.nav-science:hover {
+	background-color: #26c298;
+}
+
+.nav-entertainment:hover {
+	background-color: #266ac2;
+}
+
+.nav-sports:hover {
+	background-color: #b826c2;
+}
+
+.nav-about:hover {
+	background-color: #ec3c68;
 }
