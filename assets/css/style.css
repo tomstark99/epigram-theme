@@ -698,12 +698,12 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 	opacity: 1;
 }
 
-.nav-lifestyle .nav-entertainment .nav-intramural {
+.nav-lifestyle .nav-entertainment .nav-about {
     float: left;
     overflow: hidden;
 }
 
-.nav-lifestyle .nav-entertainment .nav-intramural .lifestyle-dropbtn .entertainment-dropbtn .intramural-dropbtn {
+.nav-lifestyle .nav-entertainment .nav-about .lifestyle-dropbtn .entertainment-dropbtn .intramural-dropbtn {
     font-size: 16px;
     border: none;
     outline: none;
@@ -742,7 +742,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
     background-color: #c2262f;
 }
 
-.nav-entertainment:hover .entertainment-dropdown-content, .nav-lifestyle:hover .lifestyle-dropdown-content, .nav-intramural:hover .intramural-dropdown-content {
+.nav-entertainment:hover .entertainment-dropdown-content, .nav-lifestyle:hover .lifestyle-dropdown-content, .nav-about:hover .intramural-dropdown-content {
     display: block;
 }
 /* Sticky Header */
