@@ -30,7 +30,7 @@ function time_ago(time, uuid) {
     } else {
         var format = { year: 'numeric', month: 'short', day: 'numeric' };
         // time__ = posted.toLocaleDateString("en", format);
-        time__ = posted.format("MMM DD, YYYY")
+        time__ = posted.format("DD MMM YYYY")
     }
     var exists = setInterval(function () {
         if(document.getElementById(uuid) !== null) {
