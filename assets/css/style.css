@@ -170,7 +170,7 @@ body.cover #single div.main-image .boxed.cover{
 }
 .section{ margin-top: 20px; }
 .fullwidth{ display: block; width: 100%; height: auto; }
-.left-content{ width: 75%; }
+.left-content{ width: 70%; }
 
 .one-sidebar .left-content{ width: 75%; }
 .one-sidebar aside#featured{ display: none; }
@@ -1551,3 +1551,4 @@ div#mc_embed_signup_scroll label{
 .nav-about:hover {
 	background-color: #ec3c68;
 }
+

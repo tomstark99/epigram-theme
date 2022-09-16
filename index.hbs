@@ -71,7 +71,7 @@
 		<!-- MAPACHE STUFF -->
 		 {{#is "paged"}}
               {{!-- lates post - partials/loop.hbs --}}
-              {{> "loop"}}
+              {{!--{{> "loop"}} --}}
                 {{else}}
 
                     {{!-- Home Top Section FEATURE TRENDING ARTICLES, not sure whether to use featured:true or weeklytop --}}
@@ -86,7 +86,7 @@
                     {{/get }}
                     </div>
 
-                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#c27e26; margin-left:15px; margin-bottom:3vh;">
+                    <hr style="width:70%;text-align:left;height:15px;border-width:0; background-color:#c27e26; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - NEWS--}}
                     <div class="side container mb-16 left-content">
                         <h4 style="margin-bottom:3px">NEWS</h4>
@@ -94,14 +94,14 @@
                             {{#get "posts" filter="tags:[news]" limit="4" as |news|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach news}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
                     </div>
 
-                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#c2b026; margin-left:15px; margin-bottom:3vh;">
+                    <hr style="width:70%;text-align:left;height:15px;border-width:0; background-color:#c2b026; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - FEATURE--}}
                     <div class="side container mb-16 left-content ">
                         <h4 style="margin-bottom:3px">FEATURES</h4>
@@ -109,14 +109,14 @@
                             {{#get "posts" filter="tags:[features]" limit="4" as |features|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach features}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
                     </div>
 
-                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#5dc226; margin-left:15px; margin-bottom:3vh;">
+                    <hr style="width:70%;text-align:left;height:15px;border-width:0; background-color:#5dc226; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - OPINION,  note use slug not tag!--}}
                     <div class="side container mb-16 left-content ">
                         <h4 style="margin-bottom:3px">OPINION</h4>
@@ -124,14 +124,14 @@
                             {{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach opinion}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
                     </div>
 
-                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#26c298; margin-left:15px; margin-bottom:3vh;">
+                    <hr style="width:70%;text-align:left;height:15px;border-width:0; background-color:#26c298; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - SCITECH--}}
                     <div class="side container mb-16 left-content ">
                         <h4 style="margin-bottom:3px">SCI-TECH</h4>
@@ -139,14 +139,14 @@
                             {{#get "posts" filter="tags:[science]" limit="4" as |science|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach science}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
                     </div>
 
-                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#266ac2; margin-left:15px; margin-bottom:3vh;">
+                    <hr style="width:70%;text-align:left;height:15px;border-width:0; background-color:#266ac2; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - CULTURE, note use slug not tag!--}}
                     <div class="side container mb-16 left-content ">
                         <h4 style="margin-bottom:3px">CULTURE</h4>
@@ -154,7 +154,7 @@
                             {{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach culture}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
@@ -169,7 +169,7 @@
                             {{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach sport}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
