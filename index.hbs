@@ -6,7 +6,7 @@
 <main id="home" class="main" role="main">
 	
 	<!-- start: .center -->
-	<div class="center content grid-container">
+	<div class="center content grid-container ">
 	
 		{{> breaking-news }}
 
@@ -86,11 +86,11 @@
                     {{/get }}
                     </div>
 
-
+                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#c27e26; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - NEWS--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>NEWS</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content">
+                        <h4 style="margin-bottom:3px">NEWS</h4>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
                             {{#get "posts" filter="tags:[news]" limit="4" as |news|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach news}}
@@ -101,11 +101,11 @@
                         </div>
                     </div>
 
-
+                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#c2b026; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - FEATURE--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>FEATURES</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h4 style="margin-bottom:3px">FEATURES</h4>
+                        <div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
                             {{#get "posts" filter="tags:[features]" limit="4" as |features|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach features}}
@@ -116,10 +116,11 @@
                         </div>
                     </div>
 
+                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#5dc226; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - OPINION,  note use slug not tag!--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>OPINION</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h4 style="margin-bottom:3px">OPINION</h4>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach opinion}}
@@ -130,10 +131,11 @@
                         </div>
                     </div>
 
+                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#26c298; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - SCITECH--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>SCI-TECH</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h4 style="margin-bottom:3px">SCI-TECH</h4>
+                        <div class=" grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[science]" limit="4" as |science|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach science}}
@@ -144,10 +146,11 @@
                         </div>
                     </div>
 
+                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#266ac2; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - CULTURE, note use slug not tag!--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>CULTURE</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h4 style="margin-bottom:3px">CULTURE</h4>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach culture}}
@@ -158,10 +161,11 @@
                         </div>
                     </div>
 
+                    <hr style="width:75%;text-align:left;height:15px;border-width:0; background-color:#b826c2; margin-left:15px; margin-bottom:3vh;">
                     {{!-- Post Grid - SPORT--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>SPORT</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h4 style="margin-bottom:3px">SPORT</h4>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach sport}}
