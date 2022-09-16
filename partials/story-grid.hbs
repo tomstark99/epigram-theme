@@ -1,0 +1,28 @@
+<article class="post-box relative overflow-hidden {{#unless feature_image}} flex flex-col justify-center p-5 bg-gray-100 rounded{{/unless}}">
+    {{#if feature_image}}
+    <figure class="post-box-image relative mb-4 overflow-hidden h-40 bg-gray-150 rounded">
+        <a href="{{url}}" class="img-hover">
+            <img class="image-inset absolute img-hover-here blur-up lazyload"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="{{img_url feature_image size="xs"}} 100w,{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+                data-sizes="auto"
+                width="350"
+                height="160"
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"/>
+        </a>
+    </figure>
+    {{/if}}
+
+    <div class="post-box-body">
+        {{!-- Category and Datetime partials/components/primary-tag.hbs --}}
+        {{> "components/primary-tag"}}
+
+        <h2 class="post-box-title text-title hover:text-primary mb-3 leading-tight{{#if classTitle}} {{classTitle}}{{else}} text-2xl font-medium{{/if}}">
+            <a href="{{url}}" class="block">{{title}}</a>
+        </h2>
+
+        {{#unless feature_image}}<p class="text-base lineClamp-3 mb-4">{{excerpt words="25"}}</p>{{/unless}}
+
+        <div class="text-sm text-gray-500"><time class="datetime" datetime="{{date format=" YYYY-MM-DD "}}">{{date format="D MMMM YYYY"}}</time></div>
+    </div>
+</article>
