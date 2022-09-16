@@ -1186,7 +1186,12 @@ section.author div.right div.social a.website i.fa{ vertical-align: middle; }
 
 /* @group Sidebar */
 
-aside#sidebar, aside#featured{ padding-left: 30px; padding-right: 0; overflow: hidden; }
+aside#sidebar, aside#featured{ padding-left: 20px; padding-right: 10px; overflow: hidden;
+	position: -webkit-sticky; /* for Safari users */
+	position: sticky;
+	top: 0px;
+	float: right;
+}
 
 /* Featured Sidebar */
 @keyframes most_read_placeholder {
