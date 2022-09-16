@@ -73,36 +73,111 @@
               {{> "loop"}}
                 {{else}}
 
-                    {{!-- Home Top Section --}}
+                    {{!-- Home Top Section FEATURE TRENDING ARTICLES, not sure whether to use featured:true or weeklytop --}}
                     <div class="h-cover home-banner mx-auto mb-10 p-2 grid gap-2 lg:grid-cols-5">
-                        {{#foreach posts visibility="all" from="1" to="3"}}
+                    {{#get "posts" filter="featured:true" limit="3"as |featured-top|}}
+                        {{#foreach featured-top}}
+                        {{!-- {{#foreach posts visibility="all" from="1" to="3"}} --}}
                             {{!-- Home Top Section -> 3 first Articles - partials/story/story-cover.hbs --}}
                             {{> story-cover }}
                             {{!--  {{> default-article}} --}}
                         {{/foreach}}
+                    {{/get }}
                     </div>
 
 
-                    {{!-- Post Grid - 8 lates article - this should be 4 articles and be repeated for each section--}}
+                    {{!-- Post Grid - NEWS--}}
                     <div class="side container mx-auto mb-16">
+                        <h4>NEWS</h4>
                         <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-
-                            {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
-                            {{#foreach posts visibility="all" from="4" to="7"}}
-                                {{> story-grid classTitle='text-xl'}}
-                                {{!--{{> default-article}} --}}
-                            {{/foreach}}
-
+                            {{#get "posts" filter="tags:[news]" limit="4" as |news|}}
+                                {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                                {{#foreach news}}
+                                    {{> story-grid classTitle='text-xl'}}
+                                    {{!--{{> default-article}} --}}
+                                {{/foreach}}
+                            {{/get}}
                         </div>
                     </div>
 
-                    {{!-- this is the MAPACHE sidebar - might be better to use EPIGRAM sidebar with MAPACHE styling --}}
-                    <div>
-                        {{!-- Sidebar - partials/sidebar.hbs --}}
-                        {{> "sidebar"}}
+
+                    {{!-- Post Grid - FEATURE--}}
+                    <div class="side container mx-auto mb-16">
+                        <h4>FEATURES</h4>
+                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                            {{#get "posts" filter="tags:[features]" limit="4" as |features|}}
+                                {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                                {{#foreach features}}
+                                    {{> story-grid classTitle='text-xl'}}
+                                    {{!--{{> default-article}} --}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
                     </div>
 
-                  
+                    {{!-- Post Grid - OPINION,  note use slug not tag!--}}
+                    <div class="side container mx-auto mb-16">
+                        <h4>OPINION</h4>
+                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                            {{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
+                                {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                                {{#foreach opinion}}
+                                    {{> story-grid classTitle='text-xl'}}
+                                    {{!--{{> default-article}} --}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </div>
+
+                    {{!-- Post Grid - SCITECH--}}
+                    <div class="side container mx-auto mb-16">
+                        <h4>SCI-TECH</h4>
+                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                            {{#get "posts" filter="tags:[science]" limit="4" as |science|}}
+                                {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                                {{#foreach science}}
+                                    {{> story-grid classTitle='text-xl'}}
+                                    {{!--{{> default-article}} --}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </div>
+
+                    {{!-- Post Grid - CULTURE, note use slug not tag!--}}
+                    <div class="side container mx-auto mb-16">
+                        <h4>CULTURE</h4>
+                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                            {{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
+                                {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                                {{#foreach culture}}
+                                    {{> story-grid classTitle='text-xl'}}
+                                    {{!--{{> default-article}} --}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </div>
+
+                    {{!-- Post Grid - SPORT--}}
+                    <div class="side container mx-auto mb-16">
+                        <h4>SPORT</h4>
+                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                            {{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
+                                {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+                                {{#foreach sport}}
+                                    {{> story-grid classTitle='text-xl'}}
+                                    {{!--{{> default-article}} --}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </div>
+
+
+
+
+
+                    {{!--need a SIDEBAR here --}}
+
+
 
                     {{/is}}
 
