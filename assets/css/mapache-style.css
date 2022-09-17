@@ -1240,7 +1240,10 @@ a>code[class*=language-]{color: #3eb0ef}
 
 .ml-4{margin-left: 1rem}
 
-.block{display: block; font-size: 70%;}
+.block{display: block; font-size: 75%; margin-top: -10px;}
+
+.block1{display: block; font-size: 100%; }
+
 
 .inline-block{display: inline-block}
 

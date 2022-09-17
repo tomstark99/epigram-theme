@@ -11,6 +11,7 @@
                 alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"/>
         </a>
     </figure>
+
     {{/if}}
 
 
@@ -20,12 +21,16 @@
         {{> primary-tag }}
 
         <h2 class="post-box-title text-title hover:text-primary mb-3 leading-tight{{#if classTitle}} {{classTitle}}{{else}} text-2xl font-medium{{/if}}">
-            <a href="{{url}}" class="block">{{title}}</a>
+            <!-- trim long titles (in time.since.js) -->
+            <script>titleBody("{{title}}", 8, "{{uuid}}")</script>
+            <a href="{{url}}" class="block lineClamp-3" id="title_{{uuid}}">{{title}}</a>
         </h2>
 
+        <!--ByLine <div class="lineClamp-2 text-sm text-gray-500"><a href="{{url}}" class="block1">{{excerpt words="10"}}</a></div> -->
         {{#unless feature_image}}<p class="text-base lineClamp-3 mb-4">{{excerpt words="25"}}</p>{{/unless}}
-
-        <div class="text-sm text-gray-500"><time class="datetime" datetime="{{date format=" YYYY-MM-DD "}}">{{date format="D MMMM YYYY"}}</time></div>
+        <div class="text-sm text-gray-500 block">
+            <time class="datetime" datetime="{{date format=" YYYY-MM-DD "}}">{{date format="D MMMM YYYY"}}</time>
+        </div>
 
     </div>
 </article>
