@@ -7,12 +7,6 @@
 
 	<!-- start: .top -->
 	<div class="top grid-container grid-parent">
-
-		<div class="social hide-on-mobile hide-on-tablet">
-			{{!-- <i class="open fa fa-share-alt"></i> --}}
-			{{> social-profiles}}
-		</div>
-
 		{{#if @blog.logo}}
 			<h1 class="logo" ><a href="{{@site.url}}"><img id="logo" src="" alt="{{@site.title}}" /></a></h1>
 		{{else}}
@@ -21,6 +15,15 @@
 			</h1>
 		{{/if}}
 
+		<form action="" method="get" class="hide-on-tablet hide-on-mobile mobile-hide">
+			<input type="text" name="s" value="" class="search-field" placeholder="Search" required>
+			<button type="submit"><i class="fa fa-search" style="margin-right: 4px;"></i></button>
+		</form>
+
+		<div class="social hide-on-mobile hide-on-tablet">
+			{{!-- <i class="open fa fa-share-alt"></i> --}}
+			{{> social-profiles}}
+		</div>
 	</div>
 	<!-- end: .top -->
 
@@ -87,11 +90,6 @@
     		</div>
   		</div> --}}
 		</ul>
-
-			<form action="" method="get" class="hide-on-tablet hide-on-mobile mobile-hide">
-				<input type="text" name="s" value="" class="search-field" placeholder="Search" required>
-				<button type="submit"><i class="fa fa-search" style="margin-right: 4px;"></i></button>
-			</form>
 
 		</nav>
 		<!-- end: .main-nav -->
