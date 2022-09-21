@@ -1,3 +1,6 @@
+
+<!-- for some reason I can access author or tag attributes???? -->
+
 <article class="story-cover img-hover bg-dark relative min-h-14{{#if @first}} h-96 firts md:col-span-2 lg:h-full lg:col-span-3 lg:row-span-4{{else}} lg:col-span-2 lg:row-span-2 h-60{{/if}}">
     <div class="h-full relative overflow-hidden">
         {{#if feature_image}}
@@ -20,6 +23,7 @@
             <h2 class="leading-tight text-white text-2xl{{#if @first}} md:text-4xl lg:text-5xl{{else}} lg:text-3xl{{/if}}">
                 <a class="block1" href="{{url}}">{{title}}</a>
             </h2>
+
         </header>
     </div>
 </article>
