@@ -1525,34 +1525,22 @@ div#mc_embed_signup_scroll label{
 }
 
 
-.nav-home:hover {
-	background-color: #731717;
-}
-
 .nav-news:hover {
-	background-color: #c27e26;
+	background-color: #0b1d51;
 }
 
 .nav-features:hover {
-	background-color: #c2b026;
+	background-color: #662e9b;
 }
 
 .nav-comment:hover {
-	background-color: #5dc226;
+	background-color: #43bccd;
 }
 
 .nav-science:hover {
-	background-color: #26c298;
-}
-
-.nav-entertainment:hover {
-	background-color: #266ac2;
+	background-color: #86d36f;
 }
 
 .nav-sports:hover {
-	background-color: #b826c2;
-}
-
-.nav-about:hover {
-	background-color: #ec3c68;
+	background-color: #86d36f;
 }
