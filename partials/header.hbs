@@ -6,21 +6,24 @@
 	</div>
 
 	<!-- start: .top -->
-	<div class="top grid-container grid-parent">
-
-		<div class="social hide-on-mobile hide-on-tablet">
-			<i class="open fa fa-share-alt"></i>
-			{{> social-profiles}}
-		</div>
-
+	<div class="top">
 		{{#if @blog.logo}}
 			<h1 class="logo" ><a href="{{@site.url}}"><img id="logo" src="" alt="{{@site.title}}" /></a></h1>
 		{{else}}
-			<h1 class="logo">
-				<a href="{{@site.url}}">{{@site.title}}</a>
-			</h1>
+			<h1 class="logo"><a href="{{@site.url}}">{{@site.title}}</a></h1>
 		{{/if}}
 
+		<div class="top-right">
+			<form action="" method="get" class="hide-on-tablet hide-on-mobile mobile-hide">
+				<input type="text" name="s" value="" class="search-field" placeholder="Search" required>
+				<button type="submit"><i class="fa fa-search" style="margin-right: 4px;"></i></button>
+			</form>
+
+			<div class="social hide-on-mobile hide-on-tablet">
+				{{!-- <i class="open fa fa-share-alt"></i> --}}
+				{{> social-profiles}}
+			</div>
+		</div>
 	</div>
 	<!-- end: .top -->
 
@@ -54,11 +57,11 @@
 				</li>
 				<li class="nav-entertainment">
 					<a href="/tag/entertainment/">Culture</a>
-					<div class="entertainment-dropdown-content">
-						<a href="/tag/film-TV/">Film & TV</a>
-						<a href="/tag/arts/">Arts</a>
-						<a href="/tag/music/">Music</a>
-					</div>
+					<ul class="entertainment-dropdown-content">
+						<li class="nav-film"><a href="/tag/film-TV/">Film & TV</a></li>
+						<li><a href="/tag/arts/">Arts</a></li>
+						<li><a href="/tag/music/">Music</a></li>
+					</ul>
 				</li>
 				<li class="nav-sports"><a href="/tag/sport/">Sport</a></li>
 				<li class="nav-about">
@@ -87,11 +90,6 @@
     		</div>
   		</div> --}}
 		</ul>
-
-			<form action="" method="get" class="hide-on-tablet hide-on-mobile mobile-hide">
-				<input type="text" name="s" value="" class="search-field" placeholder="Search" required>
-				<button type="submit"><i class="fa fa-search" style="margin-right: 4px;"></i></button>
-			</form>
 
 		</nav>
 		<!-- end: .main-nav -->

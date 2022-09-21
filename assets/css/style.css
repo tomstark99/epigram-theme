@@ -578,33 +578,26 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 
 #header{ background: #fff; color: #fff; padding-top: 10px; }
 
-#header .top{ position: relative; z-index: 1; }
+#header .top{
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+}
+#header .top-right{ min-width: 300px; }
 #header div.menu-mobile{ display: none; }
 #header div.social{
 	position: absolute;
-	left: 0;
-	top: 50%;
+	right: 0px;
+	bottom: 0px;
 	font-size: 16px;
-	color: #fff;
+	color: #000;
 	cursor: pointer;
-	margin-top: -12px;
 }
-#header div.social:hover i.open{
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
 #header div.social ul{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 200px;
 	-webkit-opacity: 0;
-	opacity: 0;
-	visibility: hidden;
+	opacity: 100;
+	visibility: visible;
 	text-align: left;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -612,38 +605,51 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 	-o-transition: all 300ms ease;
 	transition: all 300ms ease;
 }
-#header div.social:hover ul{
-	-webkit-opacity: 1;
-	opacity: 1;
-	visibility: visible;
-	left: 100%;
-	padding-left: 10px;
-}
-#header div.social ul li{ display: inline-block; padding-left: 10px; }
-#header div.social ul li a{ color: #fff; font-size: 18px; }
+#header div.social ul li{ display: inline-block;}
+#header div.social ul li a{ color: rgb(186, 0, 0); font-size: 18px; }
 #header div.social ul li a:hover{ opacity: .6; }
-#header div.social:hover{
+#header div.social ul li a i::before{
+	font-size: 12px;
+	border-radius: 50%;
+	border: 3px solid #c2262F;
+	padding: 2px;
+	background-color: #c2262F;
+	color: white;
+}
 
-}
-#header h1.logo{ max-width: 600px; text-align: center; margin: 0 auto; }
-#header h1.logo a{ font-size: 28px; line-height: 1.2; color: #fff; }
+#header h1.logo{ max-width: 600px; text-align: left; margin: 0; }
+#header h1.logo a{ font-size: 133px; line-height: 1.2; color: rgb(0, 0, 0); }
 #header h1.logo a:hover{ }
-#header h1.logo a img{ max-width: 100%; height: 150px; object-fit: contain;}
+#header h1.logo a img{ max-width: 100%; height: 300px; object-fit: contain;}
+
 #header form{
-	position: absolute;
-	right: 0px;
-	top: 50%;
+	margin: 20px 20px;
 	color: #fff;
-	margin-top: -18px;
+	display: flex;
+	justify-content: flex-end;
 }
-#header form input.search-field{ margin-right: 5px; float: right; width: 100px; padding: 5px 30px 5px 20px; border-radius: 7px; }
+#header form input.search-field{ 
+	width: 100px; 
+	padding: 5px 30px 5px 20px;
+	border-radius: 7px;
+	margin: auto 5px;
+}
 #header form input.search-field:focus{ width: 220px; }
-#header form button{ position: absolute; right: 10px; top: 7px; font-size: 14px; background: none; color: rgba(142, 142, 142, 0.42); }
+#header form button{ 
+	font-size: 20px; 
+	background: none; 
+	color: rgba(142, 142, 142, 0.42);
+}
 
 #header div.menu-wrapper{ background: #FCD665; }
 #header nav{ margin-top: 10px; text-align: center; position: relative; z-index: 100; }
 
-#header nav div.social{ display: none; color: #000; }
+#header nav div.social{
+	display: none;
+	color: #000;
+	bottom: 0%;
+	margin-bottom: 18px;
+}
 #header nav div.social ul li a{ color: #000; }
 
 #header nav form input.search-field{ background: #fff; background: rgba(255,255,255,.3); color: #fff; width: 100px !important; }
@@ -1519,34 +1525,22 @@ div#mc_embed_signup_scroll label{
 }
 
 
-.nav-home:hover {
-	background-color: #731717;
-}
-
 .nav-news:hover {
-	background-color: #c27e26;
+	background-color: #0b1d51;
 }
 
 .nav-features:hover {
-	background-color: #c2b026;
+	background-color: #662e9b;
 }
 
 .nav-comment:hover {
-	background-color: #5dc226;
+	background-color: #43bccd;
 }
 
 .nav-science:hover {
-	background-color: #26c298;
-}
-
-.nav-entertainment:hover {
-	background-color: #266ac2;
+	background-color: #86d36f;
 }
 
 .nav-sports:hover {
-	background-color: #b826c2;
-}
-
-.nav-about:hover {
-	background-color: #ec3c68;
+	background-color: #86d36f;
 }
