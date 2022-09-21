@@ -1,0 +1,31 @@
+{{#if @custom.comments_disqus_short_name}}
+
+<div id="post-comments" class="post-comments js-post-comments w-full mt-12 border-t pt-12">
+    {{!-- Disqus Comments --}}
+    <div id="disqus_thread"></div>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+    (function (d, s, id) {
+        var $comments = document.querySelector('.js-post-comments');
+
+        if (!$comments) return;
+
+        var disqus_config = function () {
+            this.page.url = '{{url absolute="true"}}';
+            this.page.identifier = 'ghost-{{comment_id}}';
+        };
+
+        var js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://{{@custom.comments_disqus_short_name}}.disqus.com/embed.js';
+            js.async = true;
+            js.defer = true;
+            js.setAttribute('data-timestamp', +new Date());
+            d.body.appendChild(js);
+    }(document, 'script', 'disqus-js'));
+</script>
+{{/contentFor}}
+
+{{/if}}
