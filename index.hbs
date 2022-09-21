@@ -94,7 +94,7 @@
                     <div class="side container mb-16 left-content">
                         <h3 style="margin-bottom:15px">NEWS</h3>
                         <div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
-                            {{#get "posts" filter="tags:[news]" limit="4" as |news|}}
+                            {{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach news}}
                                     {{> "story/story-grid" classTitle='text-xl'}}
@@ -103,7 +103,7 @@
                             {{/get}}
                         </div>
                         <!-- ReadMore button -->
-                        <a href="/tag/news/">
+                        <a href="/tag/news-2/">
                         <button  class="read">
                             <p  class="button-text" id="read-news">READ MORE</p>
                             <!-- Arrow -->
