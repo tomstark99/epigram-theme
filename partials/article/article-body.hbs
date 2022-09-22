@@ -1,0 +1,24 @@
+<div class="post-body-wrap relative lg:flex">
+    <div id="post-body" class="post-body min-w-0 js-post-content text-xl text-lg">
+        {{content}}
+
+        {{#if tags}}<div class="post-tags my-8 buttons justify-center lg:justify-start">
+            {{#foreach tags}}<a href="{{url}}" title="{{name}}" class="button is-black is-outlined is-small uppercase">{{name}}</a>{{/foreach}}
+        </div>{{/if}}
+
+    </div>
+
+    {{!-- Share Sticky - partials/article/article-share.hbs --}}
+    <!--{{> "article/article-share"}}-->
+</div>
+
+<div class="post-footer mt-8">
+    {{!-- Authors - partials/article/article-authors.hbs --}}
+    {{> "article/article-authors"}}
+
+    {{!-- Prev and Next Post - partials/article/article-prev-next.hbs --}}
+    {{> "article/article-prev-next"}}
+
+    {{!-- Comments - partials/article/article-comments.hbs
+    {{> "article/article-comments"}} --}}
+</div>

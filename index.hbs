@@ -6,7 +6,7 @@
 <main id="home" class="main" role="main">
 	
 	<!-- start: .center -->
-	<div class="center content grid-container">
+	<div class="center content grid-container ">
 	
 		{{> breaking-news }}
 
@@ -71,7 +71,7 @@
 		<!-- MAPACHE STUFF -->
 		 {{#is "paged"}}
               {{!-- lates post - partials/loop.hbs --}}
-              {{> "loop"}}
+              {{!--{{> "loop"}} --}}
                 {{else}}
 
                     {{!-- Home Top Section FEATURE TRENDING ARTICLES, not sure whether to use featured:true or weeklytop --}}
@@ -86,90 +86,147 @@
                     {{/get }}
                     </div>
 
+                    {{!-- SIDEBAR--}}
+                    {{>sidebar-default}}
 
+                    <hr class="rounded" style="width:70%;text-align:left;height:15px;border-width:0; background-color:#0b1d51; margin-left:15px; margin-bottom:2vh;">
                     {{!-- Post Grid - NEWS--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>NEWS</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                            {{#get "posts" filter="tags:[news]" limit="4" as |news|}}
+                    <div class="side container mb-16 left-content">
+                        <h3 style="margin-bottom:15px">NEWS</h3>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
+                            {{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach news}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
+                        <!-- ReadMore button -->
+                        <a href="/tag/news-2/">
+                        <button  class="read">
+                            <p  class="button-text" id="read-news">READ MORE</p>
+                            <!-- Arrow -->
+                            <div class="button__arrow button__arrow--right"></div>
+                        </button>
+                        </a>
                     </div>
 
-
+                    <hr class="rounded"style="width:70%;text-align:left;height:15px;border-width:0; background-color:#662e9b; margin-left:15px; margin-bottom:2vh;">
                     {{!-- Post Grid - FEATURE--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>FEATURES</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h3 style="margin-bottom:15px">FEATURES</h3>
+                        <div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
                             {{#get "posts" filter="tags:[features]" limit="4" as |features|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach features}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
+                        <!-- ReadMore button -->
+                        <a href="/tag/features/">
+                        <button  class="read">
+                            <p class="button-text" id="read-feature">READ MORE</p>
+                            <!-- Arrow -->
+                            <div class="button__arrow button__arrow--right"></div>
+                        </button>
+                        </a>
                     </div>
 
+                    <hr class="rounded"style="width:70%;text-align:left;height:15px;border-width:0; background-color:#5dc226; margin-left:15px; margin-bottom:2vh;">
                     {{!-- Post Grid - OPINION,  note use slug not tag!--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>OPINION</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h3 style="margin-bottom:15px">OPINION</h3>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach opinion}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
+                        <!-- ReadMore button -->
+                        <a href="/tag/comment/">
+                        <button  class="read">
+                            <p class="button-text" id="read-opinion">READ MORE</p>
+                            <!-- Arrow -->
+                            <div class="button__arrow button__arrow--right"></div>
+                        </button>
+                        </a>
                     </div>
 
+                    <hr class="rounded"style="width:70%;text-align:left;height:15px;border-width:0; background-color:#43bccd; margin-left:15px; margin-bottom:2vh;">
                     {{!-- Post Grid - SCITECH--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>SCI-TECH</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h3 style="margin-bottom:15px">SCI-TECH</h3>
+                        <div class=" grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[science]" limit="4" as |science|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach science}}
-                                    {{> story-grid classTitle='text-xl'}}
+
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
+                        <!-- ReadMore button -->
+                        <a href="/tag/science/">
+                        <button  class="read">
+                            <p class="button-text" id="read-scitech">READ MORE</p>
+                            <!-- Arrow -->
+                            <div class="button__arrow button__arrow--right"></div>
+                        </button>
+                        </a>
                     </div>
 
+                    <hr class="rounded"style="width:70%;text-align:left;height:15px;border-width:0; background-color:#e2ca50; margin-left:15px; margin-bottom:2vh;">
                     {{!-- Post Grid - CULTURE, note use slug not tag!--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>CULTURE</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h3 style="margin-bottom:15px">CULTURE</h3>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach culture}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
+                        <!-- ReadMore button -->
+                        <a href="/tag/entertainment/">
+                        <button  class="read">
+                            <p class="button-text" id="read-culture">READ MORE</p>
+                            <!-- Arrow -->
+                            <div class="button__arrow button__arrow--right"></div>
+                        </button>
+                        </a>
                     </div>
 
+
+                    <hr class="rounded"style="width:70%;text-align:left;height:15px;border-width:0; background-color:#86d36f; margin-left:15px; margin-bottom:2vh;">
                     {{!-- Post Grid - SPORT--}}
-                    <div class="side container mx-auto mb-16">
-                        <h4>SPORT</h4>
-                        <div class="left-content grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="side container mb-16 left-content ">
+                        <h3 style="margin-bottom:15px">SPORT</h3>
+                        <div class="grid gap-8 md:grid-row lg:grid-cols-4">
                             {{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach sport}}
-                                    {{> story-grid classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-xl'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
+                        <!-- ReadMore button -->
+                        <a href="/tag/sport/">
+                        <button  class="read">
+                            <p class="button-text" id="read-sport">READ MORE</p>
+                            <!-- Arrow -->
+                            <div class="button__arrow button__arrow--right"></div>
+                        </button>
+                        </a>
                     </div>
 
 
@@ -187,6 +244,6 @@
 	
 
 		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-        <!-- <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script> -->>
+        <!-- <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script> -->
 
 </main>

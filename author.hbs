@@ -1,59 +1,58 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+{{#author}}
 
-<!-- start: #archives-->
-<main id="archives" class="main" role="main">
-	
-	<!-- start: .center -->
-	<div class="center grid-container">
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "mapache_class_body"}}is-author{{/contentFor}}
 
-		{{> breaking-news }}
-		
-		<div class="left-content section articles grid-parent grid-50">
-			{{#author}}
-				{{#if cover_image}}
-					<h3 class="title bordered uppercase">THE AUTHOR</h3>
-					<div class="cover-image wow fadeIn">
-						<img src="{{cover_image}}" class="fullwidth">
-					</div>
-				{{/if}}
-				<div class="author-info hide-on-desktop item">
-					<h2 class="title">{{name}}</h2>
-					<p>{{bio}}</p>
-					<div class="social">
-								
-						{{#if location}}
-							<a href="javascript:void(0)" class="button location tooltip" title="Location: {{location}}"><i class="fa fa-map-marker"></i> Location</a>
-						{{/if}}
-						
-						{{#if website}}
-							<a href="{{website}}" class="button website tooltip" target="_blank" title="Website: {{website}}"><i class="fa fa-external-link"></i> Website</a>
-						{{/if}}
-						
-					</div>
-				</div>
-				<div class="section {{^if cover_image}}no-cover{{/if}} articles-title">
-					<h3 class="title bordered uppercase">ARTICLES BY {{name}}</h3>
-				</div>
-			{{/author}}
-			{{#foreach posts}}
-				{{> default-article}}
-			{{/foreach}}
-			{{pagination}}
-		</div>
-		
-		<div class="section">
-		
-			{{> sidebar-featured}}
-			
-			{{> sidebar-default}}
-		
-		</div>
-	
-	</div>
-	<!-- end: .center -->
+<section class="author container1 mx-auto mb-10" style="background-color:#c2262f; " >
+    <div class="flex flex-col md:flex-row items-center py-10 ">
 
-</main>
-<!-- end: #archives -->
+
+        <div class="text-center md:text-left "  style="padding-left: 10vw; ">
+            <h1 class="leading-none mb-5 text-title text-3xl lg:text-4xl " style="color: white;">{{name}}</h1>
+            {{#if bio}}<p class="mb-5 text-gray-600">{{bio}}</p>{{/if}}
+
+            {{!-- Location - website - RSS --}}
+            <div class="mb-5 text-gray-500">
+            {{#if location}}<span class="mr-4 block md:inline-block"><svg class="icon is-small"><use xlink:href="#icon-eart"></use></svg> {{location}}</span>{{/if}}
+            {{#if website}}<a href="{{website}}" class="hover:text-gray-900" target="_blank"><svg class="icon is-small is-stroke"><use xlink:href="#icon-link"></use></svg> <span>{{website}}</span></a>{{/if}}
+            </div>
+
+            {{!-- Facebook and Twitter --}}
+            <div class="buttons justify-center md:justify-start">
+                {{#if facebook}}
+                <a class="button is-outline text-sm hover:bg-facebook hover:text-white hover:border-transparent"
+                    href="{{facebook_url}}"
+                    title="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+                    <span>Facebook</span>
+                </a>
+                {{/if}}
+
+                {{#if twitter}}
+                <a class="button is-outline text-sm hover:bg-twitter hover:text-white hover:border-transparent"
+                    href="{{twitter_url}}"
+                    title="{{twitter}}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+                    <span>Twitter</span>
+                </a>
+                {{/if}}
+
+                <a class="button is-outline text-sm hover:bg-orange hover:text-white hover:border-transparent"
+
+                    <span>{{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/author}}
+
+{{!-- The tag below includes the post loop - partials/loop.hbs --}}
+{{>"loop"}}

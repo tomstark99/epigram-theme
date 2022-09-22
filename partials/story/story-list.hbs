@@ -1,0 +1,21 @@
+<article class="js-story story flex flex-col relative mb-12 {{#unless feature_image}} flex flex-col justify-center p-8 bg-gray-100 rounded{{else}}md:flex-row{{/unless}}">
+    {{#if feature_image}}
+    <a href="{{url}}" class="img-hover flex-none relative overflow-hidden w-full min-h-14 rounded md:w-3/7 md:mr-8 bg-gray-100">
+        {{!-- Featured Image ./partials/components/featured-image.hbs --}}
+        {{> "components/featured-image"}}
+    </a>
+    {{/if}}
+
+    <div class="story-body relative flex flex-col mt-4 md:mt-0">
+        {{!-- Category and Datetime partials/components/primary-tag.hbs --}}
+        {{> primary-tag}}
+
+        <h2 class="story-title text-26 leading-tight text-title mb-3 hover:text-primary"><a href="{{url}}" class="block1">{{title}}</a></h2>
+        <div class="relative overflow-hidden flex flex-col flex-grow mb-6 text-gray-700">
+            <div class="lineClamp-3"><a href="{{url}}" class="block1">{{excerpt words="25"}}</a></div>
+        </div>
+
+        {{!-- Article Author only Name - partials/components/author-meta.hbs --}}
+        {{> "components/author-meta" onlyName=true}}
+    </div>
+</article>

@@ -1,0 +1,25 @@
+<div class="cc-image godo-hero-cover bg-dark overflow-hidden pt-16 relative flex flex-col justify-center min-h-lg h-screen">
+    <div class="container relative z-3 mx-auto">
+        <div class="max-w-740 py-12">
+            {{!-- {{#if primary_tag}}{{#primary_tag}}
+            <div class="mb-4">
+                <a href="{{url}}"
+                    title="{{name}}"
+                    class="button is-primary is-small font-semibold uppercase"
+                    {{#if accent_color}}style="background:{{accent_color}}"{{/if}}>
+                    {{name}}
+                </a>
+            </div>
+            {{/primary_tag}}{{/if}} --}}
+
+            {{!-- Category and Datetime partials/components/primary-tag.hbs --}}
+            {{> "components/primary-tag" class="text-white"}}
+
+            <h1 class="post-t text-5xl md:text-6xl text-white">{{title}}</h1>
+            {{#if custom_excerpt}}<p class="text-xl pt-4 text-white">{{custom_excerpt}}</p>{{/if}}
+        </div>
+    </div>
+
+    {{!-- Featured Media - partials/components/media-cover.hbs --}}
+    {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+</div>

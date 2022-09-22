@@ -1,51 +1,36 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "mapache_class_body"}}is-tag{{/contentFor}}
 
-<!-- start: #archives-->
-<main id="archives" class="main" role="main">
+{{#tag}}
 
-	<!-- start: .center -->
-	<div class="center grid-container">
-	
-		{{> breaking-news }}
-		
-		<div class="left-content section articles grid-parent grid-50">
-				{{#if tag.feature_image}}
-					<h3 class="title bordered uppercase">TAG ARCHIVE</h3>
-					<div class="wow fadeIn">
-						
-						<div class="cover-image">
-							<img src="{{tag.feature_image}}" class="fullwidth">
-							<div class="description">
-								<h2 class="title uppercase">{{tag.name}}</h2>
-								{{#if tag.description}}
-									<p>{{tag.description}}</p>
-								{{/if}}
-							</div>
-						</div>
-					</div>
-				{{/if}}
-				<div class="{{#if tag.feature_image}}section{{/if}}">
-					<h3 class="title bordered uppercase">{{pagination.total}} RESULTS IN TAG "{{tag.name}}":</h3>
-				</div>
-			{{#foreach posts}}
-				{{> default-article}}
-			{{/foreach}}
-			{{pagination}}
-		</div>
-		
-		<div class="section">
-		
-			{{> sidebar-featured}}
-			
-			{{> sidebar-default}}
-		
-		</div>
-	
-	</div>
-	<!-- end: .center -->
+{{#if accent_color}}<style>.u-primaryGradient{background: {{accent_color}}; -webkit-opacity: 0.7; opacity: 0.7;}</style>{{/if}}
 
-</main>
-<!-- end: #archives -->
+<div class="relative text-center mb-12 text-white flex items-center lg:text-left {{#unless feature_image}}u-primaryGradient{{else}}bg-dark{{/unless}}">
+    <div class="relative z-3 container text-xl lg:flex items-center mx-auto py-12">
+        <div class="flex-grow" style="padding-right: 20px;">
+            <h1 class="text-4xl lg:text-5xl capitalize text-white">{{name}}</h1>
+            {{#if description}}<p class="mx-auto lg:ml-0 mt-5 max-w-2xl">{{description}}</p>{{/if}}
+        </div>
+        <div class="text-center leading-tight mt-8 lg:mt-0">
+            <span class="text-3xl lg:text-4xl font-semibold block">{{../pagination.total}}</span>
+            <span>{{t "Articles"}}</span>
+        </div>
+    </div>
+
+<!-- FOR FEATURE IMAGE HEADER
+    {{#if feature_image}}
+        {{!-- Featured Media - partials/components/media-cover.hbs --}}
+        {{> "components/media-cover" background=feature_image alt_title=name}}
+        <div class="inset-0 absolute z-2 bg-cover-gradient"></div>
+    {{else}}
+        <img class="image-inset z-2" src="{{asset "images/tag-bg.svg"}}" alt="">
+    {{/if}}
+-->
+</div>
+
+{{/tag}}
+
+{{!-- lates post - partials/loop.hbs --}}
+{{> "loop"}}
