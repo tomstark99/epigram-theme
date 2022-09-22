@@ -1768,14 +1768,14 @@ a>code[class*=language-]{color: #3eb0ef}
 
 }
 #read-opinion:hover{
-    color: #5dc226;
+    color:  #43bccd;
     -webkit-opacity: 0.8;
     opacity: 0.8;
 
 }
 
 #read-scitech:hover{
-  color: #43bccd ;
+  color: #5dc226  ;
   -webkit-opacity: 0.8;
   opacity: 0.8;
 
