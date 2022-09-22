@@ -91,19 +91,19 @@
 
 							<hr class="rounded section-divider news-colour">
 							{{!-- Post Grid - NEWS--}}
-							<div class="side container mb-16">
+							<div class="side mb-16">
 								<h3 style="margin-bottom:15px">NEWS</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
 									{{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
 										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 										{{#foreach news}}
-											{{> "story/story-grid" classTitle='text-xl'}}
+											{{> "story/story-grid" classTitle='text-sm'}}
 											{{!--{{> default-article}} --}}
 										{{/foreach}}
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/news-2/">
+								<a style="margin-top:10px; display:block;" href="/tag/news-2/">
 								<button  class="read">
 									<p  class="button-text" id="read-news">READ MORE</p>
 									<!-- Arrow -->
@@ -114,13 +114,13 @@
 
 							<hr class="rounded section-divider features-colour">
 							{{!-- Post Grid - FEATURE--}}
-							<div class="side container mb-16">
+							<div class="side mb-16">
 								<h3 style="margin-bottom:15px">FEATURES</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
 									{{#get "posts" filter="tags:[features]" limit="4" as |features|}}
 										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 										{{#foreach features}}
-											{{> "story/story-grid" classTitle='text-xl'}}
+											{{> "story/story-grid" classTitle='text-sm'}}
 											{{!--{{> default-article}} --}}
 										{{/foreach}}
 									{{/get}}
@@ -137,13 +137,13 @@
 
 							<hr class="rounded section-divider opinion-colour">
 							{{!-- Post Grid - OPINION,  note use slug not tag!--}}
-							<div class="side container mb-16">
+							<div class="side mb-16">
 								<h3 style="margin-bottom:15px">OPINION</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
 										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 										{{#foreach opinion}}
-											{{> "story/story-grid" classTitle='text-xl'}}
+											{{> "story/story-grid" classTitle='text-sm'}}
 											{{!--{{> default-article}} --}}
 										{{/foreach}}
 									{{/get}}
@@ -158,16 +158,16 @@
 								</a>
 							</div>
 
-							<hr class="rounded section-divider scitech-colour">
-							{{!-- Post Grid - SCITECH--}}
-							<div class="side container mb-16">
+                    <hr class="rounded section-divider scitech-colour">
+                    {{!-- Post Grid - SCITECH--}}
+							<div class="side mb-16">
 								<h3 style="margin-bottom:15px">SCI-TECH</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[science]" limit="4" as |science|}}
 										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 										{{#foreach science}}
 
-											{{> "story/story-grid" classTitle='text-xl'}}
+											{{> "story/story-grid" classTitle='text-sm'}}
 											{{!--{{> default-article}} --}}
 										{{/foreach}}
 									{{/get}}
@@ -184,13 +184,13 @@
 
 							<hr class="rounded section-divider filmtv-colour">
 							{{!-- Post Grid - CULTURE, note use slug not tag!--}}
-							<div class="side container mb-16">
+							<div class="side mb-16">
 								<h3 style="margin-bottom:15px">CULTURE</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
 										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 										{{#foreach culture}}
-											{{> "story/story-grid" classTitle='text-xl'}}
+											{{> "story/story-grid" classTitle='text-sm'}}
 											{{!--{{> default-article}} --}}
 										{{/foreach}}
 									{{/get}}
@@ -208,13 +208,13 @@
 
 							<hr class="rounded section-divider sport-colour">
 							{{!-- Post Grid - SPORT--}}
-							<div class="side container mb-16">
+							<div class="side mb-16">
 								<h3 style="margin-bottom:15px">SPORT</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
 										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 										{{#foreach sport}}
-											{{> "story/story-grid" classTitle='text-xl'}}
+											{{> "story/story-grid" classTitle='text-sm'}}
 											{{!--{{> default-article}} --}}
 										{{/foreach}}
 									{{/get}}
