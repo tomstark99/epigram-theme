@@ -1557,7 +1557,7 @@ hr.section-divider {
 	text-align: left;
 	height: 15px;
 	border-width: 0;
-	margin-left:15px;
+	margin-left:0;
 	margin-bottom:2vh;
 }
 
