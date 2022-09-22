@@ -97,13 +97,13 @@
                             {{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach news}}
-                                    {{> "story/story-grid" classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-sm'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
                         </div>
                         <!-- ReadMore button -->
-                        <a href="/tag/news-2/">
+                        <a style="margin-top:10px; display:block;"href="/tag/news-2/">
                         <button  class="read">
                             <p  class="button-text" id="read-news">READ MORE</p>
                             <!-- Arrow -->
@@ -120,7 +120,7 @@
                             {{#get "posts" filter="tags:[features]" limit="4" as |features|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach features}}
-                                    {{> "story/story-grid" classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-sm'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
@@ -143,7 +143,7 @@
                             {{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach opinion}}
-                                    {{> "story/story-grid" classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-sm'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
@@ -167,7 +167,7 @@
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach science}}
 
-                                    {{> "story/story-grid" classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-sm'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
@@ -190,7 +190,7 @@
                             {{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach culture}}
-                                    {{> "story/story-grid" classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-sm'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
@@ -214,7 +214,7 @@
                             {{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
                                 {{!-- Story Grid - partiasl/story/story-grid.hbs --}}
                                 {{#foreach sport}}
-                                    {{> "story/story-grid" classTitle='text-xl'}}
+                                    {{> "story/story-grid" classTitle='text-sm'}}
                                     {{!--{{> default-article}} --}}
                                 {{/foreach}}
                             {{/get}}
