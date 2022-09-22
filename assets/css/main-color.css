@@ -105,3 +105,16 @@ section.breaking-news div.slick a{ color: #fff; }
 .spinner > div{
 	background: #fff;
 }
+
+
+/* Section Colours */
+
+.epigram-red { background-color: #c2262f; }
+.features-colour { background-color: #662e9b; }
+.news-colour { background-color: #0b1d51; }
+.opinion-colour { background-color: #43bccd; }
+.scitech-colour { background-color: #86d36f; }
+.filmtv-colour { background-color: #e2ca50; }
+.arts-colour { background-color: #ec9a29; }
+.music-colour { background-color: #e16f76; }
+.sport-colour { background-color: #86d36f; }

@@ -1553,3 +1553,20 @@ div#mc_embed_signup_scroll label{
 	background-color: #86d36f;
 }
 
+hr.section-divider {
+	text-align: left;
+	height: 15px;
+	border-width: 0;
+	margin-left:15px;
+	margin-bottom:2vh;
+}
+
+div.home-body {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+div.section-rows {
+
+}
