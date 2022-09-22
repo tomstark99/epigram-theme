@@ -1,191 +1,36 @@
-{{!< default}}
+{{!-- Layout --}}
+{{!< default }}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+{{#contentFor "mapache_class_body"}}is-article{{/contentFor}}
 
-<!-- start: #single -->
+<div class=" mx-auto flex flex-col lg:flex-row my-10" style="padding-left: 5vw; padding-right:5vw; ">
+        {{#post}}
+        <article class="post min-w-0 flex-auto " style="width: 50vw;">
+            {{#unless feature_image}}
+                <div class="lg:pl-20">
+                {{!-- Article Header - partials/article/article-header.hbs --}}
+                {{> "article/article-header"}}
+                {{!-- Article Author - partials/components/author-meta.hbs --}}
+                {{> "components/author-meta"}}
+                </div>
+            {{else}}
+                {{!-- Article Header - partials/article/article-header.hbs --}}
+                {{> "article/article-header"}}
+                {{!-- Article Author - partials/components/author-meta.hbs --}}
+                {{> "components/author-meta"}}
+            {{/unless}}
 
-<main id="single" class="main" role="main">
-	
-	{{#post}}
-		{{#if feature_image}}
-			{{^has tag="no cover"}}
-				<div class="wow fadeIn">
-					<div class="main-image cover" style="background: url({{feature_image}});" id="image_1">
-						<div class="overlay"></div>
-						<div class="center grid-container">
-							<div class="boxed cover" style="background: url({{feature_image}});"></div>
-							<div class="boxed overlay"></div>
-							<div class="info">
-								<!-- start: .meta -->
-								<div class="meta">
-									<h1 class="title">{{title}}</h1>
-									{{#if tags}}
-										<div class="tags">
-											{{tags separator=""}}
-										</div>
-									{{/if}}
-									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
-									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
-									<div class="page_views" id="page_views"></div>
-								</div>
-								<!-- end: .meta -->
-							</div>
-						</div>
-					</div>
-				</div>
-			{{/has}}
-		{{/if}}
-	
-		<!-- start: .center -->
-		<div class="center content section grid-container {{#has tag="no cover"}}no-cover{{/has}} {{#has tag="no sidebar"}}no-sidebar{{/has}} {{#has tag="one sidebar"}}one-sidebar{{/has}}">
-	
-				<!-- start: .content -->
-				<div class="left-content grid-parent grid-50">
-					<article class="{{post_class}}">
-					
-						<h3 class="title bordered">FULL ARTICLE</h3>
-                        
-						{{#has tag="no cover"}}
-							<header>
-								<!-- start: .meta -->
-								<div class="meta">
-									{{#if tags}}
-										<div class="tags">
-											{{tags separator=""}}
-										</div>
-									{{/if}}
-									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
-									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
-									<div class="page_views" id="page_views"></div>
-								</div>
-								<!-- end: .meta -->
-								<div class="clear"></div>
-								<h2 class="title">{{title}}</h2>
-								<div class="post-format">
-									{{#if feature_image}}
-										<div class="main-image"><img src="{{feature_image}}"></div>
-									{{/if}}
-								</div>
-							</header>
-						{{/has}}
-						<section class="post-content">
-							<div class="text">{{content}}</div>
-						</section>
-						
-						<div class="share">
-							<h3 class="title">SHARE THIS!</h3>
-							<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-						onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook"></i> FACEBOOK</a>
-							<a class="twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
-						onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="fa fa-twitter"></i> TWITTER</a>
-							<a class="googleplus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-					   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><i class="fa fa-google-plus"></i> GOOGLE</a>
-						</div>
+            {{!-- Featured Image - partials/article/article-media.hbs --}}
+            {{> "article/article-media"}}
 
-						<button onclick="hide_show()" id="button_sm">SOMETHING WRONG WITH THIS ARTICLE?</button>
+            {{!-- Article Content - partials/article/article-body.hbs --}}
+            {{> "article/article-body"}}
+        </article>
 
-						{{> something-wrong}}
-						
-					</article>
-					
-					{{#primary_author}}
-						<!-- start: .author -->
-						<section class="author {{#if profile_image}} with-avatar{{else}} no-avatar{{/if}} grid-container">
-							<h3 class="title bordered">AUTHOR</h3>
-							<div class="avatar grid-35 tablet-grid-30">
-								{{#if profile_image}}
-									<a href="{{url}}" class="hover-effect"><img src="{{profile_image}}"></a>
-								{{/if}}
-							</div>
-							<div class="right grid-65 tablet-grid-70">
-								<h4 class="title"><a href="{{url}}">{{name}}</a></h4>
-								<p>{{bio}}</p>
-								<div class="social">
-								
-									{{#if location}}
-										<a href="javascript:void(0)" class="button location tooltip" title="Location: {{location}}"><i class="fa fa-map-marker"></i> Location</a>
-									{{/if}}
-									
-									{{#if website}}
-										<a href="{{website}}" class="button website tooltip" target="_blank" title="Website: {{website}}"><i class="fa fa-external-link"></i> Website</a>
-									{{/if}}
-									
-								</div>
-							</div>
-							<div class="clear"></div>
-						</section>
-						<!-- end: .author -->
-					{{/primary_author}}
-					
-					<section class="related grid-container grid-parent">
-						<h3 class="title bordered">RELATED POSTS</h3>
-						{{#prev_post}}
-							<article class="previous grid-50 tablet-grid-50">
-								{{#if feature_image}}
-									<a href="{{url}}" class="thumb cover opacity-effect" style="background: url({{feature_image}}); -webkit-border-radius: 10px;"><span><i class="fa fa-chevron-left"></i> PREVIOUS</span></a>
-								{{/if}}
-								<div class="meta">
-									{{#if tags}}
-										<div class="tags">
-											{{tags separator=""}}
-										</div>
-									{{/if}}
-									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
-									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
-								</div>
-								<h4 class="title"><a href="{{url}}">{{title}}</a></h4>
-							</article>
-						{{/prev_post}}
-						
-						{{#next_post}}
-							<article class="next grid-50 tablet-grid-50">
-								{{#if feature_image}}
-									<a href="{{url}}" class="thumb cover opacity-effect" style="background: url({{feature_image}}); -webkit-border-radius: 10px;"><span>NEXT <i class="fa fa-chevron-right"></i></span></a>
-								{{/if}}
-								<div class="meta">
-									{{#if tags}}
-										<div class="tags">
-											{{tags separator=""}}
-										</div>
-									{{/if}}
-									<script>time_ago("{{date format="YYYY-MM-DD HH:mm"}}","{{uuid}}")</script>
-									<time id="{{uuid}}" datetime="{{date format="YYYY-MM-DD"}}"></time>
-								</div>
-								<h4 class="title"><a href="{{url}}">{{title}}</a></h4>
-							</article>
-						{{/next_post}}
-					</section>
-				    <section class="post-full-comments">
-				    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-                    <!-- <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script> -->
-				    </section>
-	
-						
-						 <!--  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-						 
-					
-					<!-- start: .pagination -->
-					<div class="pagination">
-		
-						<div class="clear"></div>
-					</div>
-					<!-- end: .pagination-->
-					
-					<div class="clear"></div>
-				</div>
-				<!-- end: .content -->
-			
-			
-			{{>sidebar-featured}}
-			{{>sidebar-default}}
-		
-		</div>
-		<!-- end: .center -->
-		
-	{{/post}}
-	
-</main>
 
-<script type="text/javascript" src="{{asset "js/parallax.js"}}"></script>
-<!-- end: #single -->
+        {{!-- Sidebar - partials/sidebar.hbs --}}
+        {{> sidebar-default}}
+
+        {{/post}}
+</div>
+

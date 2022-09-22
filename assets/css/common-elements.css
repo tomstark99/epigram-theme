@@ -241,7 +241,7 @@ section.widget_ep_social div.icons{ }
 section.widget_ep_social div.icons a{
 	display: block;
 	height: 64px;
-	font: 22px 'Roboto Condensed';
+	font: 22px ;
 	font-weight: bold;
 	background: #DFE3DE;
 	color: #fff !important;

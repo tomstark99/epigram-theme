@@ -6,12 +6,10 @@
 <main id="home" class="main" role="main">
 	
 	<!-- start: .center -->
-	<div class="center content grid-container">
+	<div class="center content grid-container ">
 	
 		{{> breaking-news }}
 
-		{{> carousel}}
-		
 		<!-- start: .ads -->
 
 		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -33,13 +31,14 @@
             data-ad-slot="4646156948">
         </amp-ad>-->
 
+        <!--
 		<div class="textwidget" style="margin-top: 20px; border-radius: 10px;">
 			<a id="top-banner-sup" href="" class="sup" target="_blank"><img style="border-radius: 10px; pointer-events: none;" src="" class="img-sup"></a>
 		</div>
-		<!-- end: .ads -->
+		<!-- end: .ads
 		
-		<!-- start: .left-content -->
-		<div class="left-content section articles grid-parent grid-50">
+		<!-- start: .left-content
+		<div class="left-content section articles grid-parent grid-75">
 			<h3 class="title bordered">RECENT NEWS</h3>
 			
 				{{#foreach posts}}
@@ -68,19 +67,182 @@
 			
 		</div>
 		<!-- end: .left-content -->
-		
-		<div class="section">
-			
-			{{> sidebar-featured}}
-			{{> sidebar-default}}
-		
-		</div>
+
+		<!-- MAPACHE STUFF -->
+		 {{#is "paged"}}
+              {{!-- lates post - partials/loop.hbs --}}
+              {{!--{{> "loop"}} --}}
+                {{else}}
+
+                    {{!-- Home Top Section FEATURE TRENDING ARTICLES, not sure whether to use featured:true or weeklytop --}}
+                    <div class="h-cover home-banner mx-auto mb-10 p-2 grid gap-2 lg:grid-cols-5">
+                    {{#get "posts" filter="featured:true" limit="3"as |featured-top|}}
+                        {{#foreach featured-top}}
+                        {{!-- {{#foreach posts visibility="all" from="1" to="3"}} --}}
+                            {{!-- Home Top Section -> 3 first Articles - partials/story/story-cover.hbs --}}
+                            {{> story-cover }}
+                            {{!--  {{> default-article}} --}}
+                        {{/foreach}}
+                    {{/get }}
+                    </div>
+
+					<div class="home-body">
+						<div class="section-rows left-content">
+
+							<hr class="rounded section-divider news-colour">
+							{{!-- Post Grid - NEWS--}}
+							<div class="side mb-16">
+								<h3 style="margin-bottom:15px">NEWS</h3>
+								<div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
+									{{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach news}}
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a style="margin-top:10px; display:block;" href="/tag/news-2/">
+								<button  class="read">
+									<p  class="button-text" id="read-news">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+
+							<hr class="rounded section-divider features-colour">
+							{{!-- Post Grid - FEATURE--}}
+							<div class="side mb-16">
+								<h3 style="margin-bottom:15px">FEATURES</h3>
+								<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
+									{{#get "posts" filter="tags:[features]" limit="4" as |features|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach features}}
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a href="/tag/news-2/">
+								<button  class="read">
+									<p  class="button-text" id="read-news">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+
+							<hr class="rounded section-divider opinion-colour">
+							{{!-- Post Grid - OPINION,  note use slug not tag!--}}
+							<div class="side mb-16">
+								<h3 style="margin-bottom:15px">OPINION</h3>
+								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
+									{{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach opinion}}
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a href="/tag/comment/">
+								<button  class="read">
+									<p class="button-text" id="read-opinion">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+
+							<hr class="rounded section-divider scitech-colour">
+
+
+                             {{!-- Post Grid - SCITECH--}}
+							<div class="side mb-16">
+								<h3 style="margin-bottom:15px">SCI-TECH</h3>
+								<div class=" grid gap-8 md:grid-row lg:grid-cols-4">
+									{{#get "posts" filter="tags:[science]" limit="4" as |science|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach science}}
+
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a href="/tag/science/">
+								<button  class="read">
+									<p class="button-text" id="read-scitech">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+
+							<hr class="rounded section-divider filmtv-colour">
+							{{!-- Post Grid - CULTURE, note use slug not tag!--}}
+							<div class="side mb-16">
+								<h3 style="margin-bottom:15px">CULTURE</h3>
+								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
+									{{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach culture}}
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a href="/tag/entertainment/">
+								<button  class="read">
+									<p class="button-text" id="read-culture">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+
+
+							<hr class="rounded section-divider sport-colour">
+							{{!-- Post Grid - SPORT--}}
+							<div class="side mb-16">
+								<h3 style="margin-bottom:15px">SPORT</h3>
+								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
+									{{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach sport}}
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a href="/tag/sport/">
+								<button  class="read">
+									<p class="button-text" id="read-sport">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+						</div>
+
+						{{!-- SIDEBAR--}}
+                    	{{>sidebar-default}}
+					</div>
+
+                    {{/is}}
 	
 	</div>
 	<!-- end: .center -->
 	
 
 		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-        <!-- <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script> -->>
+        <!-- <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"d26225c0c7c87bc20295436eb","lid":"9c4c243686","uniqueMethods":true}) })</script> -->
 
 </main>

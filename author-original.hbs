@@ -1,0 +1,59 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<!-- start: #archives-->
+<main id="archives" class="main" role="main">
+	
+	<!-- start: .center -->
+	<div class="center grid-container">
+
+		{{> breaking-news }}
+		
+		<div class="left-content section articles grid-parent grid-50">
+			<!-- {{#primary_author}} UNCOMMENT IF USING THIS PAGE -->
+				{{#if cover_image}}
+					<h3 class="title bordered uppercase">THE AUTHOR</h3>
+					<div class="cover-image wow fadeIn">
+						<img src="{{cover_image}}" class="fullwidth">
+					</div>
+				{{/if}}
+				<div class="author-info hide-on-desktop item">
+					<h2 class="title">{{name}}</h2>
+					<p>{{bio}}</p>
+					<div class="social">
+								
+						{{#if location}}
+							<a href="javascript:void(0)" class="button location tooltip" title="Location: {{location}}"><i class="fa fa-map-marker"></i> Location</a>
+						{{/if}}
+						
+						{{#if website}}
+							<a href="{{website}}" class="button website tooltip" target="_blank" title="Website: {{website}}"><i class="fa fa-external-link"></i> Website</a>
+						{{/if}}
+						
+					</div>
+				</div>
+				<div class="section {{^if cover_image}}no-cover{{/if}} articles-title">
+					<h3 class="title bordered uppercase">ARTICLES BY {{name}}</h3>
+				</div>
+			<!-- {{/primary_author}} -->
+			{{#foreach posts}}
+				{{> default-article}}
+			{{/foreach}}
+			{{pagination}}
+		</div>
+		
+		<div class="section">
+		
+			{{> sidebar-featured}}
+			
+			{{> sidebar-default}}
+		
+		</div>
+	
+	</div>
+	<!-- end: .center -->
+
+</main>
+<!-- end: #archives -->

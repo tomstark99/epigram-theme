@@ -77,7 +77,7 @@
 			infinite: false,
 			variableWidth: false,
 			swipe: true,
-			vertical: true,
+			vertical: false,
 			slidesToShow: 1
 		});
 		

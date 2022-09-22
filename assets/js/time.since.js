@@ -25,12 +25,12 @@ function time_ago(time, uuid) {
         time__ = Math.floor(seconds/hour) + ' hours ago';
     } else if ((seconds - (day * 2.0)) < 0) {
         time__ = Math.floor(seconds/day) + ' day ago';
-    } else if ((seconds - week) < 0) {
+    } else if ((seconds - (week * 2.0)) < 0) {
         time__ = Math.floor(seconds/day) + ' days ago';
     } else {
         var format = { year: 'numeric', month: 'short', day: 'numeric' };
         // time__ = posted.toLocaleDateString("en", format);
-        time__ = posted.format("MMM DD, YYYY")
+        time__ = posted.format("DD MMM YYYY")
     }
     var exists = setInterval(function () {
         if(document.getElementById(uuid) !== null) {
@@ -66,3 +66,21 @@ function title(title, n, uuid) {
   }, 100)
   return
 }
+
+//function to trim titles in story-grid if too long
+function titleBody(title, n, uuid) {
+    var exists = setInterval(function () {
+        if(document.getElementById(`title_${uuid}`) !== null) {
+            clearInterval(exists)
+            if (title.length > 65) {
+                document.getElementById(`title_${uuid}`).innerHTML = `
+            ${title.split(" ").slice(0, n).join(" ")}...`
+            } else {
+                document.getElementById(`title_${uuid}`).innerHTML = `
+            ${title}`
+            }
+        }
+    }, 100)
+    return
+}
+
