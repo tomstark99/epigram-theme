@@ -1,0 +1,22 @@
+{{!-- TODO: complete this partial and use in index.hbs --}}
+
+{{!-- find a way to dynamically set colour using handlebars? --}}
+<hr class="rounded section-divider epigram-red">
+<div class="side container mb-16 left-content">
+    <h3 style="margin-bottom:15px">NEWS</h3>
+    <div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
+        {{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
+            {{#foreach news}}
+                {{> "story/story-grid" classTitle='text-xl'}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+    <!-- ReadMore button -->
+    <a href="/tag/news-2/">
+    <button  class="read">
+        <p  class="button-text" id="read-news">READ MORE</p>
+        <!-- Arrow -->
+        <div class="button__arrow button__arrow--right"></div>
+    </button>
+    </a>
+</div>

@@ -312,7 +312,7 @@ where there is no paragraph added*/
 	height: 40vh;
 }
 .container1{
-	height: 20vh;
+	height: 30vh;
 }
 .container2 {
 	padding: 0 5px;
@@ -581,14 +581,14 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 
 #header{ background: #fff; color: #fff; padding-top: 10px; }
 
-#header .top{
+#header div.menu-mobile{ display: none; }
+#header div.top{
 	position: relative;
 	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 }
-#header .top-right{ min-width: 300px; }
-#header div.menu-mobile{ display: none; }
+#header div.top-right{ min-width: 300px; }
 #header div.social{
 	position: absolute;
 	right: 0px;
@@ -620,7 +620,7 @@ div.gallery a:hover:before, section.widget_ep_flickr ul li a:hover:before{
 	color: white;
 }
 
-#header h1.logo{ max-width: 600px; text-align: left; margin: 0; }
+#header h1.logo{ max-width: 600px; text-align: left; margin-left: 30px; }
 #header h1.logo a{ font-size: 133px; line-height: 1.2; color: rgb(0, 0, 0); }
 #header h1.logo a:hover{ }
 #header h1.logo a img{ max-width: 100%; height: 300px; object-fit: contain;}
@@ -1553,3 +1553,20 @@ div#mc_embed_signup_scroll label{
 	background-color: #86d36f;
 }
 
+hr.section-divider {
+	text-align: left;
+	height: 15px;
+	border-width: 0;
+	margin-left:15px;
+	margin-bottom:2vh;
+}
+
+div.home-body {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+div.section-rows {
+
+}
