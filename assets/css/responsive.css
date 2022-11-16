@@ -7,7 +7,7 @@
 	body{ min-width: inherit; }
 	img{ max-width: 100%; height: auto; }
 	
-	#header .top{ margin: 0 5%; }
+	/* #header .top{ margin: 0 5%; } */
 
 	#footer, .center{ padding-left: 5%; padding-right: 5%; }
 	
@@ -33,7 +33,7 @@
 	
 	/* @group Header */
 	
-	#header .top{ margin: 0 5%; }
+	#header .top{ margin: 0 65px; }
 	#header{ /*padding: 50px 0;*/ position: relative; }
 	#header h1.logo{ max-width: 60%; }
 	#header div.menu-mobile{
@@ -125,7 +125,7 @@
 	
 	/* @group Header */
 	
-	#header .top{ margin: 0 30px; }
+	#header .top{ margin: 0 65px; }
 	#header{ /*padding: 30px 0; */}
 	
 	/* @end */
