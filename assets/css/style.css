@@ -19,6 +19,22 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 /* @group Reset */
 
+/* Section Colours */
+
+:root {
+	--epigram-red: #c2262f;
+	--features-colour: #662e9b;
+	--news-colour: #0b1d51;
+	--opinion-colour: #43bccd;
+	--scitech-colour: #86d36f;
+	--filmtv-colour: #ffae00;
+	--arts-colour: #fa5f40;
+	--music-colour: #fc6791;
+	--sport-colour: #3f6933;
+	--creative-colour: #000;
+	--croft-colour: #d1daa2;
+}
+
 
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, button{ margin: 0; padding: 0; border: 0; font-size: 100%;
 	vertical-align: baseline; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
@@ -1533,23 +1549,31 @@ div#mc_embed_signup_scroll label{
 
 
 .nav-news:hover {
-	background-color: #0b1d51;
+	background-color: var(--news-colour);
 }
 
 .nav-features:hover {
-	background-color: #662e9b;
+	background-color: var(--features-colour);
 }
 
 .nav-comment:hover {
-	background-color: #43bccd;
+	background-color: var(--opinion-colour);
 }
 
 .nav-science:hover {
-	background-color: #86d36f;
+	background-color: var(--scitech-colour);
+}
+
+.nav-lifestyle:hover {
+	background-color: var(--croft-colour);
+}
+
+.nav-entertainment:hover {
+	background-color: var(--creative-colour);
 }
 
 .nav-sports:hover {
-	background-color: #86d36f;
+	background-color: var(--sport-colour);
 }
 
 hr.section-divider {
