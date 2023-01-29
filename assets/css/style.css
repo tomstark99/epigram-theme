@@ -909,7 +909,7 @@ div.articles article.default div.meta{ margin-top: 0; }
 
 h3#breaking-news-title { letter-spacing: 1px; }
 
-section.breaking-news{ line-height: 1.2; margin-top: 20px; }
+section.breaking-news{ line-height: 1.2; }
 section.breaking-news div.user, section.breaking-news .timePosted, section.breaking-news .interact{ display: none; }
 section.breaking-news h3{
 	color: #fff;
