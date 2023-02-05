@@ -21,17 +21,17 @@ License URI: http://www.gnu.org/licenses/gpl.html
 /* Section Colours */
 
 :root {
-  --epigram-red: #c2262f;
-  --features-colour: #662e9b;
-  --news-colour: #0b1d51;
-  --opinion-colour: #43bccd;
-  --scitech-colour: #86d36f;
-  --filmtv-colour: #ffae00;
-  --arts-colour: #fa5f40;
-  --music-colour: #fc6791;
-  --sport-colour: #3f6933;
-  --creative-colour: #000;
-  --croft-colour: #d1daa2;
+	--epigram-red: #c2262f;
+	--features-colour: #662e9b;
+	--news-colour: #0b1d51;
+	--opinion-colour: #43bccd;
+	--scitech-colour: #86d36f;
+	--filmtv-colour: #ffae00;
+	--arts-colour: #fa5f40;
+	--music-colour: #fc6791;
+	--sport-colour: #3f6933;
+	--creative-colour: #000;
+	--croft-colour: #d1daa2;
 }
 
 html,
