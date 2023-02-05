@@ -2525,38 +2525,38 @@ div.home-body {
 div.section-rows {
 }
 
-.sidebar-news:hover {
-  background-color: var(--news-colour);
+section.widget_ep_social div.icons a.sidebar-news:hover{
+	background-color: var(--news-colour);
 }
 
-.sidebar-comment:hover {
+section.widget_ep_social div.icons a.sidebar-comment:hover {
   background-color: var(--opinion-colour);
 }
 
-.sidebar-features:hover {
+section.widget_ep_social div.icons a.sidebar-features:hover {
   background-color: var(--features-colour);
 }
 
-.sidebar-science:hover {
+section.widget_ep_social div.icons a.sidebar-science:hover {
   background-color: var(--scitech-colour);
 }
 
-.sidebar-filmtv:hover {
+section.widget_ep_social div.icons a.sidebar-filmtv:hover {
   background-color: var(--filmtv-colour);
 }
 
-.sidebar-arts:hover {
+section.widget_ep_social div.icons a.sidebar-arts:hover {
   background-color: var(--arts-colour);
 }
 
-.sidebar-music:hover {
+section.widget_ep_social div.icons a.sidebar-music:hover {
   background-color: var(--music-colour);
 }
 
-.sidebar-sports:hover {
+section.widget_ep_social div.icons a.sidebar-sports:hover {
   background-color: var(--sport-colour);
 }
 
-.sidebar-lifestyle:hover {
+section.widget_ep_social div.icons a.sidebar-lifestyle:hover {
   background-color: var(--croft-colour);
 }
