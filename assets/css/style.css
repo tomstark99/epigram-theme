@@ -1090,37 +1090,7 @@ section.widget_ep_flickr ul li a:hover:before {
 	border-radius: 50%;
   	border: 3px solid var(--epigram-red);
   	padding: 2px;
-	margin: 2px;
-}
-
-#header div.social ul {
-  -webkit-opacity: 0;
-  opacity: 100;
-  visibility: visible;
-  text-align: left;
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-#header div.social ul li {
-  display: inline-block;
-}
-#header div.social ul li a {
-  color: rgb(186, 0, 0);
-  font-size: 18px;
-}
-#header div.social ul li a:hover {
-  opacity: 0.6;
-}
-#header div.social ul li a i::before {
-  font-size: 12px;
-  border-radius: 50%;
-  border: 3px solid #c2262f;
-  padding: 2px;
-  background-color: #c2262f;
-  color: white;
+	margin: 0 3px;
 }
 
 #header h1.logo{ max-width: 600px; text-align: left; }
@@ -1143,7 +1113,7 @@ section.widget_ep_flickr ul li a:hover:before {
   width: 220px;
 }
 #header form button {
-  font-size: 20px;
+  font-size: 32px;
   background: none;
   color: rgba(142, 142, 142, 0.42);
 }
