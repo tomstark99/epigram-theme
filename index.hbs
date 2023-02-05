@@ -68,7 +68,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/news-2/">
+								<a href="/tag/features/">
 								<button  class="read">
 									<p  class="button-text" id="read-news">READ MORE</p>
 									<!-- Arrow -->
@@ -101,9 +101,7 @@
 							</div>
 
 							<hr class="rounded section-divider scitech-colour">
-
-
-                             {{!-- Post Grid - SCITECH--}}
+              {{!-- Post Grid - SCITECH--}}
 							<div class="side mb-16">
 								<h3 style="margin-bottom:15px">SCI-TECH</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4">
@@ -172,8 +170,31 @@
 								</button>
 								</a>
 							</div>
-						</div>
+						
 
+						<hr class="rounded section-divider croft-colour">
+							{{!-- Post Grid - The Croft--}}
+							<div class="side mb-16">
+								<h3 style="margin-bottom:15px">THE CROFT</h3>
+								<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
+									{{#get "posts" filter="tags:[the-croft]" limit="4" as |features|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach features}}
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a href="/tag/the-croft/">
+								<button  class="read">
+									<p  class="button-text" id="read-croft">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+						</div>
 						{{!-- SIDEBAR--}}
                     	{{>sidebar-default}}
 					</div>

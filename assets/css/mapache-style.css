@@ -1761,6 +1761,12 @@ a>code[class*=language-]{color: #3eb0ef}
     opacity: 0.8;
 
 }
+#read-croft:hover{
+    color: #D1DAA2;
+    -webkit-opacity: 0.8;
+    opacity: 0.8;
+
+}
 #read-feature:hover{
     color: #662e9b;
     -webkit-opacity: 0.8;
