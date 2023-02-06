@@ -33,7 +33,7 @@
 
 							<hr class="rounded section-divider news-colour">
 							{{!-- Post Grid - NEWS--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">NEWS</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
 									{{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
@@ -56,7 +56,7 @@
 
 							<hr class="rounded section-divider features-colour">
 							{{!-- Post Grid - FEATURE--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">FEATURES</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
 									{{#get "posts" filter="tags:[features]" limit="4" as |features|}}
@@ -68,7 +68,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/features/">
+								<a  style="margin-top:10px; display:block;" href="/tag/features/">
 								<button  class="read">
 									<p  class="button-text" id="read-news">READ MORE</p>
 									<!-- Arrow -->
@@ -79,7 +79,7 @@
 
 							<hr class="rounded section-divider opinion-colour">
 							{{!-- Post Grid - OPINION,  note use slug not tag!--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">OPINION</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
@@ -91,7 +91,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/comment/">
+								<a style="margin-top:10px; display:block;" href="/tag/comment/">
 								<button  class="read">
 									<p class="button-text" id="read-opinion">READ MORE</p>
 									<!-- Arrow -->
@@ -102,7 +102,7 @@
 
 							<hr class="rounded section-divider scitech-colour">
               {{!-- Post Grid - SCITECH--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">SCI-TECH</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[science]" limit="4" as |science|}}
@@ -115,7 +115,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/science/">
+								<a style="margin-top:10px; display:block;" href="/tag/science/">
 								<button  class="read">
 									<p class="button-text" id="read-scitech">READ MORE</p>
 									<!-- Arrow -->
@@ -126,7 +126,7 @@
 
 							<hr class="rounded section-divider filmtv-colour">
 							{{!-- Post Grid - CULTURE, note use slug not tag!--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">CULTURE</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
@@ -138,7 +138,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/entertainment/">
+								<a style="margin-top:10px; display:block;" href="/tag/entertainment/">
 								<button  class="read">
 									<p class="button-text" id="read-culture">READ MORE</p>
 									<!-- Arrow -->
@@ -150,7 +150,7 @@
 
 							<hr class="rounded section-divider sport-colour">
 							{{!-- Post Grid - SPORT--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">SPORT</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
@@ -162,7 +162,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/sport/">
+								<a style="margin-top:10px; display:block;" href="/tag/sport/">
 								<button  class="read">
 									<p class="button-text" id="read-sport">READ MORE</p>
 									<!-- Arrow -->
@@ -174,7 +174,7 @@
 
 						<hr class="rounded section-divider croft-colour">
 							{{!-- Post Grid - The Croft--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">THE CROFT</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
 									{{#get "posts" filter="tags:[the-croft]" limit="4" as |features|}}
@@ -186,7 +186,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/the-croft/">
+								<a style="margin-top:10px; display:block;" href="/tag/the-croft/">
 								<button  class="read">
 									<p  class="button-text" id="read-croft">READ MORE</p>
 									<!-- Arrow -->
