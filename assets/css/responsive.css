@@ -35,7 +35,7 @@
 	
 	#header .top{ margin: 0 65px; }
 	#header{ /*padding: 50px 0;*/ position: relative; }
-	#header h1.logo{ max-width: 60%; }
+	#header h1.logo{ max-width: 100%; }
 	#header div.menu-mobile{
 		display: block;
 		position: absolute;

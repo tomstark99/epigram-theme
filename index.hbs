@@ -10,64 +10,6 @@
 	
 		{{> breaking-news }}
 
-		<!-- start: .ads -->
-
-		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Top Banner -->
-
-        <!-- <ins class="adsbygoogle"
-            style="display:inline-block;width:970px;height:90px"
-            data-ad-client="ca-pub-8236710384567365"
-            data-ad-slot="4646156948"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <amp-ad
-            layout="fixed"
-            width="970"
-            height="90"
-            type="adsense"
-            data-ad-client="ca-pub-8236710384567365"
-            data-ad-slot="4646156948">
-        </amp-ad>-->
-
-        <!--
-		<div class="textwidget" style="margin-top: 20px; border-radius: 10px;">
-			<a id="top-banner-sup" href="" class="sup" target="_blank"><img style="border-radius: 10px; pointer-events: none;" src="" class="img-sup"></a>
-		</div>
-		<!-- end: .ads
-		
-		<!-- start: .left-content
-		<div class="left-content section articles grid-parent grid-75">
-			<h3 class="title bordered">RECENT NEWS</h3>
-			
-				{{#foreach posts}}
-
-					{{^is "paged"}}
-					
-						{{#if @first}}
-
-							{{> first-article}}
-
-						{{else}}
-
-							{{> default-article}}
-
-						{{/if}}
-
-					{{else}}
-
-						{{> default-article}}
-
-					{{/is}}
-					
-				{{/foreach}}
-			
-			{{pagination}}
-			
-		</div>
-		<!-- end: .left-content -->
-
 		<!-- MAPACHE STUFF -->
 		 {{#is "paged"}}
               {{!-- lates post - partials/loop.hbs --}}
@@ -91,7 +33,7 @@
 
 							<hr class="rounded section-divider news-colour">
 							{{!-- Post Grid - NEWS--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">NEWS</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
 									{{#get "posts" filter="tags:[news-2]" limit="4" as |news|}}
@@ -114,7 +56,7 @@
 
 							<hr class="rounded section-divider features-colour">
 							{{!-- Post Grid - FEATURE--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">FEATURES</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
 									{{#get "posts" filter="tags:[features]" limit="4" as |features|}}
@@ -126,7 +68,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/news-2/">
+								<a  style="margin-top:10px; display:block;" href="/tag/features/">
 								<button  class="read">
 									<p  class="button-text" id="read-news">READ MORE</p>
 									<!-- Arrow -->
@@ -137,7 +79,7 @@
 
 							<hr class="rounded section-divider opinion-colour">
 							{{!-- Post Grid - OPINION,  note use slug not tag!--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">OPINION</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[comment]" limit="4" as |opinion|}}
@@ -149,7 +91,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/comment/">
+								<a style="margin-top:10px; display:block;" href="/tag/comment/">
 								<button  class="read">
 									<p class="button-text" id="read-opinion">READ MORE</p>
 									<!-- Arrow -->
@@ -159,10 +101,8 @@
 							</div>
 
 							<hr class="rounded section-divider scitech-colour">
-
-
-                             {{!-- Post Grid - SCITECH--}}
-							<div class="side mb-16">
+              {{!-- Post Grid - SCITECH--}}
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">SCI-TECH</h3>
 								<div class=" grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[science]" limit="4" as |science|}}
@@ -175,7 +115,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/science/">
+								<a style="margin-top:10px; display:block;" href="/tag/science/">
 								<button  class="read">
 									<p class="button-text" id="read-scitech">READ MORE</p>
 									<!-- Arrow -->
@@ -186,7 +126,7 @@
 
 							<hr class="rounded section-divider filmtv-colour">
 							{{!-- Post Grid - CULTURE, note use slug not tag!--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">CULTURE</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[entertainment]" limit="4" as |culture|}}
@@ -198,7 +138,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/entertainment/">
+								<a style="margin-top:10px; display:block;" href="/tag/entertainment/">
 								<button  class="read">
 									<p class="button-text" id="read-culture">READ MORE</p>
 									<!-- Arrow -->
@@ -210,7 +150,7 @@
 
 							<hr class="rounded section-divider sport-colour">
 							{{!-- Post Grid - SPORT--}}
-							<div class="side mb-16">
+							<div class="side mb-1">
 								<h3 style="margin-bottom:15px">SPORT</h3>
 								<div class="grid gap-8 md:grid-row lg:grid-cols-4">
 									{{#get "posts" filter="tags:[sport]" limit="4" as |sport|}}
@@ -222,7 +162,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a href="/tag/sport/">
+								<a style="margin-top:10px; display:block;" href="/tag/sport/">
 								<button  class="read">
 									<p class="button-text" id="read-sport">READ MORE</p>
 									<!-- Arrow -->
@@ -230,8 +170,31 @@
 								</button>
 								</a>
 							</div>
-						</div>
+						
 
+						<hr class="rounded section-divider croft-colour">
+							{{!-- Post Grid - The Croft--}}
+							<div class="side mb-1">
+								<h3 style="margin-bottom:15px">THE CROFT</h3>
+								<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
+									{{#get "posts" filter="tags:[the-croft]" limit="4" as |features|}}
+										{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
+										{{#foreach features}}
+											{{> "story/story-grid" classTitle='text-sm'}}
+											{{!--{{> default-article}} --}}
+										{{/foreach}}
+									{{/get}}
+								</div>
+								<!-- ReadMore button -->
+								<a style="margin-top:10px; display:block;" href="/tag/the-croft/">
+								<button  class="read">
+									<p  class="button-text" id="read-croft">READ MORE</p>
+									<!-- Arrow -->
+									<div class="button__arrow button__arrow--right"></div>
+								</button>
+								</a>
+							</div>
+						</div>
 						{{!-- SIDEBAR--}}
                     	{{>sidebar-default}}
 					</div>

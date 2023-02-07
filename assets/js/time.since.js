@@ -72,7 +72,7 @@ function titleBody(title, n, uuid) {
     var exists = setInterval(function () {
         if(document.getElementById(`title_${uuid}`) !== null) {
             clearInterval(exists)
-            if (title.length > 65) {
+            if (title.length > 75) {
                 document.getElementById(`title_${uuid}`).innerHTML = `
             ${title.split(" ").slice(0, n).join(" ")}...`
             } else {

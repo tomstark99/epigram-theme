@@ -16,9 +16,9 @@ section.breaking-news div.slick,
 	background: #c2262f;
 }
 
-.croft-colour {
+/* .croft-colour {
     background: #CF71EE;
-}
+} */
 
 .title.bordered,
 div.text blockquote,
@@ -109,12 +109,14 @@ section.breaking-news div.slick a{ color: #fff; }
 
 /* Section Colours */
 
-.epigram-red { background-color: #c2262f; }
-.features-colour { background-color: #662e9b; }
-.news-colour { background-color: #0b1d51; }
-.opinion-colour { background-color: #43bccd; }
-.scitech-colour { background-color: #86d36f; }
-.filmtv-colour { background-color: #e2ca50; }
-.arts-colour { background-color: #ec9a29; }
-.music-colour { background-color: #e16f76; }
-.sport-colour { background-color: #86d36f; }
+.epigram-red { background-color: var(--epigram-red); }
+.features-colour { background-color: var(--features-colour); }
+.news-colour { background-color: var(--news-colour); }
+.opinion-colour { background-color: var(--opinion-colour); }
+.scitech-colour { background-color: var(--scitech-colour); }
+.filmtv-colour { background-color: var(--filmtv-colour); }
+.arts-colour { background-color: var(--arts-colour); }
+.music-colour { background-color: var(--music-colour); }
+.sport-colour { background-color: var(--sport-colour); }
+.creative-colour { background-color: var(--creative-colour); }
+.croft-colour { background-color: var(--croft-colour); }
