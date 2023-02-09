@@ -13,7 +13,7 @@
 			<h1 class="logo"><a href="{{@site.url}}">{{@site.title}}</a></h1>
 		{{/if}} --}}
 
-		<h1 class="logo"><a href="{{@site.url}}"><img src="/assets/images/epigram_logo_2023.png" alt="EPIGRAM" /></a></h1>
+		<h1 class="logo"><a href="{{@site.url}}"><img src={{asset "images/epigram_logo_2023.png"}} alt="EPIGRAM" /></a></h1>
 
 		<div class="top-right hide-on-tablet hide-on-mobile">
 			<form action="" method="get" class="mobile-hide">
@@ -68,11 +68,11 @@
 				</li>
 				<li class="nav-entertainment">
 					<a href="/tag/entertainment/">Culture</a>
-					<ul class="entertainment-dropdown-content">
-						<li class="nav-film"><a href="/tag/film-TV/">Film & TV</a></li>
-						<li><a href="/tag/arts/">Arts</a></li>
-						<li><a href="/tag/music/">Music</a></li>
-					</ul>
+					<div class="entertainment-dropdown-content">
+						<a href="/tag/film-TV/">Film & TV</a>
+						<a href="/tag/arts/">Arts</a>
+						<a href="/tag/music/">Music</a>
+					</div>
 				</li>
 				<li class="nav-sports"><a href="/tag/sport/">Sport</a></li>
 				<li class="nav-about">
