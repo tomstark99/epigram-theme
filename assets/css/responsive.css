@@ -81,6 +81,7 @@
 	#header nav ul.menu > li.current-menu-item{ background: #000; }
 	#header nav ul.menu > li > a{ padding: 5px 0; }
 	#header nav ul.menu > li a:before{ display: none; }
+	#header div.top-right{ visibility: hidden; }
 	
 	/* @end */	
 	
@@ -93,8 +94,8 @@
 @media screen and (min-width: 768px) and (max-width: 990px){
 	
 	#header h1.logo, #footer .logo{ max-width: 40%; }
-	#header form input.search-field{ width: 60px; }
-	#header form input.search-field:focus{ width: 120px; }
+	/* #header form input.search-field{ width: 60px; } */
+	/* #header form input.search-field:focus{ width: 120px; } */
 	#header .is-sticky nav ul.menu{ padding: 0; }
 	
 	aside#featured{ padding-left: 0; }

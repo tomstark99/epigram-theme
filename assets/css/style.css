@@ -1095,7 +1095,7 @@ section.widget_ep_flickr ul li a:hover:before {
 
 #header h1.logo{ max-width: 600px; text-align: left; }
 #header h1.logo a{ font-size: 133px; line-height: 1.2; color: rgb(0, 0, 0); }
-#header h1.logo a img{ min-width: 50vw; max-width: 100%; object-fit: contain;}
+#header h1.logo a img{ min-width: 70vw; max-width: 100%; object-fit: contain;}
 
 #header form {
   margin: 0 20px;
