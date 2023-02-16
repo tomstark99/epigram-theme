@@ -17,7 +17,7 @@
                 {{else}}
 
                     {{!-- Home Top Section FEATURE TRENDING ARTICLES, not sure whether to use featured:true or weeklytop --}}
-                    <div class="h-cover home-banner mx-auto mb-10 p-2 grid gap-2 lg:grid-cols-5">
+                    <div class="h-cover home-banner mx-auto mb-8 p-2 grid gap-2 lg:grid-cols-5">
                     {{#get "posts" filter="featured:true" limit="3"as |featured-top|}}
                         {{#foreach featured-top}}
                         {{!-- {{#foreach posts visibility="all" from="1" to="3"}} --}}
@@ -45,7 +45,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a style="margin-top:10px; display:block;" href="/tag/news-2/">
+								<a style="margin-top:10px; margin-bottom:10px; display:block;" href="/tag/news-2/">
 								<button  class="read">
 									<p  class="button-text" id="read-news">READ MORE</p>
 									<!-- Arrow -->
@@ -68,7 +68,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a  style="margin-top:10px; display:block;" href="/tag/features/">
+								<a  style="margin-top:10px; margin-bottom:10px; display:block;" href="/tag/features/">
 								<button  class="read">
 									<p  class="button-text" id="read-news">READ MORE</p>
 									<!-- Arrow -->
@@ -91,7 +91,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a style="margin-top:10px; display:block;" href="/tag/comment/">
+								<a style="margin-top:10px; margin-bottom:10px;display:block;" href="/tag/comment/">
 								<button  class="read">
 									<p class="button-text" id="read-opinion">READ MORE</p>
 									<!-- Arrow -->
@@ -115,7 +115,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a style="margin-top:10px; display:block;" href="/tag/science/">
+								<a style="margin-top:10px; margin-bottom:10px;display:block;" href="/tag/science/">
 								<button  class="read">
 									<p class="button-text" id="read-scitech">READ MORE</p>
 									<!-- Arrow -->
@@ -138,7 +138,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a style="margin-top:10px; display:block;" href="/tag/entertainment/">
+								<a style="margin-top:10px; display:block; margin-bottom:10px;" href="/tag/entertainment/">
 								<button  class="read">
 									<p class="button-text" id="read-culture">READ MORE</p>
 									<!-- Arrow -->
@@ -162,7 +162,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a style="margin-top:10px; display:block;" href="/tag/sport/">
+								<a style="margin-top:10px; display:block; margin-bottom:10px;" href="/tag/sport/">
 								<button  class="read">
 									<p class="button-text" id="read-sport">READ MORE</p>
 									<!-- Arrow -->
@@ -186,7 +186,7 @@
 									{{/get}}
 								</div>
 								<!-- ReadMore button -->
-								<a style="margin-top:10px; display:block;" href="/tag/the-croft/">
+								<a style="margin-top:10px; display:block; margin-bottom:10px;" href="/tag/the-croft/">
 								<button  class="read">
 									<p  class="button-text" id="read-croft">READ MORE</p>
 									<!-- Arrow -->
