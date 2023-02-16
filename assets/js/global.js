@@ -78,7 +78,9 @@
 			variableWidth: false,
 			swipe: true,
 			vertical: false,
-			slidesToShow: 1
+			slidesToShow: 1,
+			autoplay: true,
+			autoplaySpeed: 5000
 		});
 		
 		$('.tooltip').tooltipster({ theme: 'tooltipster-small', contentAsHTML: true, animation: 'grow' });
