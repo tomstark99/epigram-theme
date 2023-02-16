@@ -9,7 +9,7 @@
             <div class="js-post-feed">
                 <hr class="rounded section-divider {{#unless feature_image}}u-primaryGradient{{else}}bg-dark{{/unless}}">
 
-                {{#foreach posts}}
+                {{#foreach posts from="10"}}
                     {{!-- Story - partials/story/story-list.hbs --}}
                     {{> "story/story-list"}}
                 {{/foreach}}
