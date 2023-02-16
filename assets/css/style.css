@@ -1103,7 +1103,7 @@ section.widget_ep_flickr ul li a:hover:before {
   color: rgb(0, 0, 0);
 }
 #header h1.logo a img {
-  min-width: 50vw;
+  min-width: 70vw;
   max-width: 100%;
   object-fit: contain;
 }
