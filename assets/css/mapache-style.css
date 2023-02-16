@@ -2243,6 +2243,7 @@ a > code[class*="language-"] {
   position: absolute;
   bottom: 2px;
   right: 0px;
+  padding-top: 5px;
 }
 
 .inline-block {
@@ -2541,6 +2542,7 @@ a > code[class*="language-"] {
 
 .rounded {
   border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .rounded-xl {
@@ -3235,7 +3237,7 @@ a > code[class*="language-"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .md\:grid-row {
-    grid-auto-rows: 30vh;
+    grid-auto-rows: 35vh;
   }
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
