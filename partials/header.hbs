@@ -1,110 +1,118 @@
 <!-- start: #header -->
-<header id="header">
+<header id='header'>
 
-	<div class="menu-mobile">
-		<i class="fa fa-bars"></i>
-	</div>
+  <div class='menu-mobile'>
+    <i class='fa fa-bars'></i>
+  </div>
 
-	<!-- start: .top -->
-	<div class="top">
-		{{!-- {{#if @blog.logo}}
+  <!-- start: .top -->
+  <div class='top'>
+    {{!-- {{#if @blog.logo}}
 			<h1 class="logo" ><a href="{{@site.url}}"><img id="logo" src="" alt="{{@site.title}}" /></a></h1>
 		{{else}}
 			<h1 class="logo"><a href="{{@site.url}}">{{@site.title}}</a></h1>
 		{{/if}} --}}
 
-		<h1 class="logo"><a href="{{@site.url}}"><img src={{asset "images/epigram_logo_2023.png"}} alt="EPIGRAM" /></a></h1>
+    <h1 class='logo'><a href='{{@site.url}}'><img
+          src={{asset 'images/epigram_logo_2023.png'}}
+          alt='EPIGRAM'
+        /></a></h1>
 
-		<div class="top-right">
-			{{!-- <form action="" method="get" class="mobile-hide">
+    <div class='top-right'>
+      {{! <form action="" method="get" class="mobile-hide">
 				<input type="text" name="s" value="" class="search-field" placeholder="Search" required>
 				<button type="submit"><i class="fa fa-search " style="margin-right: 4px;"></i></button>
-			</form> --}}
-			<div class="social">
-				<a href="https://www.linkedin.com/company/epigram-paper/mycompany/" target="_blank">
-					<i class="fa fa-linkedin fa-fw"></i>
-				</a>
-				<a href="https://www.instagram.com/epigrampaper_/" target="_blank">
-					<i class="fa fa-instagram fa-fw"></i>
-				</a>
-				<a href="https://twitter.com/epigrampaper/" target="_blank">
-					<i class="fa fa-twitter fa-fw"></i>
-				</a>
-				<a href="https://www.facebook.com/EpigramPaper/" target="_blank">
-					<i class="fa fa-facebook fa-fw"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-	<!-- end: .top -->
+			</form> }}
+      <div class='social'>
+        <a
+          href='https://www.linkedin.com/company/epigram-paper/mycompany/'
+          target='_blank'
+        >
+          <i class='fa fa-linkedin fa-fw'></i>
+        </a>
+        <a href='https://www.instagram.com/epigrampaper_/' target='_blank'>
+          <i class='fa fa-instagram fa-fw'></i>
+        </a>
+        <a href='https://twitter.com/epigrampaper/' target='_blank'>
+          <i class='fa fa-twitter fa-fw'></i>
+        </a>
+        <a href='https://www.facebook.com/EpigramPaper/' target='_blank'>
+          <i class='fa fa-facebook fa-fw'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- end: .top -->
 
-	
+  <!-- start: .menu-wrapper -->
+  <div class='menu-wrapper'>
+    <!-- start: .main-nav -->
+    <nav class='grid-container grid-parent main-nav' role='navigation'>
 
-	<!-- start: .menu-wrapper -->
-	<div class="menu-wrapper">
-		<!-- start: .main-nav -->
-		<nav class="grid-container grid-parent main-nav" role="navigation">
-
-			<ul id="menu-header" class="menu">
-				<li class="nav-home"><a href="/">Home</a></li>
-				<li class="nav-news"><a href="/tag/news-2/">News</a></li>
-				<li class="nav-features"><a href="/tag/features/">Features</a></li>
-				<li class="nav-comment"><a href="/tag/comment/">Opinion</a></li>
-				<li class="nav-science"><a href="/tag/science/">SciTech</a></li>
-				<li class="nav-lifestyle" id="nav-lifestyle">
-					<a id="croft_head" href="/tag/The Croft/">The Croft</a>
-					<div id="croft_drop" class="lifestyle-dropdown-content">
-						<a class="croft_drop" href="/tag/wellbeing/">Wellbeing</a>
-						<a class="croft_drop" href="/tag/food/">Food</a>
-						<a class="croft_drop" href="/tag/travel/">Travel</a>
-						<a class="croft_drop" href="/tag/style/">Style</a>
-						<a class="croft_drop" href="/tag/puzzles/">Puzzles</a>
-					</div>
-				</li>
-				<li class="nav-entertainment">
-					<a href="/tag/entertainment/">Culture</a>
-					<div class="entertainment-dropdown-content">
-						<a href="/tag/film-TV/">Film & TV</a>
-						<a href="/tag/arts/">Arts</a>
-						<a href="/tag/music/">Music</a>
-					</div>
-				</li>
-				<li class="nav-sports"><a href="/tag/sport/">Sport</a></li>
-				<li class="nav-about">
-					<a href="/get-involved/">About us</a>
-					<div class="intramural-dropdown-content">
-						<a href="/meet-the-team/">About</a>
-						<a href="/meet-the-team/">Contact us</a>
-						<a href="/advertise-with-us/">Advertise with us</a>
+      <ul id='menu-header' class='menu'>
+        <li class='nav-home'><a href='/'>Home</a></li>
+        <li class='nav-news'><a href='/tag/news-2/'>News</a></li>
+        <li class='nav-features'><a href='/tag/features/'>Features</a></li>
+        <li class='nav-comment'><a href='/tag/comment/'>Opinion</a></li>
+        <li class='nav-science'><a href='/tag/science/'>SciTech</a></li>
+        <li class='nav-lifestyle' id='nav-lifestyle'>
+          <a id='croft_head' href='/tag/The Croft/'>The Croft</a>
+          <div id='croft_drop' class='lifestyle-dropdown-content'>
+            <a class='croft_drop' href='/tag/wellbeing/'>Wellbeing</a>
+            <a class='croft_drop' href='/tag/food/'>Food</a>
+            <a class='croft_drop' href='/tag/travel/'>Travel</a>
+            <a class='croft_drop' href='/tag/style/'>Style</a>
+            <a class='croft_drop' href='/tag/puzzles/'>Puzzles</a>
+          </div>
+        </li>
+        <li class='nav-entertainment'>
+          <a href='/tag/entertainment/'>Culture</a>
+          <div class='entertainment-dropdown-content'>
+            <a href='/tag/film-TV/'>Film & TV</a>
+            <a href='/tag/arts/'>Arts</a>
+            <a href='/tag/music/'>Music</a>
+          </div>
+        </li>
+        <li class='nav-sports'><a href='/tag/sport/'>Sport</a></li>
+        <li class='nav-about'>
+          <a href='/get-involved/'>About us</a>
+          <div class='intramural-dropdown-content'>
+            <a href='/meet-the-team/'>About</a>
+            <a href='/meet-the-team/'>Contact us</a>
+            {{! <a href="/advertise-with-us/">Advertise with us</a>
 						<a href="/alumni/">Alumni</a>
-						<a href="https://wearepercent.com/cause/331/Epigram-Bristol">Donate</a>
-						<!-- <a href="/read-the-paper/">Read the paper</a> -->
-						<!-- <a href="/tag/puzzles/">Puzzles</a> -->
-					</div>
-				</li>
-				{{!-- <li class="nav-puzzles"><a href="/tag/puzzles/">Puzzles</a></li> --}}
-				{{!-- <form action="" method="get" class="mobile-hide">
+						<a href="https://wearepercent.com/cause/331/Epigram-Bristol">Donate</a> }}
+            <!-- <a href="/read-the-paper/">Read the paper</a> -->
+            <!-- <a href="/tag/puzzles/">Puzzles</a> -->
+          </div>
+        </li>
+        {{! <li class="nav-puzzles"><a href="/tag/puzzles/">Puzzles</a></li> }}
+        {{! <form action="" method="get" class="mobile-hide">
 					<input type="text" name="s" value="" class="search-field" required>
 					<button type="submit"><i class="fa fa-search"></i></button>
-				</form> --}}
-				{{!-- <div class="nav-home current-menu-item">
+				</form> }}
+        {{! <div class="nav-home current-menu-item">
     			<button class="home-dropbtn">Home</button>
     		<div class="home-dropdown-content">
       		<a href="#">Link 1</a>
       		<a href="#">Link 2</a>
       		<a href="#">Link 3</a>
     		</div>
-  		</div> --}}
-		</ul>
+  		</div> }}
+      </ul>
 
-		</nav>
-		<!-- end: .main-nav -->
-	</div>
-	<!-- end: .menu-wrapper -->
+    </nav>
+    <!-- end: .main-nav -->
+  </div>
+  <!-- end: .menu-wrapper -->
 
-	<div class="clear"></div>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <div class='clear'></div>
+  <link
+    rel='stylesheet'
+    type='text/css'
+    href='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css'
+  />
 </header>
-<script type="text/javascript" src="{{asset "js/header.menu.js"}}"></script>
+<script type='text/javascript' src='{{asset "js/header.menu.js"}}'></script>
 
 <!-- end: #header -->
