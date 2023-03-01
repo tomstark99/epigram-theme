@@ -32,7 +32,7 @@
 				<div class="side mb-1">
 					<h3 style="margin-bottom:15px">NEWS</h3>
 					<div class="grid gap-8 md:grid-row lg:grid-cols-4 ">
-						{{#get "posts" filter="tags:[news-2]" include="tags" limit="4"}}
+						{{#get "posts" filter="tags:[news-2]" order="published_at desc" include="tags" limit="4"}}
 						{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 						{{#foreach posts}}
 						{{> "story/story-grid" classTitle='text-sm'}}
@@ -54,7 +54,7 @@
 				<div class="side mb-1">
 					<h3 style="margin-bottom:15px">FEATURES</h3>
 					<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
-						{{#get "posts" filter="tags:[features]" limit="4" include="tags" as |features|}}
+						{{#get "posts" filter="tags:[features]" order="published_at desc" limit="4" include="tags" as |features|}}
 						{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 						{{#foreach features}}
 						{{> "story/story-grid" classTitle='text-sm'}}
@@ -76,7 +76,7 @@
 				<div class="side mb-1">
 					<h3 style="margin-bottom:15px">OPINION</h3>
 					<div class="grid gap-8 md:grid-row lg:grid-cols-4">
-						{{#get "posts" filter="tags:[comment]" limit="4" include="tags"as |opinion|}}
+						{{#get "posts" filter="tags:[comment]" order="published_at desc" limit="4" include="tags"as |opinion|}}
 						{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 						{{#foreach opinion}}
 						{{> "story/story-grid" classTitle='text-sm'}}
@@ -99,7 +99,7 @@
 				<div class="side mb-1">
 					<h3 style="margin-bottom:15px">SCI-TECH</h3>
 					<div class=" grid gap-8 md:grid-row lg:grid-cols-4">
-						{{#get "posts" filter="tags:[science]" limit="4" include="tags"as |science|}}
+						{{#get "posts" filter="tags:[science]" limit="4" include="tags" order="published_at desc"as |science|}}
 						{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 						{{#foreach science}}
 
@@ -123,7 +123,7 @@
 				<div class="side mb-1">
 					<h3 style="margin-bottom:15px">CULTURE</h3>
 					<div class="grid gap-8 md:grid-row lg:grid-cols-4">
-						{{#get "posts" filter="tags:[entertainment]" include="tags" limit="4" as |culture|}}
+						{{#get "posts" filter="tags:[entertainment]" order="published_at desc" include="tags" limit="4" as |culture|}}
 						{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 						{{#foreach culture}}
 						{{> "story/story-grid" classTitle='text-sm'}}
@@ -146,7 +146,7 @@
 				<div class="side mb-1">
 					<h3 style="margin-bottom:15px">SPORT</h3>
 					<div class="grid gap-8 md:grid-row lg:grid-cols-4">
-						{{#get "posts" filter="tags:[sport]" limit="4"include="tags" as |sport|}}
+						{{#get "posts" filter="tags:[sport]" order="published_at desc"limit="4"include="tags" as |sport|}}
 						{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 						{{#foreach sport}}
 						{{> "story/story-grid" classTitle='text-sm'}}
@@ -169,7 +169,7 @@
 				<div class="side mb-1">
 					<h3 style="margin-bottom:15px">THE CROFT</h3>
 					<div class=" grid gap-8 md:grid-row lg:grid-cols-4 ">
-						{{#get "posts" filter="tags:[the-croft]" include="tags"limit="4" as |features|}}
+						{{#get "posts" filter="tags:[the-croft]" order="published_at desc"include="tags"limit="4" as |features|}}
 						{{!-- Story Grid - partiasl/story/story-grid.hbs --}}
 						{{#foreach features}}
 						{{> "story/story-grid" classTitle='text-sm'}}
