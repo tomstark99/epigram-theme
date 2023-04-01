@@ -181,7 +181,33 @@
 		<!--<h4 class="widget-title title bordered">ADVERTISING</h4>-->
 
 		<div class="textwidget">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+	// Only load the Google Adsense ad if the user accepted cookies.
+	function getCookie(cname) {
+		let name = cname + "=";
+		let decodedCookie = decodeURIComponent(document.cookie);
+		let ca = decodedCookie.split(';');
+		for(let i = 0; i <ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+	var cookies_accepted = getCookie("cookieconsent_status");
+	if (cookies_accepted === 'dismiss') {
+		var s = document.createElement('script');
+		s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+		s.type = "text/javascript";
+		s.async = true;
+		document.getElementsByTagName('head')[0].appendChild(s);
+	}
+</script>
+{{!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
 <!-- Fat Advert Two -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -189,7 +215,9 @@
      data-ad-slot="6851425529"
      data-ad-format="auto"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+	if (cookies_accepted === 'dismiss') {
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	}
 </script>
 
 		<div class="clear"></div>

@@ -96,7 +96,7 @@
 	'security_storage': 'denied'
   });
 
-  let cookies_accepted = getCookie("cookieconsent_status");
+  var cookies_accepted = getCookie("cookieconsent_status");
   if (cookies_accepted === "dismiss") {
 	gtag('consent', 'update', {
       'ad_storage': 'granted',
