@@ -65,12 +65,47 @@
     onreadystatechange="if (this.readyState === 'complete') this.onload()">
 </script> --}}
 <script>
+  // This script handles cookies for Google Analytics via gtag.
+  // For more information, see https://developers.google.com/analytics/devguides/collection/gtagjs/cookies-user-id
+  function getCookie(cname) {
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for(let i = 0; i <ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+		c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+		return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+  }
   
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   
   gtag('js', new Date());
 
+  gtag('consent', 'default', {
+	'ad_storage': 'denied',
+	'analytics_storage': 'denied',
+	'functionality_storage': 'denied',
+	'personalization_storage': 'denied',
+	'security_storage': 'denied'
+  });
+
+  let cookies_accepted = getCookie("cookieconsent_status");
+  if (cookies_accepted === "dismiss") {
+	gtag('consent', 'update', {
+      'ad_storage': 'granted',
+	  'analytics_storage': 'granted',
+	  'functionality_storage': 'granted',
+	  'personalization_storage': 'granted',
+	  'security_storage': 'granted'
+    });
+  }
 
   var _name = "General2";
   var _section ="General2";
@@ -183,22 +218,25 @@ gtag('config', 'UA-120404499-1', {'dimension1': _name, 'dimension2': _section});
 		}());
 	</script>
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-    <script>
-    window.cookieconsent.initialise({
-    "palette": {
-        "popup": {
-        "background": "#aa0000",
-        "text": "#ffdddd"
-        },
-        "button": {
-        "background": "#ff0000"
-        }
-    },
-    "theme": "classic",
-    "content": {
-        "href": "/privacy/"
-    }
-    });
-    </script>
+	<script>
+	window.cookieconsent.initialise({
+	"palette": {
+		"popup": {
+		"background": "#aa0000",
+		"text": "#ffdddd"
+		},
+		"button": {
+		"background": "#ff0000"
+		}
+	},
+	"theme": "classic",
+	"content": {
+		"message": "We use cookies for our website analytics and for displaying ads",
+		"dismiss": "Ok!",
+		"link": "See details and manage cookies",
+		"href": "/privacy/"
+	}
+	});
+	</script>
 </body>
 </html>
